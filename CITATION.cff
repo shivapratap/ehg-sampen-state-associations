@@ -8,18 +8,29 @@ abstract: >-
   mixed-model analysis, robustness and cross-channel checks, the gain sensitivity of finite-resolution
   sample-entropy profile summaries, and the gain-invariant (GI) alternative.
 license: MIT
-repository-code: "TODO: add repository URL before release"
+repository-code: "https://github.com/shivapratap/ehg-sampen-state-associations"
 authors:
+  - family-names: Ram
+    given-names: Gopika
   - family-names: Gopakumar
     given-names: Shivapratap
-# TODO before release: add co-authors in the agreed order, a release version/date and, if deposited, a Zenodo DOI.
+  - family-names: Udhayakumar
+    given-names: Radhagayathri
+  - family-names: Karmakar
+    given-names: Chandan
 preferred-citation:
   type: article
-  title: "TODO: manuscript title (in preparation for Results in Engineering)"
+  title: "Gain dependence in sample entropy profiling of electrohysterography and its effect on uterine-state associations"
   status: in-preparation
   authors:
+    - family-names: Ram
+      given-names: Gopika
     - family-names: Gopakumar
       given-names: Shivapratap
+    - family-names: Udhayakumar
+      given-names: Radhagayathri
+    - family-names: Karmakar
+      given-names: Chandan
   year: 2026
 references:
   - type: data

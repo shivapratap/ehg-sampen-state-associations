@@ -1,7 +1,7 @@
 PASS  lag-1: 55 feature-recording combinations (11 x 5)  n=55
-PASS  lag-1: |r1|>=0.30 count  25 of 55 (IEEE text: 25)
-PASS  lag-1: maximum |r1|  0.560 (IEEE text: 0.560)
-PASS  lag-1: rows using marginal fallback residuals  0 of 55
+PASS  lag-1: |r1|>=0.30 count  25 of 55 (manuscript: 25)
+PASS  lag-1: maximum |r1|  0.560 (manuscript: 0.560)
+PASS  lag-1: rows whose fit has zero random-effect variance (conditional = marginal residuals)  20 of 55; labelled marginal in saved file: 0
 PASS  duration FDR support 60 s / 80 s / 40 s  11/11/10
 PASS  duration: feature losing support at 40 s  ['Hjorth complexity']
 PASS  duration: signs agree in all 11  
@@ -30,7 +30,9 @@ PASS  table:amplitude fwh_entropy_svd_entropy/preferred_mixed_model/adjusted  sa
 PASS  table:amplitude fwh_entropy_svd_entropy/woman_cluster_robust_OLS/adjusted  saved 0.2559 vs text 0.256
 PASS  residual-RMS Spearman, Total SampEn, conditional pooled = -0.70  -0.698
 PASS  woman-level change Spearman (RMS) range  0.916-0.955 (text 0.92-0.96)
-PASS  conditional table: frozen Total 0.409 -> 0.020  
+PASS  conditional table: original Total 0.409 -> 0.020  
 PASS  conditional table: GI Total -0.113 -> +0.275  
 PASS  LOWO: n refits  42
 PASS  LOWO: GI Total unadjusted stays negative / adjusted stays positive  unadj -0.134..-0.088; adj 0.244..0.305
+PASS  S8G: all-window rows reproduce S8E  
+PASS  S8G: original Total excl. 0.692 / adj 0.203; GI -0.099 / 0.280  

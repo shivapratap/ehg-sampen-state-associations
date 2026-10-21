@@ -2,9 +2,9 @@
 \clearpage
 \begin{landscape}
 \section*{Table S7. Robustness and residual diagnostics for the 11 primary EHG9 UC--IN features}\label{tab:s7_robustness}
-All values are read from saved outputs of the reviewer-revision analyses (folders 01, 02, 05--08) and the Stage 09 residual-autocorrelation diagnostic; no model was refitted for this document. The 11 features are those FDR-supported in the original EHG9 34-feature family. Coefficients are standardised UC-minus-IN estimates. Panels S7A--S7D are descriptive and are not a second inferential family.
+All values are read from saved analysis outputs; no model was refitted for this document. The 11 features are those FDR-supported in the original EHG9 34-feature family. Coefficients are standardised UC-minus-IN estimates. Panels S7A--S7D are descriptive and are not a second inferential family.
 \subsection*{S7A. Lag-1 autocorrelation of model residuals in the five most-windowed EHG9 recordings}
-Residuals were ordered by window start time within each recording. Entries are Pearson lag-1 autocorrelation; an asterisk marks marginal (fixed-effects-only) residuals used because the fit had a singular random-effects covariance; bold marks $|r_1|\ge0.30$. Across the 11 features and five recordings, 25 of 55 combinations reached the informal $0.30$ flag, with a maximum $|r_1|$ of 0.560; 0 of 55 used marginal residuals. This is a diagnostic, not a model of serial correlation.
+Residuals were ordered by window start time within each recording. Entries are Pearson lag-1 autocorrelation; bold marks $|r_1|\ge0.30$. Across the 11 features and five recordings, 25 of 55 combinations reached the informal $0.30$ flag, with a maximum $|r_1|$ of 0.560; for 20 of 55 combinations (the four amplitude features whose primary fit was a woman-only boundary fit) the random-effect variance was estimated at zero, so conditional and marginal residuals coincide. This is a diagnostic, not a model of serial correlation.
 \begin{longtable}{p{3.6cm}rrrrrr}
 \toprule
 \textbf{Feature} & \textbf{ice002\_p\_1of3} & \textbf{ice044\_p\_2of3} & \textbf{ice004\_p\_1of1} & \textbf{ice003\_p\_1of2} & \textbf{ice036\_p\_1of6} & \textbf{n flagged} \\
@@ -54,7 +54,7 @@ Higuchi FD & $-$0.090 & 0.031 & 0.110 & 0.077 & 0.110 & 0.674 & -1.18e-03 & 0.33
 \bottomrule
 \end{longtable}
 \subsection*{S7C. Balanced IN subsampling, window duration and clean-UC sensitivity}
-Balanced IN: 1,000 within-woman resamples of IN windows (same-direction and BH-supported frequencies, and the median ratio of the resampled to the frozen standard error). Duration: window length 40, 60 and 80 s with the same event centres. Clean UC: 21 UC windows containing a competing FM annotation removed (312 UC windows).
+Balanced IN: 1,000 within-woman resamples of IN windows (same-direction and BH-supported frequencies, and the median ratio of the resampled to the primary-fit standard error). Duration: window length 40, 60 and 80 s with the same event centres. Clean UC: 21 UC windows containing a competing FM annotation removed (312 UC windows).
 \begin{longtable}{p{3.0cm}rrrrrrrrrr}
 \toprule
 \textbf{Feature} & \textbf{Same dir.} & \textbf{q$<$0.05 freq.} & \textbf{SE ratio} & \textbf{40 s $\beta$} & \textbf{40 s q} & \textbf{80 s $\beta$} & \textbf{80 s q} & \textbf{Clean $\beta$} & \textbf{Clean q} \\
@@ -105,7 +105,7 @@ Higuchi FD & 0.56 & 2.02 & 1.04 & 1.05 & 0.20 \\
 \clearpage
 \begin{landscape}
 \section*{Table S8. Amplitude dependence of the entropy associations}\label{tab:s8_amplitude}
-All values are read from saved outputs (reviewer-revision folder 04, Paper1 amplitude audit and the 2026-10-20 GI refit); no model was refitted for this document.
+All values are read from saved analysis outputs; no model was refitted for this document.
 \subsection*{S8A. Direct positive scaling of 60 windows (20 per state)}
 Median relative change from unit scale (\%). ``Non-decr.'' is the number of the 60 trajectories that were non-decreasing with scale; ``Invariant'' is the number numerically unchanged at every scale.
 \begin{longtable}{p{3.2cm}rrrrrrr}
@@ -169,7 +169,7 @@ SVD entropy & marginal & $-$0.12 & $-$0.10 & $-$0.14 & $-$0.13 & $-$0.10 \\
 \bottomrule
 \end{longtable}
 \subsection*{S8D. Woman-level UC-minus-IN changes: Total SampEn versus amplitude (34 paired women)}
-Spearman correlation between each woman's median UC-minus-baseline change in Total SampEn and the corresponding change in the amplitude summary, by channel (Paper1 amplitude audit).
+Spearman correlation between each woman's median UC-minus-IN change in Total SampEn and the corresponding change in the amplitude summary, by channel.
 \begin{longtable}{p{3.2cm}rrrr}
 \toprule
 \textbf{Amplitude summary} & \textbf{EHG9} & \textbf{EHG10} & \textbf{EHG11} & \textbf{EHG12} \\
@@ -185,7 +185,7 @@ Peak-to-peak & 0.847 & 0.801 & 0.791 & 0.825 \\
 Waveform length & 0.978 & 0.970 & 0.974 & 0.960 \\
 \bottomrule
 \end{longtable}
-\subsection*{S8E. EHG9 UC-minus-IN coefficients for frozen and GI Total SampEn under log-RMS conditioning}
+\subsection*{S8E. EHG9 UC-minus-IN coefficients for original and GI Total SampEn under log-RMS conditioning}
 Three-state random-intercept model (woman and recording-within-woman), REML, 4,083 windows; custom block-diagonal REML implementation, checked against the cached unadjusted coefficients (agreement to four decimals). Log-RMS is standardised. Cross-checked against statsmodels 0.14.5 MixedLM (REML, woman intercept plus recording variance component): maximum absolute coefficient difference $3\times10^{-6}$, maximum standard-error difference 0.003 (saved as statsmodels\_verification.csv in the refit folder).
 \begin{longtable}{p{2.4cm}p{3.2cm}rrrr}
 \toprule
@@ -196,10 +196,10 @@ Three-state random-intercept model (woman and recording-within-woman), REML, 4,0
 \textbf{Outcome} & \textbf{Adjustment} & \textbf{UC $\beta$} & \textbf{95\% CI} & \textbf{FM $\beta$} & \textbf{log-RMS $\beta$} \\
 \midrule
 \endhead
-frozen total & none & 0.409 & [0.296, 0.522] & 0.078 & -- \\
-frozen total & standardised log-RMS & 0.020 & [$-$0.086, 0.126] & $-$0.122 & 0.529 \\
-gi total & none & $-$0.113 & [$-$0.203, $-$0.023] & $-$0.200 & -- \\
-gi total & standardised log-RMS & 0.275 & [0.196, 0.354] & 0.002 & $-$0.567 \\
+Original Total & none & 0.409 & [0.296, 0.522] & 0.078 & -- \\
+Original Total & standardised log-RMS & 0.020 & [$-$0.086, 0.126] & $-$0.122 & 0.529 \\
+GI Total & none & $-$0.113 & [$-$0.203, $-$0.023] & $-$0.200 & -- \\
+GI Total & standardised log-RMS & 0.275 & [0.196, 0.354] & 0.002 & $-$0.567 \\
 \bottomrule
 \end{longtable}
 \subsection*{S8F. Leave-one-woman-out refits (42 refits, each dropping one woman)}
@@ -214,8 +214,29 @@ gi total & standardised log-RMS & 0.275 & [0.196, 0.354] & 0.002 & $-$0.567 \\
 \endhead
 GI Total, unadjusted & $-$0.134 & $-$0.113 & $-$0.088 \\
 GI Total, log-RMS adjusted & 0.244 & 0.275 & 0.305 \\
-Frozen Total, unadjusted & 0.213 & 0.411 & 0.442 \\
-Frozen Total, log-RMS adjusted & 0.005 & 0.019 & 0.059 \\
+Original Total, unadjusted & 0.213 & 0.411 & 0.442 \\
+Original Total, log-RMS adjusted & 0.005 & 0.019 & 0.059 \\
+\bottomrule
+\end{longtable}
+\subsection*{S8G. Effect of the single extreme window on the conditional models}
+Same models as S8E, refitted after removing the one UC window from woman ice037 (samples 6,094--18,094, RMS 5.49 against 0.17 for the next largest window): 4,082 windows. Outcomes are re-standardised within each window set.
+\begin{longtable}{p{2.4cm}p{3.2cm}rrrr}
+\toprule
+\textbf{Outcome} & \textbf{Adjustment} & \textbf{Window set} & \textbf{UC $\beta$ (SE)} & \textbf{95\% CI} & \textbf{FM $\beta$} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Outcome} & \textbf{Adjustment} & \textbf{Window set} & \textbf{UC $\beta$ (SE)} & \textbf{95\% CI} & \textbf{FM $\beta$} \\
+\midrule
+\endhead
+Original Total & none & all 4,083 & 0.409 (0.058) & [0.296, 0.522] & 0.078 \\
+Original Total & none & 4,082 & 0.692 (0.038) & [0.618, 0.765] & 0.203 \\
+Original Total & standardised log-RMS & all 4,083 & 0.020 (0.054) & [$-$0.086, 0.126] & $-$0.122 \\
+Original Total & standardised log-RMS & 4,082 & 0.203 (0.021) & [0.161, 0.245] & $-$0.062 \\
+GI Total & none & all 4,083 & $-$0.113 (0.046) & [$-$0.203, $-$0.023] & $-$0.200 \\
+GI Total & none & 4,082 & $-$0.099 (0.046) & [$-$0.190, $-$0.009] & $-$0.199 \\
+GI Total & standardised log-RMS & all 4,083 & 0.275 (0.040) & [0.196, 0.354] & 0.002 \\
+GI Total & standardised log-RMS & 4,082 & 0.280 (0.040) & [0.201, 0.359] & 0.009 \\
 \bottomrule
 \end{longtable}
 \end{landscape}

@@ -1,0 +1,17 @@
+contrast,summary,channel,estimate,ci_low,ci_high,q_16test,marker
+UC versus IN,GI Total,EHG9,-0.1131,-0.2034,-0.0227,0.0206,filled
+UC versus IN,GI Total,EHG10,-0.0896,-0.1790,-0.0003,0.0658,open
+UC versus IN,GI Total,EHG11,-0.0466,-0.1395,0.0462,0.347,open
+UC versus IN,GI Total,EHG12,-0.0439,-0.1374,0.0497,0.358,open
+UC versus IN,GI profile SD,EHG9,-0.1398,-0.2350,-0.0447,0.00706,filled
+UC versus IN,GI profile SD,EHG10,-0.1297,-0.2248,-0.0345,0.0121,filled
+UC versus IN,GI profile SD,EHG11,-0.0621,-0.1608,0.0366,0.267,open
+UC versus IN,GI profile SD,EHG12,-0.0538,-0.1538,0.0461,0.333,open
+FM versus IN,GI Total,EHG9,-0.2003,-0.2878,-0.1129,1.43e-05,filled
+FM versus IN,GI Total,EHG10,-0.2736,-0.3601,-0.1870,2.34e-09,filled
+FM versus IN,GI Total,EHG11,-0.2937,-0.3836,-0.2038,8.06e-10,filled
+FM versus IN,GI Total,EHG12,-0.2545,-0.3450,-0.1640,9.52e-08,filled
+FM versus IN,GI profile SD,EHG9,-0.2460,-0.3381,-0.1539,3.77e-07,filled
+FM versus IN,GI profile SD,EHG10,-0.3452,-0.4373,-0.2531,3.26e-12,filled
+FM versus IN,GI profile SD,EHG11,-0.3323,-0.4278,-0.2368,7.19e-11,filled
+FM versus IN,GI profile SD,EHG12,-0.2787,-0.3753,-0.1821,5.04e-08,filled
