@@ -1,0 +1,14 @@
+table_file,source_result_file,analysis,notes
+table_A_population.csv,work/primary/confirmatory_feature_registry_60s_fwh.csv,population,Validated canonical counts
+table_B_primary_EHG9.csv,results/primary/mixed_model_results_60s_fwh_EHG9.csv,primary EHG9,Supported features
+table_S1_primary_EHG9_full_34.csv,results/primary/mixed_model_results_60s_fwh_EHG9.csv,primary EHG9,Full 34-feature table
+table_D_cross_channel.csv,results/cross_channel/corrected_cross_channel_comparison.csv,cross-channel,Phase E1 corrected results
+table_E_entropy_amplitude.csv,results/entropy/corrected_amplitude_adjusted_model_results.csv,entropy/amplitude,Phase E2 results
+table_E_entropy_amplitude.csv,results/entropy/scale_sensitivity_summary.csv,entropy/amplitude,Phase E2 results
+table_F_fm_secondary.csv,results/fm/paired_uc_vs_fm_34_features.csv,FM secondary,Paired and clean-FM evidence
+table_F_fm_secondary.csv,results/fm/fm_vs_in_34_features.csv,FM secondary,Paired and clean-FM evidence
+table_F_fm_secondary.csv,results/fm/clean_fm_sensitivity_summary.csv,FM secondary,Paired and clean-FM evidence
+table_S2_cross_channel_detail.csv,results/cross_channel/corrected_model_results.csv,cross-channel,Detailed effects
+table_S3_entropy_scale.csv,results/entropy/scale_sensitivity_summary.csv,entropy scale,Scale sensitivity
+table_S4_rms_adjusted.csv,results/entropy/corrected_amplitude_adjusted_model_results.csv,RMS adjustment,Detailed models
+table_S5_fm_paired.csv,results/fm/paired_uc_vs_fm_34_features.csv,FM paired,Detailed paired results

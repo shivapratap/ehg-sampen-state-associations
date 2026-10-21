@@ -1,0 +1,87 @@
+feature,band,suffix,status,retained_representative,reason,primary_confirmatory
+fwh_time_minimum,fwh,time_minimum,excluded,,QC/descriptive only; polarity/extreme-sensitive,False
+fwh_time_maximum,fwh,time_maximum,excluded,,QC/descriptive only; polarity/extreme-sensitive,False
+fwh_time_sum_value,fwh,time_sum_value,excluded,fwh_time_mean,fixed window length: sum is a multiple of mean,False
+fwh_time_mean,fwh,time_mean,excluded,,QC/descriptive only; near-zero after bandpass,False
+fwh_time_median,fwh,time_median,eligible,,eligible feature,True
+fwh_time_standard_deviation,fwh,time_standard_deviation,excluded,fwh_time_root_mean_square,near-zero-mean bandpass signal: SD is equivalent to RMS,False
+fwh_time_variance,fwh,time_variance,excluded,fwh_time_root_mean_square,variance is SD squared and redundant with RMS,False
+fwh_time_kurtosis,fwh,time_kurtosis,eligible,,eligible feature,True
+fwh_time_skewness,fwh,time_skewness,eligible,,eligible feature,True
+fwh_time_mean_absolute_value,fwh,time_mean_absolute_value,eligible,,eligible feature,True
+fwh_time_root_mean_square,fwh,time_root_mean_square,eligible,,eligible feature,True
+fwh_time_peak_to_peak,fwh,time_peak_to_peak,eligible,,eligible feature,True
+fwh_time_integrated_absolute_value,fwh,time_integrated_absolute_value,excluded,fwh_time_mean_absolute_value,fixed window length: IAV is a multiple of MAV,False
+fwh_time_waveform_length,fwh,time_waveform_length,eligible,,eligible feature,True
+fwh_time_zero_crossing_count,fwh,time_zero_crossing_count,eligible,,eligible feature,True
+fwh_time_slope_sign_change_count,fwh,time_slope_sign_change_count,eligible,,eligible feature,True
+fwh_freq_peak_frequency,fwh,freq_peak_frequency,eligible,,eligible feature,True
+fwh_freq_mean_frequency,fwh,freq_mean_frequency,eligible,,eligible feature,True
+fwh_freq_median_frequency,fwh,freq_median_frequency,eligible,,eligible feature,True
+fwh_freq_spectral_edge_frequency_95,fwh,freq_spectral_edge_frequency_95,eligible,,eligible feature,True
+fwh_freq_spectral_entropy,fwh,freq_spectral_entropy,eligible,,eligible feature,True
+fwh_freq_spectral_spread,fwh,freq_spectral_spread,eligible,,eligible feature,True
+fwh_entropy_approximate_entropy,fwh,entropy_approximate_entropy,eligible,,eligible feature,True
+fwh_entropy_permutation_entropy,fwh,entropy_permutation_entropy,eligible,,eligible feature,True
+fwh_entropy_fuzzy_entropy,fwh,entropy_fuzzy_entropy,eligible,,eligible feature,True
+fwh_entropy_distribution_entropy,fwh,entropy_distribution_entropy,eligible,,eligible feature,True
+fwh_entropy_svd_entropy,fwh,entropy_svd_entropy,eligible,,eligible feature,True
+fwh_entropy_sampen_fixed_r,fwh,entropy_sampen_fixed_r,eligible,,eligible feature,True
+fwh_entropy_totalsampen,fwh,entropy_totalsampen,eligible,,eligible feature,True
+fwh_entropy_averagesampen,fwh,entropy_averagesampen,eligible,,eligible feature,True
+fwh_entropy_mediansampen,fwh,entropy_mediansampen,eligible,,eligible feature,True
+fwh_entropy_sdsampen,fwh,entropy_sdsampen,eligible,,eligible feature,True
+fwh_entropy_kurtosissampen,fwh,entropy_kurtosissampen,eligible,,eligible feature,True
+fwh_entropy_skewnesssampen,fwh,entropy_skewnesssampen,eligible,,eligible feature,True
+fwh_complexity_lempel_ziv_complexity,fwh,complexity_lempel_ziv_complexity,eligible,,eligible feature,True
+fwh_complexity_hjorth_mobility,fwh,complexity_hjorth_mobility,eligible,,eligible feature,True
+fwh_complexity_hjorth_complexity,fwh,complexity_hjorth_complexity,eligible,,eligible feature,True
+fwh_complexity_fisher_information,fwh,complexity_fisher_information,eligible,,eligible feature,True
+fwh_complexity_petrosian_fractal_dimension,fwh,complexity_petrosian_fractal_dimension,excluded,fwh_time_slope_sign_change_count,monotone transform of derivative sign changes at fixed N,False
+fwh_complexity_katz_fractal_dimension,fwh,complexity_katz_fractal_dimension,eligible,,eligible feature,True
+fwh_complexity_higuchi_fractal_dimension,fwh,complexity_higuchi_fractal_dimension,eligible,,eligible feature,True
+fwh_complexity_detrended_fluctuation_analysis,fwh,complexity_detrended_fluctuation_analysis,eligible,,eligible feature,True
+broad_time_minimum,broad,time_minimum,excluded,,QC/descriptive only; polarity/extreme-sensitive,False
+broad_time_maximum,broad,time_maximum,excluded,,QC/descriptive only; polarity/extreme-sensitive,False
+broad_time_sum_value,broad,time_sum_value,excluded,broad_time_mean,fixed window length: sum is a multiple of mean,False
+broad_time_mean,broad,time_mean,excluded,,QC/descriptive only; near-zero after bandpass,False
+broad_time_median,broad,time_median,eligible,,eligible feature,False
+broad_time_standard_deviation,broad,time_standard_deviation,excluded,broad_time_root_mean_square,near-zero-mean bandpass signal: SD is equivalent to RMS,False
+broad_time_variance,broad,time_variance,excluded,broad_time_root_mean_square,variance is SD squared and redundant with RMS,False
+broad_time_kurtosis,broad,time_kurtosis,eligible,,eligible feature,False
+broad_time_skewness,broad,time_skewness,eligible,,eligible feature,False
+broad_time_mean_absolute_value,broad,time_mean_absolute_value,eligible,,eligible feature,False
+broad_time_root_mean_square,broad,time_root_mean_square,eligible,,eligible feature,False
+broad_time_peak_to_peak,broad,time_peak_to_peak,eligible,,eligible feature,False
+broad_time_integrated_absolute_value,broad,time_integrated_absolute_value,excluded,broad_time_mean_absolute_value,fixed window length: IAV is a multiple of MAV,False
+broad_time_waveform_length,broad,time_waveform_length,eligible,,eligible feature,False
+broad_time_zero_crossing_count,broad,time_zero_crossing_count,eligible,,eligible feature,False
+broad_time_slope_sign_change_count,broad,time_slope_sign_change_count,eligible,,eligible feature,False
+broad_freq_peak_frequency,broad,freq_peak_frequency,eligible,,eligible feature,False
+broad_freq_mean_frequency,broad,freq_mean_frequency,eligible,,eligible feature,False
+broad_freq_median_frequency,broad,freq_median_frequency,eligible,,eligible feature,False
+broad_freq_spectral_edge_frequency_95,broad,freq_spectral_edge_frequency_95,eligible,,eligible feature,False
+broad_freq_spectral_entropy,broad,freq_spectral_entropy,eligible,,eligible feature,False
+broad_freq_spectral_spread,broad,freq_spectral_spread,eligible,,eligible feature,False
+broad_entropy_approximate_entropy,broad,entropy_approximate_entropy,eligible,,eligible feature,False
+broad_entropy_permutation_entropy,broad,entropy_permutation_entropy,eligible,,eligible feature,False
+broad_entropy_fuzzy_entropy,broad,entropy_fuzzy_entropy,eligible,,eligible feature,False
+broad_entropy_distribution_entropy,broad,entropy_distribution_entropy,eligible,,eligible feature,False
+broad_entropy_svd_entropy,broad,entropy_svd_entropy,eligible,,eligible feature,False
+broad_entropy_sampen_fixed_r,broad,entropy_sampen_fixed_r,eligible,,eligible feature,False
+broad_entropy_totalsampen,broad,entropy_totalsampen,eligible,,eligible feature,False
+broad_entropy_averagesampen,broad,entropy_averagesampen,eligible,,eligible feature,False
+broad_entropy_mediansampen,broad,entropy_mediansampen,eligible,,eligible feature,False
+broad_entropy_sdsampen,broad,entropy_sdsampen,eligible,,eligible feature,False
+broad_entropy_kurtosissampen,broad,entropy_kurtosissampen,eligible,,eligible feature,False
+broad_entropy_skewnesssampen,broad,entropy_skewnesssampen,eligible,,eligible feature,False
+broad_complexity_lempel_ziv_complexity,broad,complexity_lempel_ziv_complexity,eligible,,eligible feature,False
+broad_complexity_hjorth_mobility,broad,complexity_hjorth_mobility,eligible,,eligible feature,False
+broad_complexity_hjorth_complexity,broad,complexity_hjorth_complexity,eligible,,eligible feature,False
+broad_complexity_fisher_information,broad,complexity_fisher_information,eligible,,eligible feature,False
+broad_complexity_petrosian_fractal_dimension,broad,complexity_petrosian_fractal_dimension,excluded,broad_time_slope_sign_change_count,monotone transform of derivative sign changes at fixed N,False
+broad_complexity_katz_fractal_dimension,broad,complexity_katz_fractal_dimension,eligible,,eligible feature,False
+broad_complexity_higuchi_fractal_dimension,broad,complexity_higuchi_fractal_dimension,eligible,,eligible feature,False
+broad_complexity_detrended_fluctuation_analysis,broad,complexity_detrended_fluctuation_analysis,eligible,,eligible feature,False
+freq_band_power_fwh,global,_fwh,excluded,,absolute band power redundant with band-specific RMS,False
+freq_band_power_broad,global,_broad,excluded,,absolute band power redundant with band-specific RMS,False

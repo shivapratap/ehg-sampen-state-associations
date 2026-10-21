@@ -1,0 +1,2 @@
+path,sha256,reason
+NOT COMPUTABLE,,The protocol requires 12 saved full-precision waveform windows; no waveform `.npz` is present.

@@ -1,0 +1,301 @@
+{
+  "results/gi/figures/Figure1_deviation_source.csv": {
+    "columns": [
+      "feature",
+      "mode",
+      "gain",
+      "median_relative_difference_percent",
+      "abs_dev",
+      "series"
+    ],
+    "n_cols": 6,
+    "n_rows": 42,
+    "sha256": "61b47efb3d214f89c0bb6c6f43c3d0e1d3cc1b37f75b6ea7146dbebea1c5e3cd"
+  },
+  "results/gi/figures/Figure1_panelB_source.csv": {
+    "columns": [
+      "feature",
+      "channel",
+      "estimate",
+      "q_value",
+      "frozen_estimate",
+      "frozen_q_value",
+      "ci_low",
+      "ci_high",
+      "n",
+      "n_women"
+    ],
+    "n_cols": 10,
+    "n_rows": 8,
+    "sha256": "be0bce36ed9a01ec09e0c1fdf662276faf0b353dc769961729d058fe1212d8b5"
+  },
+  "results/gi/figures/Figure1_support_source.csv": {
+    "columns": [
+      "gain",
+      "frozen_n_retained",
+      "gi_n_retained",
+      "unrounded_n_retained"
+    ],
+    "n_cols": 4,
+    "n_rows": 7,
+    "sha256": "e8aa169d257c56d694730c2221541499e4259b93899d045538ce22f6036d94b2"
+  },
+  "results/gi/tables/amplitude_collinearity.csv": {
+    "columns": [
+      "feature",
+      "amplitude_feature",
+      "pearson_r",
+      "r_squared",
+      "n_windows"
+    ],
+    "n_cols": 5,
+    "n_rows": 104,
+    "sha256": "882a8f8f3ac1dcd8c87e05c827ea2795f91bf83f53bca4cc4f63140a039734a8"
+  },
+  "results/gi/tables/avg_sampen_gain_summary.csv": {
+    "columns": [
+      "feature",
+      "mode",
+      "gain",
+      "n_windows",
+      "median_relative_difference_percent",
+      "max_abs_relative_difference_percent",
+      "n_invariance_pass",
+      "proportion_invariance_pass"
+    ],
+    "n_cols": 8,
+    "n_rows": 36,
+    "sha256": "8ba15733d021fc314758fbf809bf4a8094024bb3b42bbb13665d8d0a97ffd29f"
+  },
+  "results/gi/tables/avg_sampen_gain_test.csv": {
+    "columns": [
+      "window_id",
+      "state",
+      "gain",
+      "feature",
+      "mode",
+      "baseline_value",
+      "scaled_value",
+      "abs_difference",
+      "relative_difference",
+      "invariance_pass"
+    ],
+    "n_cols": 10,
+    "n_rows": 2160,
+    "sha256": "98a4e44ac3385ad3b9ca6b4490c866a5edac1bc73d03b2a370e5013ca687fbde"
+  },
+  "results/gi/tables/cross_channel_replication_summary.csv": {
+    "columns": [
+      "feature",
+      "n",
+      "n_women",
+      "n_recordings",
+      "n_baseline",
+      "n_contraction",
+      "n_fetal_movement",
+      "model",
+      "optimizer",
+      "converged",
+      "fallback",
+      "boundary_fit",
+      "boundary_reason",
+      "warning_summary",
+      "contrast",
+      "term",
+      "estimate",
+      "std_error",
+      "statistic",
+      "p_value",
+      "ci_low",
+      "ci_high",
+      "channel",
+      "q_value",
+      "validated",
+      "frozen_estimate",
+      "frozen_q_value"
+    ],
+    "n_cols": 27,
+    "n_rows": 8,
+    "sha256": "04b0993bd78854997a6b623d61f419bf87dc315f588a4b0a2bc12d545e55ff47"
+  },
+  "results/gi/tables/full_precision_gain_test.csv": {
+    "columns": [
+      "window_id",
+      "state",
+      "patient_id",
+      "gain",
+      "fp_total",
+      "fp_average",
+      "fp_sd",
+      "fp_n_retained"
+    ],
+    "n_cols": 8,
+    "n_rows": 84,
+    "sha256": "9ef4557ec3d699596060866266edb9f5f2656376e26c8db59af9683b092f07d1"
+  },
+  "results/gi/tables/gain_resolution_sensitivity.csv": {
+    "columns": [
+      "resolution",
+      "approx_bin_count_documented",
+      "approx_bin_count_measured_median",
+      "mode",
+      "feature",
+      "gain",
+      "median_relative_difference_percent",
+      "max_abs_relative_difference_percent",
+      "pass_count",
+      "total_count"
+    ],
+    "n_cols": 10,
+    "n_rows": 108,
+    "sha256": "8c327864be0a797f5cc0407aef75b824d5e28e85b98ae461476b432223156cd4"
+  },
+  "results/gi/tables/gain_resolution_sensitivity_aggregate.csv": {
+    "columns": [
+      "resolution",
+      "mode",
+      "approx_bin_count_documented",
+      "approx_bin_count_measured_median",
+      "worst_median_relative_difference_percent",
+      "worst_max_relative_difference_percent",
+      "proportion_pass"
+    ],
+    "n_cols": 7,
+    "n_rows": 6,
+    "sha256": "050695b890473a33e076e8c726f3e57f074ca02d76f7700c80e2b25617154942"
+  },
+  "results/gi/tables/gate_summary.csv": {
+    "columns": [
+      "decision",
+      "invariance_pass",
+      "contrast",
+      "feature",
+      "n",
+      "n_women",
+      "estimate",
+      "std_error",
+      "ci_low",
+      "ci_high",
+      "p_value",
+      "q_value",
+      "frozen_estimate",
+      "frozen_q_value",
+      "model",
+      "fallback",
+      "boundary_fit",
+      "warning_summary"
+    ],
+    "n_cols": 18,
+    "n_rows": 26,
+    "sha256": "21bb1cb0138b3c16b7c2c9ed6f29281df4f88e6af947d5970025d6116d032b37"
+  },
+  "results/gi/tables/gi_model_results.csv": {
+    "columns": [
+      "feature",
+      "n",
+      "n_women",
+      "n_recordings",
+      "n_baseline",
+      "n_contraction",
+      "n_fetal_movement",
+      "model",
+      "optimizer",
+      "converged",
+      "fallback",
+      "boundary_fit",
+      "boundary_reason",
+      "warning_summary",
+      "contrast",
+      "term",
+      "estimate",
+      "std_error",
+      "statistic",
+      "p_value",
+      "ci_low",
+      "ci_high",
+      "q_value",
+      "validated",
+      "frozen_estimate",
+      "frozen_q_value"
+    ],
+    "n_cols": 26,
+    "n_rows": 26,
+    "sha256": "d02e29eeaf603ff48a3c2a317feaf76d873768321c7acd20bdd2a99c07bb26c6"
+  },
+  "results/gi/tables/grid_coverage_baseline.csv": {
+    "columns": [
+      "tau",
+      "coverage_fraction",
+      "selected"
+    ],
+    "n_cols": 3,
+    "n_rows": 400,
+    "sha256": "2220bb995c4ebd8585b272264d9fd12d71d57fe4fde52886ba46439a1520db9f"
+  },
+  "results/gi/tables/grid_definition.json": {
+    "sha256": "f53e5dab07fecd73fdb124ce565f537152a1f79f12bb3b374f77c059d0683eb0"
+  },
+  "results/gi/tables/invariance_summary.csv": {
+    "columns": [
+      "feature",
+      "scale_factor",
+      "n_windows",
+      "median_relative_change_percent",
+      "q1_relative_change_percent",
+      "q3_relative_change_percent",
+      "max_absolute_difference",
+      "n_numerically_invariant",
+      "proportion_invariant"
+    ],
+    "n_cols": 9,
+    "n_rows": 140,
+    "sha256": "1727a51d13b752ec261cdb410a68dd0aa2448c2ea65269b81da6fa62d91f4f17"
+  },
+  "results/gi/tables/parity_check.csv": {
+    "columns": [
+      "window_id",
+      "total_computed",
+      "total_frozen",
+      "total_abs_diff",
+      "total_match",
+      "average_computed",
+      "average_frozen",
+      "average_abs_diff",
+      "average_match",
+      "median_computed",
+      "median_frozen",
+      "median_abs_diff",
+      "median_match",
+      "sd_computed",
+      "sd_frozen",
+      "sd_abs_diff",
+      "sd_match",
+      "kurtosis_computed",
+      "kurtosis_frozen",
+      "kurtosis_abs_diff",
+      "kurtosis_match",
+      "skewness_computed",
+      "skewness_frozen",
+      "skewness_abs_diff",
+      "skewness_match"
+    ],
+    "n_cols": 25,
+    "n_rows": 200,
+    "sha256": "54600d09cec94a2bcac1498e5d546afc8211120c4b5d0916cd571bc78f2e0bfb"
+  },
+  "results/gi/tables/resolution_ablation_summary.csv": {
+    "columns": [
+      "feature",
+      "contrast",
+      "estimate",
+      "q_value",
+      "condition",
+      "summary",
+      "n",
+      "n_women"
+    ],
+    "n_cols": 8,
+    "n_rows": 24,
+    "sha256": "c44e67fc2d1bd03570e15f23c7ff24a0d93ada8e722894bd08260308d9eaa29d"
+  }
+}

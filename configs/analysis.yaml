@@ -1,0 +1,32 @@
+# Analysis configuration. All paths are relative to the repository root unless
+# absolute. Environment variables override the two paths:
+#   EHG_RAW_DIR              -> paths.raw_dir
+#   GI_SAMPEN_UPSTREAM_DIR   -> paths.upstream_dir   (normally leave unset)
+
+paths:
+  # PhysioNet Icelandic 16-electrode EHG database (WFDB files). Not
+  # redistributed; see data/README.md for where to get it.
+  raw_dir: "data/raw"
+
+  # Directory whose src/, work/ and results/ hold the standard pipeline's
+  # outputs. In this single repository that is the repository root.
+  upstream_dir: "."
+
+analysis:
+  channel: EHG9                              # primary channel
+  cross_channels: [EHG9, EHG10, EHG11, EHG12]
+  band: fwh                                  # 0.3-1.0 Hz
+  expected_samples: 1200                     # 60 s at 20 Hz
+
+# Documentation only -- these are defined in code (src/gi_sampen/gi_profile.py,
+# src/config.py) and are NOT read from this file, because changing them would
+# change the scientific definition of the method.
+constants_for_reference:
+  embedding_dimension: 2
+  r_fraction: 0.2
+  profile_distance_decimals: 3
+  gi_distance_decimals: 3
+  profile_epsilon: 1.0e-12
+  grid_min_valid_fraction: 0.90
+
+gain_stress_factors: [0.25, 0.5, 1.3, 2.0, 4.0, 7.1]

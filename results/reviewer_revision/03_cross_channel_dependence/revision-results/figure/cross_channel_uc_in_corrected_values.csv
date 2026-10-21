@@ -1,0 +1,29 @@
+feature,feature_display,channel,uc_in_estimate,ci95_low,ci95_high
+fwh_entropy_totalsampen,Total SampEn,EHG9,0.255856464,0.143233531,0.368479397
+fwh_entropy_totalsampen,Total SampEn,EHG10,0.518514851,0.405891918,0.631137785
+fwh_entropy_totalsampen,Total SampEn,EHG11,0.211262743,0.09863981,0.323885676
+fwh_entropy_totalsampen,Total SampEn,EHG12,0.211129234,0.0985063006,0.323752167
+fwh_time_mean_absolute_value,Mean absolute value,EHG9,0.171420928,0.0588542693,0.283987586
+fwh_time_mean_absolute_value,Mean absolute value,EHG10,0.452386409,0.33981975,0.564953067
+fwh_time_mean_absolute_value,Mean absolute value,EHG11,0.147234241,0.034667583,0.2598009
+fwh_time_mean_absolute_value,Mean absolute value,EHG12,0.147508806,0.0349421477,0.260075464
+fwh_time_root_mean_square,Root mean square,EHG9,0.140790049,0.0283057597,0.253274338
+fwh_time_root_mean_square,Root mean square,EHG10,0.431843248,0.319358959,0.544327537
+fwh_time_root_mean_square,Root mean square,EHG11,0.12507403,0.0125897411,0.237558319
+fwh_time_root_mean_square,Root mean square,EHG12,0.124127642,0.0116433526,0.236611931
+fwh_time_peak_to_peak,Peak-to-peak amplitude,EHG9,0.130069732,0.0176157221,0.242523742
+fwh_time_peak_to_peak,Peak-to-peak amplitude,EHG10,0.42171476,0.30926075,0.53416877
+fwh_time_peak_to_peak,Peak-to-peak amplitude,EHG11,0.117913979,0.00545996906,0.230367989
+fwh_time_peak_to_peak,Peak-to-peak amplitude,EHG12,0.116402486,0.003948476,0.228856495
+fwh_time_waveform_length,Waveform length,EHG9,0.149628645,0.0371598003,0.26209749
+fwh_time_waveform_length,Waveform length,EHG10,0.453061112,0.340592268,0.565529957
+fwh_time_waveform_length,Waveform length,EHG11,0.131177013,0.0187081679,0.243645858
+fwh_time_waveform_length,Waveform length,EHG12,0.130333268,0.0178644232,0.242802113
+fwh_time_median,Time median,EHG9,-0.142996134,-0.253713355,-0.0322789124
+fwh_time_median,Time median,EHG10,-0.122023987,-0.232741208,-0.0113067652
+fwh_time_median,Time median,EHG11,-0.109248542,-0.219965764,0.00146867925
+fwh_time_median,Time median,EHG12,-0.142114636,-0.252831857,-0.0313974146
+fwh_time_skewness,Time skewness,EHG9,0.188128028,0.0757775308,0.300478525
+fwh_time_skewness,Time skewness,EHG10,0.245842288,0.13349179,0.358192785
+fwh_time_skewness,Time skewness,EHG11,0.222866006,0.110515509,0.335216503
+fwh_time_skewness,Time skewness,EHG12,0.207963886,0.0956133888,0.320314383

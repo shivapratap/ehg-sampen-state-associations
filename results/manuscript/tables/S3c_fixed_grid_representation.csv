@@ -1,0 +1,2 @@
+check,candidate_tau_min,candidate_tau_max,min_coverage_fraction,selected_grid_points,baseline_windows_used,source
+fixed-grid representation coverage,0.01,4.0,1.0,200,300,results/gi/tables/grid_definition.json + grid_coverage_baseline.csv

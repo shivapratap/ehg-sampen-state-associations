@@ -1,0 +1,9 @@
+family,source,role,channel,feature,contrast,q_value
+two-summary BH family,results/manuscript/corrected_family/corrected_two_summary_family.csv,summary-level corrected GI output; retained as a secondary family,EHG9,gi_total,fetal_movement_vs_baseline,7.163817472615768e-06
+two-summary BH family,results/manuscript/corrected_family/corrected_two_summary_family.csv,summary-level corrected GI output; retained as a secondary family,EHG9,gi_total,contraction_vs_baseline,0.014177188005733827
+two-summary BH family,results/manuscript/corrected_family/corrected_two_summary_family.csv,summary-level corrected GI output; retained as a secondary family,EHG9,gi_sd,fetal_movement_vs_baseline,3.296027416357535e-07
+two-summary BH family,results/manuscript/corrected_family/corrected_two_summary_family.csv,summary-level corrected GI output; retained as a secondary family,EHG9,gi_sd,contraction_vs_baseline,0.00794485783833052
+16-test cross-channel BH family,results/manuscript/corrected_family/corrected_cross_channel_all_16.csv,final declared headline GI inference across 4 channels x 2 summaries x 2 contrasts,EHG9,gi_total,fetal_movement_vs_baseline,1.4327634945231536e-05
+16-test cross-channel BH family,results/manuscript/corrected_family/corrected_cross_channel_all_16.csv,final declared headline GI inference across 4 channels x 2 summaries x 2 contrasts,EHG9,gi_total,contraction_vs_baseline,0.020621364371976477
+16-test cross-channel BH family,results/manuscript/corrected_family/corrected_cross_channel_all_16.csv,final declared headline GI inference across 4 channels x 2 summaries x 2 contrasts,EHG9,gi_sd,fetal_movement_vs_baseline,3.7668884758371827e-07
+16-test cross-channel BH family,results/manuscript/corrected_family/corrected_cross_channel_all_16.csv,final declared headline GI inference across 4 channels x 2 summaries x 2 contrasts,EHG9,gi_sd,contraction_vs_baseline,0.0070620958562937946

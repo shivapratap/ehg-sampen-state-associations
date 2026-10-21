@@ -1,0 +1,58 @@
+{
+  "items": [
+    {
+      "id": "T1_cohort",
+      "enabled": true,
+      "kind": "table",
+      "source": "../results/manuscript/adapters/cohort_summary.csv",
+      "columns": ["population", "n_women", "n_recordings", "n_windows", "definition"],
+      "caption": "Analysis populations and denominators from the frozen manifest reconciliation; candidate windows precede exclusion of mixed and possible-contraction labels."
+    },
+    {
+      "id": "F2_original_EHG9_UC_IN",
+      "enabled": true,
+      "kind": "forest",
+      "source": "../results/manuscript/adapters/original_ehg9_uc_in_forest.csv",
+      "expected": {"contrast": ["contraction_vs_baseline"], "scale": ["model-standardised units"], "interval_method": ["model-based Wald 95% CI"], "family_id": ["historical_fwh_ehg9_uc_in_34"], "family_size": [34]},
+      "expected_rows": 34,
+      "order": ["fwh_time_median", "fwh_time_kurtosis", "fwh_time_skewness", "fwh_time_mean_absolute_value", "fwh_time_root_mean_square", "fwh_time_peak_to_peak", "fwh_time_waveform_length", "fwh_time_zero_crossing_count", "fwh_time_slope_sign_change_count", "fwh_freq_peak_frequency", "fwh_freq_mean_frequency", "fwh_freq_median_frequency", "fwh_freq_spectral_edge_frequency_95", "fwh_freq_spectral_entropy", "fwh_freq_spectral_spread", "fwh_entropy_approximate_entropy", "fwh_entropy_permutation_entropy", "fwh_entropy_fuzzy_entropy", "fwh_entropy_distribution_entropy", "fwh_entropy_svd_entropy", "fwh_entropy_sampen_fixed_r", "fwh_entropy_totalsampen", "fwh_entropy_averagesampen", "fwh_entropy_mediansampen", "fwh_entropy_sdsampen", "fwh_entropy_kurtosissampen", "fwh_entropy_skewnesssampen", "fwh_complexity_lempel_ziv_complexity", "fwh_complexity_hjorth_mobility", "fwh_complexity_hjorth_complexity", "fwh_complexity_fisher_information", "fwh_complexity_katz_fractal_dimension", "fwh_complexity_higuchi_fractal_dimension", "fwh_complexity_detrended_fluctuation_analysis"],
+      "groups": ["EHG9"],
+      "width": 7.1,
+      "xlabel": "UC minus IN coefficient (model-standardised units; 95% CI)",
+      "caption": "All 34 original EHG9 UC–IN mixed-model coefficients. Estimates are model-standardised; intervals are model-based Wald 95% CIs; q-values belong to the historical 34-feature family."
+    },
+    {
+      "id": "F3_gain_response",
+      "enabled": true,
+      "kind": "gain",
+      "source": "../results/manuscript/adapters/gain_trajectories_original_gi_total.csv",
+      "gains": [0.25, 0.5, 1, 1.3, 2, 4, 7.1],
+      "groups": ["Original Total", "GI Total"],
+      "mode": "relative_percent",
+      "baseline_tolerance": 1e-12,
+      "series_styles": {"Original Total": {"color": "#6A6A6A", "marker": "o", "linestyle": "--"}, "GI Total": {"color": "#0072B2", "marker": "s", "linestyle": "-"}},
+      "caption": "Descriptive per-window gain trajectories for the original Total and GI Total summaries across 60 audited windows. Lines show medians and ribbons show interquartile ranges of change from unit gain; these are not confidence intervals."
+    },
+    {
+      "id": "F4_independent_agreement",
+      "enabled": true,
+      "kind": "agreement",
+      "source": "../results/manuscript/adapters/independent_grid_auc_agreement.csv",
+      "xlabel": "Reference GI-grid AUC",
+      "ylabel": "Independent GI-grid AUC",
+      "caption": "Independent explicit pairwise GI-grid AUC versus the reference implementation on 12 audited windows. Validity masks matched and the maximum absolute difference was zero after template-alignment correction."
+    },
+    {
+      "id": "F5_GI_UC_IN_supportive_channels",
+      "enabled": true,
+      "kind": "forest",
+      "source": "../results/manuscript/adapters/corrected_cross_channel_uc_in_forest.csv",
+      "expected": {"contrast": ["contraction_vs_baseline"], "scale": ["model-standardised units"], "interval_method": ["model-based Wald 95% CI"], "family_id": ["corrected_cross_channel_16_after_development"], "family_size": [16]},
+      "expected_rows": 8,
+      "order": ["GI Total", "GI profile SD"],
+      "groups": ["EHG9", "EHG10", "EHG11", "EHG12"],
+      "xlabel": "UC minus IN coefficient (model-standardised units; 95% CI)",
+      "caption": "Corrected GI Total and profile-SD UC–IN coefficients across four simultaneous channels from the same windows and women. Intervals are model-based Wald 95% CIs; q-values use the declared 16-test BH family chosen after development."
+    }
+  ]
+}

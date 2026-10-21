@@ -1,0 +1,6 @@
+{
+  "status": "complete",
+  "n_windows": 12,
+  "wall_seconds": 3.668632745742798,
+  "tolerance": "atol=1e-10, rtol=1e-8"
+}

@@ -1,0 +1,36 @@
+PASS  lag-1: 55 feature-recording combinations (11 x 5)  n=55
+PASS  lag-1: |r1|>=0.30 count  25 of 55 (IEEE text: 25)
+PASS  lag-1: maximum |r1|  0.560 (IEEE text: 0.560)
+PASS  lag-1: rows using marginal fallback residuals  0 of 55
+PASS  duration FDR support 60 s / 80 s / 40 s  11/11/10
+PASS  duration: feature losing support at 40 s  ['Hjorth complexity']
+PASS  duration: signs agree in all 11  
+PASS  clean UC (312 windows): FDR support  9 of 11; lost: {'Spectral edge 95': 0.067, 'Higuchi FD': 0.054}
+PASS  clean UC: 312 UC windows  
+PASS  balanced IN: all 11 same direction in all resamples  
+PASS  balanced IN: none >=80% BH-supported  {'Median': 0.245, 'Skewness': 0.488, 'MAV': 0.0, 'RMS': 0.0, 'Peak-to-peak': 0.0, 'Waveform length': 0.0, 'Spectral edge 95': 0.282, 'Spectral spread': 0.283, 'Total SampEn': 0.002, 'Hjorth complexity': 0.075, 'Higuchi FD': 0.251}
+PASS  balanced IN: amplitude-group median SE ratio range  3.21-3.36 (text 3.21-3.36); n=5
+PASS  balanced IN: other-group median SE ratio range  1.26-1.41 (text 1.26-1.41); n=6
+PASS  CR1: same direction  8 of 11
+PASS  CR1: q<0.05 among the 11  1 of 11
+PASS  woman-level: q<0.05 among the 11  5 of 11 (text 5 of 11)
+PASS  woman-level: same direction as mixed model  11 of 11
+PASS  scaling: Total SampEn -75/-50/+102/+309 at 0.25/0.5/2/4x  {0.25: -75.4, 0.5: -50.4, 1.0: 0.0, 2.0: 102.3, 4.0: 309.2}
+PASS  scaling: average/median SampEn at 4x = +4.6 / +8.8 %  4.62 / 8.77
+PASS  scaling: fixed-r SampEn invariant  
+PASS  scaling: Spearman between change in Total SampEn and change in retained profile values (overall)  0.966  [column 8 of scale_sensitivity_mechanism.csv; text 0.966]
+PASS  table:amplitude fwh_entropy_totalsampen/preferred_mixed_model/unadjusted  saved 0.2992 vs text 0.299
+PASS  table:amplitude fwh_entropy_totalsampen/preferred_mixed_model/adjusted  saved -0.0855 vs text -0.086
+PASS  table:amplitude fwh_entropy_totalsampen/woman_cluster_robust_OLS/adjusted  saved 0.0297 vs text 0.03
+PASS  table:amplitude fwh_entropy_sampen_fixed_r/preferred_mixed_model/unadjusted  saved -0.2131 vs text -0.213
+PASS  table:amplitude fwh_entropy_sampen_fixed_r/preferred_mixed_model/adjusted  saved 0.2352 vs text 0.235
+PASS  table:amplitude fwh_entropy_sampen_fixed_r/woman_cluster_robust_OLS/adjusted  saved 0.0828 vs text 0.083
+PASS  table:amplitude fwh_entropy_svd_entropy/preferred_mixed_model/unadjusted  saved -0.0529 vs text -0.053
+PASS  table:amplitude fwh_entropy_svd_entropy/preferred_mixed_model/adjusted  saved 0.0198 vs text 0.02
+PASS  table:amplitude fwh_entropy_svd_entropy/woman_cluster_robust_OLS/adjusted  saved 0.2559 vs text 0.256
+PASS  residual-RMS Spearman, Total SampEn, conditional pooled = -0.70  -0.698
+PASS  woman-level change Spearman (RMS) range  0.916-0.955 (text 0.92-0.96)
+PASS  conditional table: frozen Total 0.409 -> 0.020  
+PASS  conditional table: GI Total -0.113 -> +0.275  
+PASS  LOWO: n refits  42
+PASS  LOWO: GI Total unadjusted stays negative / adjusted stays positive  unadj -0.134..-0.088; adj 0.244..0.305

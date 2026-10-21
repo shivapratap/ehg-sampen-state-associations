@@ -1,0 +1,230 @@
+{
+  "status": "rendered_pending_visual_review",
+  "config_sha256": "1dc6db800b87b06b6d9af04d05ed099da129986687d244082dd4edc80306de03",
+  "script_sha256": "0ce0502a40d23823698bb306a8b3248e06015481822f907e82112e695fe6ed45",
+  "python": "3.13.9",
+  "packages": {
+    "pandas": "2.3.3",
+    "numpy": "2.3.5",
+    "matplotlib": "3.10.6"
+  },
+  "disabled": [],
+  "outputs": [
+    {
+      "source": "/Users/shivangayathri/Work/EHGProcessing/ehg-sampen-state-associations/results/manuscript/adapters/cohort_summary.csv",
+      "sha256": "c8b247182e74a45d3f3aacea78dd3d7e6c75b5c69c5c4f3ea82af64784dd5cef",
+      "source_rows": 6,
+      "retained_rows": 6,
+      "configuration": {
+        "id": "T1_cohort",
+        "enabled": true,
+        "kind": "table",
+        "source": "../results/manuscript/adapters/cohort_summary.csv",
+        "columns": [
+          "population",
+          "n_women",
+          "n_recordings",
+          "n_windows",
+          "definition"
+        ],
+        "caption": "Analysis populations and denominators from the frozen manifest reconciliation; candidate windows precede exclusion of mixed and possible-contraction labels."
+      },
+      "id": "T1_cohort"
+    },
+    {
+      "source": "/Users/shivangayathri/Work/EHGProcessing/ehg-sampen-state-associations/results/manuscript/adapters/original_ehg9_uc_in_forest.csv",
+      "sha256": "15cdf2563f95e294967ccd5ffecf8d2761037702c1409e988dccc972f13844c1",
+      "source_rows": 34,
+      "retained_rows": 34,
+      "configuration": {
+        "id": "F2_original_EHG9_UC_IN",
+        "enabled": true,
+        "kind": "forest",
+        "source": "../results/manuscript/adapters/original_ehg9_uc_in_forest.csv",
+        "expected": {
+          "contrast": [
+            "contraction_vs_baseline"
+          ],
+          "scale": [
+            "model-standardised units"
+          ],
+          "interval_method": [
+            "model-based Wald 95% CI"
+          ],
+          "family_id": [
+            "historical_fwh_ehg9_uc_in_34"
+          ],
+          "family_size": [
+            34
+          ]
+        },
+        "expected_rows": 34,
+        "order": [
+          "fwh_time_median",
+          "fwh_time_kurtosis",
+          "fwh_time_skewness",
+          "fwh_time_mean_absolute_value",
+          "fwh_time_root_mean_square",
+          "fwh_time_peak_to_peak",
+          "fwh_time_waveform_length",
+          "fwh_time_zero_crossing_count",
+          "fwh_time_slope_sign_change_count",
+          "fwh_freq_peak_frequency",
+          "fwh_freq_mean_frequency",
+          "fwh_freq_median_frequency",
+          "fwh_freq_spectral_edge_frequency_95",
+          "fwh_freq_spectral_entropy",
+          "fwh_freq_spectral_spread",
+          "fwh_entropy_approximate_entropy",
+          "fwh_entropy_permutation_entropy",
+          "fwh_entropy_fuzzy_entropy",
+          "fwh_entropy_distribution_entropy",
+          "fwh_entropy_svd_entropy",
+          "fwh_entropy_sampen_fixed_r",
+          "fwh_entropy_totalsampen",
+          "fwh_entropy_averagesampen",
+          "fwh_entropy_mediansampen",
+          "fwh_entropy_sdsampen",
+          "fwh_entropy_kurtosissampen",
+          "fwh_entropy_skewnesssampen",
+          "fwh_complexity_lempel_ziv_complexity",
+          "fwh_complexity_hjorth_mobility",
+          "fwh_complexity_hjorth_complexity",
+          "fwh_complexity_fisher_information",
+          "fwh_complexity_katz_fractal_dimension",
+          "fwh_complexity_higuchi_fractal_dimension",
+          "fwh_complexity_detrended_fluctuation_analysis"
+        ],
+        "groups": [
+          "EHG9"
+        ],
+        "width": 7.1,
+        "xlabel": "UC minus IN coefficient (model-standardised units; 95% CI)",
+        "caption": "All 34 original EHG9 UC\u2013IN mixed-model coefficients. Estimates are model-standardised; intervals are model-based Wald 95% CIs; q-values belong to the historical 34-feature family."
+      },
+      "id": "F2_original_EHG9_UC_IN"
+    },
+    {
+      "source": "/Users/shivangayathri/Work/EHGProcessing/ehg-sampen-state-associations/results/manuscript/adapters/gain_trajectories_original_gi_total.csv",
+      "sha256": "2de45c5ae193b601e82b15cc8c05400229c2cfd6c1d822795cfadb8e7bbdfdbf",
+      "source_rows": 840,
+      "retained_rows": 840,
+      "configuration": {
+        "id": "F3_gain_response",
+        "enabled": true,
+        "kind": "gain",
+        "source": "../results/manuscript/adapters/gain_trajectories_original_gi_total.csv",
+        "gains": [
+          0.25,
+          0.5,
+          1,
+          1.3,
+          2,
+          4,
+          7.1
+        ],
+        "groups": [
+          "Original Total",
+          "GI Total"
+        ],
+        "mode": "relative_percent",
+        "baseline_tolerance": 1e-12,
+        "series_styles": {
+          "Original Total": {
+            "color": "#6A6A6A",
+            "marker": "o",
+            "linestyle": "--"
+          },
+          "GI Total": {
+            "color": "#0072B2",
+            "marker": "s",
+            "linestyle": "-"
+          }
+        },
+        "caption": "Descriptive per-window gain trajectories for the original Total and GI Total summaries across 60 audited windows. Lines show medians and ribbons show interquartile ranges of change from unit gain; these are not confidence intervals."
+      },
+      "id": "F3_gain_response"
+    },
+    {
+      "source": "/Users/shivangayathri/Work/EHGProcessing/ehg-sampen-state-associations/results/manuscript/adapters/independent_grid_auc_agreement.csv",
+      "sha256": "bc384f82300db961290d34cdba2876eb91f6e1e28113c00476cfc6c76515e689",
+      "source_rows": 12,
+      "retained_rows": 12,
+      "configuration": {
+        "id": "F4_independent_agreement",
+        "enabled": true,
+        "kind": "agreement",
+        "source": "../results/manuscript/adapters/independent_grid_auc_agreement.csv",
+        "xlabel": "Reference GI-grid AUC",
+        "ylabel": "Independent GI-grid AUC",
+        "caption": "Independent explicit pairwise GI-grid AUC versus the reference implementation on 12 audited windows. Validity masks matched and the maximum absolute difference was zero after template-alignment correction."
+      },
+      "id": "F4_independent_agreement"
+    },
+    {
+      "source": "/Users/shivangayathri/Work/EHGProcessing/ehg-sampen-state-associations/results/manuscript/adapters/corrected_cross_channel_uc_in_forest.csv",
+      "sha256": "06b3c5260e9aa397639a72b48096c1d31a88129560b27e61bb06017db50cd7bf",
+      "source_rows": 8,
+      "retained_rows": 8,
+      "configuration": {
+        "id": "F5_GI_UC_IN_supportive_channels",
+        "enabled": true,
+        "kind": "forest",
+        "source": "../results/manuscript/adapters/corrected_cross_channel_uc_in_forest.csv",
+        "expected": {
+          "contrast": [
+            "contraction_vs_baseline"
+          ],
+          "scale": [
+            "model-standardised units"
+          ],
+          "interval_method": [
+            "model-based Wald 95% CI"
+          ],
+          "family_id": [
+            "corrected_cross_channel_16_after_development"
+          ],
+          "family_size": [
+            16
+          ]
+        },
+        "expected_rows": 8,
+        "order": [
+          "GI Total",
+          "GI profile SD"
+        ],
+        "groups": [
+          "EHG9",
+          "EHG10",
+          "EHG11",
+          "EHG12"
+        ],
+        "xlabel": "UC minus IN coefficient (model-standardised units; 95% CI)",
+        "caption": "Corrected GI Total and profile-SD UC\u2013IN coefficients across four simultaneous channels from the same windows and women. Intervals are model-based Wald 95% CIs; q-values use the declared 16-test BH family chosen after development."
+      },
+      "id": "F5_GI_UC_IN_supportive_channels"
+    }
+  ],
+  "output_hashes": {
+    "F2_original_EHG9_UC_IN.caption.md": "62da7b052834f0d2c8450deb8fe0e90947424be0196afb36d67dd035bcdfe67e",
+    "F2_original_EHG9_UC_IN.csv": "15cdf2563f95e294967ccd5ffecf8d2761037702c1409e988dccc972f13844c1",
+    "F2_original_EHG9_UC_IN.pdf": "dd0a7861581577c16fd6e15a82f570436169db819e92cb29afb1b0772cde97df",
+    "F2_original_EHG9_UC_IN.png": "b393f87d4afb14c0f6c8b28b1f7c59cf26b92c2056d229990ac164138189947a",
+    "F3_gain_response.caption.md": "3a6ac488e883e18b9f2d8e14bc4f3d6d256b1127ac15ae80d18a84652b0f9fa6",
+    "F3_gain_response.csv": "514d8f5c42fcc3e00abaf549377ebc0abc0ff7034d7ac9b003d832d62db1fefb",
+    "F3_gain_response.pdf": "c7d1dd534b406c514c30265563f79359747a74a97d03c398be41940478b6b6f6",
+    "F3_gain_response.png": "1914b2c53a2ae0933d380112cb87faeb5b4e6f728ec913df946bd1aab7682ee6",
+    "F3_gain_response_descriptive_summary.csv": "d2d367270cd22a61b1a63019e5e13750e76b657ee7c0d1e7e7703f93d0e95a70",
+    "F4_independent_agreement.caption.md": "392d8a618baed5deff763c39e70fb030c41d309d1e1849a10133a465807440f9",
+    "F4_independent_agreement.csv": "bc384f82300db961290d34cdba2876eb91f6e1e28113c00476cfc6c76515e689",
+    "F4_independent_agreement.pdf": "69f37abd47296611e0d0fb239a2f78b3f1c7f4e425b85c1924417a20294e403b",
+    "F4_independent_agreement.png": "64cd48dfc4531af8f4eba8f179f503518fb02499c523ae14746ab72a1753c9db",
+    "F5_GI_UC_IN_supportive_channels.caption.md": "747fccf54a8ad76fe4576687b954d3af3cadbceed61e741f63c35703b299067e",
+    "F5_GI_UC_IN_supportive_channels.csv": "06b3c5260e9aa397639a72b48096c1d31a88129560b27e61bb06017db50cd7bf",
+    "F5_GI_UC_IN_supportive_channels.pdf": "741a7d2edac1ece940fe4312ac8e3c92ae73261113d71863a2d76118799a4d55",
+    "F5_GI_UC_IN_supportive_channels.png": "34edcccbdde6bd88300c3e8db5ba6b9b1b863bb8f2db6d7704d7ab0acf9c9384",
+    "T1_cohort.caption.md": "7f126a0b73a73014721333f31a90a237dfcf7c754c1c982bf4daa288fedc4c0a",
+    "T1_cohort.csv": "5dfa6a6a7be41dd418a9c6ee892c6895ebaccb9f05e102e3e5508b343270f881",
+    "T1_cohort.tex": "48f2b2770dbf5a06956ce10e8500b7893990d9aeb0fec06f62ec3a5181a89e27"
+  }
+}

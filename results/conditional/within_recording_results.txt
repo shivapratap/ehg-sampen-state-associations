@@ -1,0 +1,7 @@
+between-recording SD of log RMS: 0.340; within-recording SD: 0.340
+gi_total     cov=lrms         UC=+0.2750 (SE 0.0402, CI +0.196 to +0.354) FM=+0.0025 (SE 0.0381) cov_coef=-0.5673
+gi_total     cov=lrms_within  UC=+0.2729 (SE 0.0402, CI +0.194 to +0.352) FM=+0.0021 (SE 0.0381) cov_coef=-0.4037
+frozen_total cov=lrms         UC=+0.0197 (SE 0.0541, CI -0.086 to +0.126) FM=-0.1216 (SE 0.0508) cov_coef=+0.5285
+frozen_total cov=lrms_within  UC=+0.0334 (SE 0.0539, CI -0.072 to +0.139) FM=-0.1075 (SE 0.0509) cov_coef=+0.4292
+IN windows Spearman GI Total vs within-recording log RMS: -0.331
+all-window Spearman GI Total vs within-recording log RMS: -0.355

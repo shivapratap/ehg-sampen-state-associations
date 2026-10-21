@@ -1,0 +1,6 @@
+IN Spearman: GI~RMS -0.251, GI~crest -0.455, GI~kurt -0.559, RMS~crest 0.047, RMS~kurt 0.059
+GI_total none            UC=-0.113 (SE 0.046)  
+GI_total lr              UC=+0.275 (SE 0.040)  lr=-0.567
+GI_total crest           UC=-0.123 (SE 0.036)  crest_z=-0.490
+GI_total kurt            UC=-0.123 (SE 0.034)  kurt_z=-0.527
+GI_total lr+crest+kurt   UC=+0.141 (SE 0.031)  lr=-0.386 crest_z=-0.158 kurt_z=-0.308

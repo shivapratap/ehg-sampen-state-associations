@@ -1,0 +1,449 @@
+channel,scope,class_label,sampen_feature,amplitude_feature,sampen_label,amplitude_label,method,n_units,rho,p_value,abs_rho
+EHG12,window_pooled,all,fwh_entropy_totalsampen,fwh_time_mean_absolute_value,Total SampEn,MAV,pearson,4083,0.9883996050523246,0.0,0.9883996050523246
+EHG12,window_pooled,all,fwh_entropy_totalsampen,fwh_time_mean_absolute_value,Total SampEn,MAV,spearman,4083,0.9783891038796284,0.0,0.9783891038796284
+EHG12,window_pooled,all,fwh_entropy_totalsampen,fwh_time_root_mean_square,Total SampEn,RMS,pearson,4083,0.97744256592197,0.0,0.97744256592197
+EHG12,window_pooled,all,fwh_entropy_totalsampen,fwh_time_root_mean_square,Total SampEn,RMS,spearman,4083,0.9581117616058493,0.0,0.9581117616058493
+EHG12,window_pooled,all,fwh_entropy_totalsampen,fwh_time_peak_to_peak,Total SampEn,Peak-to-peak,pearson,4083,0.9654714177435123,0.0,0.9654714177435123
+EHG12,window_pooled,all,fwh_entropy_totalsampen,fwh_time_peak_to_peak,Total SampEn,Peak-to-peak,spearman,4083,0.8184259717884548,0.0,0.8184259717884548
+EHG12,window_pooled,all,fwh_entropy_totalsampen,fwh_time_waveform_length,Total SampEn,Waveform length,pearson,4083,0.988793008553498,0.0,0.988793008553498
+EHG12,window_pooled,all,fwh_entropy_totalsampen,fwh_time_waveform_length,Total SampEn,Waveform length,spearman,4083,0.9914998695331769,0.0,0.9914998695331769
+EHG12,window_pooled,all,fwh_entropy_averagesampen,fwh_time_mean_absolute_value,Average SampEn,MAV,pearson,4083,-0.049821715150692156,0.0014498998297162312,0.049821715150692156
+EHG12,window_pooled,all,fwh_entropy_averagesampen,fwh_time_mean_absolute_value,Average SampEn,MAV,spearman,4083,0.08568933560581252,4.162394082589764e-08,0.08568933560581252
+EHG12,window_pooled,all,fwh_entropy_averagesampen,fwh_time_root_mean_square,Average SampEn,RMS,pearson,4083,-0.06809240257493102,1.3324009862644093e-05,0.06809240257493102
+EHG12,window_pooled,all,fwh_entropy_averagesampen,fwh_time_root_mean_square,Average SampEn,RMS,spearman,4083,-0.013090460730251722,0.4030206638935453,0.013090460730251722
+EHG12,window_pooled,all,fwh_entropy_averagesampen,fwh_time_peak_to_peak,Average SampEn,Peak-to-peak,pearson,4083,-0.08981906107536416,8.969003033270627e-09,0.08981906107536416
+EHG12,window_pooled,all,fwh_entropy_averagesampen,fwh_time_peak_to_peak,Average SampEn,Peak-to-peak,spearman,4083,-0.34891336042025206,3.276824950014561e-117,0.34891336042025206
+EHG12,window_pooled,all,fwh_entropy_averagesampen,fwh_time_waveform_length,Average SampEn,Waveform length,pearson,4083,-0.04113785808477002,0.008564907923994575,0.04113785808477002
+EHG12,window_pooled,all,fwh_entropy_averagesampen,fwh_time_waveform_length,Average SampEn,Waveform length,spearman,4083,0.11663265249265102,7.668951203959052e-14,0.11663265249265102
+EHG12,window_pooled,all,fwh_entropy_sampen_fixed_r,fwh_time_mean_absolute_value,Fixed-r SampEn,MAV,pearson,4083,-0.1398880969195345,2.705971635448401e-19,0.1398880969195345
+EHG12,window_pooled,all,fwh_entropy_sampen_fixed_r,fwh_time_mean_absolute_value,Fixed-r SampEn,MAV,spearman,4083,-0.1001296739835063,1.4335688867355942e-10,0.1001296739835063
+EHG12,window_pooled,all,fwh_entropy_sampen_fixed_r,fwh_time_root_mean_square,Fixed-r SampEn,RMS,pearson,4083,-0.15658879803733045,7.900826244482348e-24,0.15658879803733045
+EHG12,window_pooled,all,fwh_entropy_sampen_fixed_r,fwh_time_root_mean_square,Fixed-r SampEn,RMS,spearman,4083,-0.18110488020414175,1.9161970168068324e-31,0.18110488020414175
+EHG12,window_pooled,all,fwh_entropy_sampen_fixed_r,fwh_time_peak_to_peak,Fixed-r SampEn,Peak-to-peak,pearson,4083,-0.17644250932280597,6.601703134383465e-30,0.17644250932280597
+EHG12,window_pooled,all,fwh_entropy_sampen_fixed_r,fwh_time_peak_to_peak,Fixed-r SampEn,Peak-to-peak,spearman,4083,-0.354889964344188,1.7932105994211524e-121,0.354889964344188
+EHG12,window_pooled,all,fwh_entropy_sampen_fixed_r,fwh_time_waveform_length,Fixed-r SampEn,Waveform length,pearson,4083,-0.12888321591529336,1.3690641253130187e-16,0.12888321591529336
+EHG12,window_pooled,all,fwh_entropy_sampen_fixed_r,fwh_time_waveform_length,Fixed-r SampEn,Waveform length,spearman,4083,-0.0005924418640322459,0.9698116848230437,0.0005924418640322459
+EHG12,window_pooled,all,fwh_entropy_mediansampen,fwh_time_mean_absolute_value,Median SampEn,MAV,pearson,4083,0.040925336949176654,0.008913430529491772,0.040925336949176654
+EHG12,window_pooled,all,fwh_entropy_mediansampen,fwh_time_mean_absolute_value,Median SampEn,MAV,spearman,4083,0.13848397195078196,6.163433289168321e-19,0.13848397195078196
+EHG12,window_pooled,all,fwh_entropy_mediansampen,fwh_time_root_mean_square,Median SampEn,RMS,pearson,4083,0.025875059553044717,0.09830149883003496,0.025875059553044717
+EHG12,window_pooled,all,fwh_entropy_mediansampen,fwh_time_root_mean_square,Median SampEn,RMS,spearman,4083,0.04958316912819287,0.0015282642118241215,0.04958316912819287
+EHG12,window_pooled,all,fwh_entropy_mediansampen,fwh_time_peak_to_peak,Median SampEn,Peak-to-peak,pearson,4083,0.008925101714690839,0.5685854138494456,0.008925101714690839
+EHG12,window_pooled,all,fwh_entropy_mediansampen,fwh_time_peak_to_peak,Median SampEn,Peak-to-peak,spearman,4083,-0.31367363318303976,6.511070517844661e-94,0.31367363318303976
+EHG12,window_pooled,all,fwh_entropy_mediansampen,fwh_time_waveform_length,Median SampEn,Waveform length,pearson,4083,0.04219268012459819,0.0070089624740233974,0.04219268012459819
+EHG12,window_pooled,all,fwh_entropy_mediansampen,fwh_time_waveform_length,Median SampEn,Waveform length,spearman,4083,0.12567743160895384,7.623334180208406e-16,0.12567743160895384
+EHG12,window_pooled,all,fwh_entropy_sdsampen,fwh_time_mean_absolute_value,SD SampEn,MAV,pearson,4083,-0.09895240570885916,2.3501865391368897e-10,0.09895240570885916
+EHG12,window_pooled,all,fwh_entropy_sdsampen,fwh_time_mean_absolute_value,SD SampEn,MAV,spearman,4083,0.0975588751815547,4.1881610520189507e-10,0.0975588751815547
+EHG12,window_pooled,all,fwh_entropy_sdsampen,fwh_time_root_mean_square,SD SampEn,RMS,pearson,4083,-0.12141599912692332,6.986636191593873e-15,0.12141599912692332
+EHG12,window_pooled,all,fwh_entropy_sdsampen,fwh_time_root_mean_square,SD SampEn,RMS,spearman,4083,0.0018047981929840704,0.908216515284504,0.0018047981929840704
+EHG12,window_pooled,all,fwh_entropy_sdsampen,fwh_time_peak_to_peak,SD SampEn,Peak-to-peak,pearson,4083,-0.14561027154721243,8.658794015688444e-21,0.14561027154721243
+EHG12,window_pooled,all,fwh_entropy_sdsampen,fwh_time_peak_to_peak,SD SampEn,Peak-to-peak,spearman,4083,-0.30005039400769734,1.0298658047403178e-85,0.30005039400769734
+EHG12,window_pooled,all,fwh_entropy_sdsampen,fwh_time_waveform_length,SD SampEn,Waveform length,pearson,4083,-0.08877217120732567,1.33222817263832e-08,0.08877217120732567
+EHG12,window_pooled,all,fwh_entropy_sdsampen,fwh_time_waveform_length,SD SampEn,Waveform length,spearman,4083,0.14995919758498677,5.759796709976917e-22,0.14995919758498677
+EHG12,window_pooled,all,fwh_entropy_kurtosissampen,fwh_time_mean_absolute_value,Kurtosis SampEn,MAV,pearson,4083,0.11754751397917082,4.886055185017661e-14,0.11754751397917082
+EHG12,window_pooled,all,fwh_entropy_kurtosissampen,fwh_time_mean_absolute_value,Kurtosis SampEn,MAV,spearman,4083,0.08054148706494092,2.559882635109671e-07,0.08054148706494092
+EHG12,window_pooled,all,fwh_entropy_kurtosissampen,fwh_time_root_mean_square,Kurtosis SampEn,RMS,pearson,4083,0.18282442930734577,5.068017399572292e-32,0.18282442930734577
+EHG12,window_pooled,all,fwh_entropy_kurtosissampen,fwh_time_root_mean_square,Kurtosis SampEn,RMS,spearman,4083,0.17929447508447627,7.6621273035792895e-31,0.17929447508447627
+EHG12,window_pooled,all,fwh_entropy_kurtosissampen,fwh_time_peak_to_peak,Kurtosis SampEn,Peak-to-peak,pearson,4083,0.24541578806028738,4.5346135383203975e-57,0.24541578806028738
+EHG12,window_pooled,all,fwh_entropy_kurtosissampen,fwh_time_peak_to_peak,Kurtosis SampEn,Peak-to-peak,spearman,4083,0.5037374818790393,1.0299003279294409e-261,0.5037374818790393
+EHG12,window_pooled,all,fwh_entropy_kurtosissampen,fwh_time_waveform_length,Kurtosis SampEn,Waveform length,pearson,4083,0.13623087560867422,2.2689699501984488e-18,0.13623087560867422
+EHG12,window_pooled,all,fwh_entropy_kurtosissampen,fwh_time_waveform_length,Kurtosis SampEn,Waveform length,spearman,4083,0.05846645080910983,0.00018551658763055656,0.05846645080910983
+EHG12,window_pooled,all,fwh_entropy_skewnesssampen,fwh_time_mean_absolute_value,Skewness SampEn,MAV,pearson,4083,0.08672893360742885,2.8469004449817945e-08,0.08672893360742885
+EHG12,window_pooled,all,fwh_entropy_skewnesssampen,fwh_time_mean_absolute_value,Skewness SampEn,MAV,spearman,4083,0.04448201159757208,0.00447101087913899,0.04448201159757208
+EHG12,window_pooled,all,fwh_entropy_skewnesssampen,fwh_time_root_mean_square,Skewness SampEn,RMS,pearson,4083,0.13533288642186467,3.791340880899263e-18,0.13533288642186467
+EHG12,window_pooled,all,fwh_entropy_skewnesssampen,fwh_time_root_mean_square,Skewness SampEn,RMS,spearman,4083,0.1432534111184272,3.6354775326575796e-20,0.1432534111184272
+EHG12,window_pooled,all,fwh_entropy_skewnesssampen,fwh_time_peak_to_peak,Skewness SampEn,Peak-to-peak,pearson,4083,0.1871065578031987,1.743411922957594e-33,0.1871065578031987
+EHG12,window_pooled,all,fwh_entropy_skewnesssampen,fwh_time_peak_to_peak,Skewness SampEn,Peak-to-peak,spearman,4083,0.4728956816753529,1.277318794136677e-226,0.4728956816753529
+EHG12,window_pooled,all,fwh_entropy_skewnesssampen,fwh_time_waveform_length,Skewness SampEn,Waveform length,pearson,4083,0.09621064028741302,7.269274418175251e-10,0.09621064028741302
+EHG12,window_pooled,all,fwh_entropy_skewnesssampen,fwh_time_waveform_length,Skewness SampEn,Waveform length,spearman,4083,0.021395616333431,0.1716621149904361,0.021395616333431
+EHG12,window_class_stratified,baseline,fwh_entropy_totalsampen,fwh_time_mean_absolute_value,Total SampEn,MAV,pearson,3358,0.8928893829766487,0.0,0.8928893829766487
+EHG12,window_class_stratified,baseline,fwh_entropy_totalsampen,fwh_time_mean_absolute_value,Total SampEn,MAV,spearman,3358,0.9794929257961401,0.0,0.9794929257961401
+EHG12,window_class_stratified,baseline,fwh_entropy_totalsampen,fwh_time_root_mean_square,Total SampEn,RMS,pearson,3358,0.6153003769931202,0.0,0.6153003769931202
+EHG12,window_class_stratified,baseline,fwh_entropy_totalsampen,fwh_time_root_mean_square,Total SampEn,RMS,spearman,3358,0.9618662004225066,0.0,0.9618662004225066
+EHG12,window_class_stratified,baseline,fwh_entropy_totalsampen,fwh_time_peak_to_peak,Total SampEn,Peak-to-peak,pearson,3358,0.4713995980648175,2.113902257218311e-185,0.4713995980648175
+EHG12,window_class_stratified,baseline,fwh_entropy_totalsampen,fwh_time_peak_to_peak,Total SampEn,Peak-to-peak,spearman,3358,0.8220036650127986,0.0,0.8220036650127986
+EHG12,window_class_stratified,baseline,fwh_entropy_totalsampen,fwh_time_waveform_length,Total SampEn,Waveform length,pearson,3358,0.8638066303709133,0.0,0.8638066303709133
+EHG12,window_class_stratified,baseline,fwh_entropy_totalsampen,fwh_time_waveform_length,Total SampEn,Waveform length,spearman,3358,0.9921946010743359,0.0,0.9921946010743359
+EHG12,window_class_stratified,baseline,fwh_entropy_averagesampen,fwh_time_mean_absolute_value,Average SampEn,MAV,pearson,3358,-0.0373297778590453,0.030530110181843435,0.0373297778590453
+EHG12,window_class_stratified,baseline,fwh_entropy_averagesampen,fwh_time_mean_absolute_value,Average SampEn,MAV,spearman,3358,0.1030641119174851,2.149217016015757e-09,0.1030641119174851
+EHG12,window_class_stratified,baseline,fwh_entropy_averagesampen,fwh_time_root_mean_square,Average SampEn,RMS,pearson,3358,-0.1328906613601556,1.0567829390760324e-14,0.1328906613601556
+EHG12,window_class_stratified,baseline,fwh_entropy_averagesampen,fwh_time_root_mean_square,Average SampEn,RMS,spearman,3358,0.00936518764143961,0.587469902282276,0.00936518764143961
+EHG12,window_class_stratified,baseline,fwh_entropy_averagesampen,fwh_time_peak_to_peak,Average SampEn,Peak-to-peak,pearson,3358,-0.1911725105600795,5.271268423493188e-29,0.1911725105600795
+EHG12,window_class_stratified,baseline,fwh_entropy_averagesampen,fwh_time_peak_to_peak,Average SampEn,Peak-to-peak,spearman,3358,-0.3341235153802275,2.2264455665877658e-88,0.3341235153802275
+EHG12,window_class_stratified,baseline,fwh_entropy_averagesampen,fwh_time_waveform_length,Average SampEn,Waveform length,pearson,3358,0.003041575158705045,0.860145656631544,0.003041575158705045
+EHG12,window_class_stratified,baseline,fwh_entropy_averagesampen,fwh_time_waveform_length,Average SampEn,Waveform length,spearman,3358,0.12913976769224852,5.818085313716186e-14,0.12913976769224852
+EHG12,window_class_stratified,baseline,fwh_entropy_sampen_fixed_r,fwh_time_mean_absolute_value,Fixed-r SampEn,MAV,pearson,3358,-0.27454199810917207,3.8947412881610847e-59,0.27454199810917207
+EHG12,window_class_stratified,baseline,fwh_entropy_sampen_fixed_r,fwh_time_mean_absolute_value,Fixed-r SampEn,MAV,spearman,3358,-0.09936213414150756,7.927082222419043e-09,0.09936213414150756
+EHG12,window_class_stratified,baseline,fwh_entropy_sampen_fixed_r,fwh_time_root_mean_square,Fixed-r SampEn,RMS,pearson,3358,-0.326770992359556,2.150425914346053e-84,0.326770992359556
+EHG12,window_class_stratified,baseline,fwh_entropy_sampen_fixed_r,fwh_time_root_mean_square,Fixed-r SampEn,RMS,spearman,3358,-0.17426634421649326,2.6279812983618517e-24,0.17426634421649326
+EHG12,window_class_stratified,baseline,fwh_entropy_sampen_fixed_r,fwh_time_peak_to_peak,Fixed-r SampEn,Peak-to-peak,pearson,3358,-0.33966000943977226,1.878993360745145e-91,0.33966000943977226
+EHG12,window_class_stratified,baseline,fwh_entropy_sampen_fixed_r,fwh_time_peak_to_peak,Fixed-r SampEn,Peak-to-peak,spearman,3358,-0.3439683957072418,6.888211802776669e-94,0.3439683957072418
+EHG12,window_class_stratified,baseline,fwh_entropy_sampen_fixed_r,fwh_time_waveform_length,Fixed-r SampEn,Waveform length,pearson,3358,-0.19528912779121985,3.224470668774879e-30,0.19528912779121985
+EHG12,window_class_stratified,baseline,fwh_entropy_sampen_fixed_r,fwh_time_waveform_length,Fixed-r SampEn,Waveform length,spearman,3358,0.0005961278796665376,0.9724531558047158,0.0005961278796665376
+EHG12,window_class_stratified,baseline,fwh_entropy_mediansampen,fwh_time_mean_absolute_value,Median SampEn,MAV,pearson,3358,0.11028773493661373,1.4728783027498758e-10,0.11028773493661373
+EHG12,window_class_stratified,baseline,fwh_entropy_mediansampen,fwh_time_mean_absolute_value,Median SampEn,MAV,spearman,3358,0.1586773271194269,2.238370435073238e-20,0.1586773271194269
+EHG12,window_class_stratified,baseline,fwh_entropy_mediansampen,fwh_time_root_mean_square,Median SampEn,RMS,pearson,3358,0.010317680226806463,0.5500502369117283,0.010317680226806463
+EHG12,window_class_stratified,baseline,fwh_entropy_mediansampen,fwh_time_root_mean_square,Median SampEn,RMS,spearman,3358,0.07331254282568747,2.114206638056622e-05,0.07331254282568747
+EHG12,window_class_stratified,baseline,fwh_entropy_mediansampen,fwh_time_peak_to_peak,Median SampEn,Peak-to-peak,pearson,3358,-0.05680447097229098,0.000990703991496649,0.05680447097229098
+EHG12,window_class_stratified,baseline,fwh_entropy_mediansampen,fwh_time_peak_to_peak,Median SampEn,Peak-to-peak,spearman,3358,-0.29715659131695893,1.9707696685123638e-69,0.29715659131695893
+EHG12,window_class_stratified,baseline,fwh_entropy_mediansampen,fwh_time_waveform_length,Median SampEn,Waveform length,pearson,3358,0.09846919138431773,1.078528063406917e-08,0.09846919138431773
+EHG12,window_class_stratified,baseline,fwh_entropy_mediansampen,fwh_time_waveform_length,Median SampEn,Waveform length,spearman,3358,0.1406183811090928,2.694683109326373e-16,0.1406183811090928
+EHG12,window_class_stratified,baseline,fwh_entropy_sdsampen,fwh_time_mean_absolute_value,SD SampEn,MAV,pearson,3358,-0.08900230616778462,2.393331245869144e-07,0.08900230616778462
+EHG12,window_class_stratified,baseline,fwh_entropy_sdsampen,fwh_time_mean_absolute_value,SD SampEn,MAV,spearman,3358,0.10920849318170114,2.2232354039331276e-10,0.10920849318170114
+EHG12,window_class_stratified,baseline,fwh_entropy_sdsampen,fwh_time_root_mean_square,SD SampEn,RMS,pearson,3358,-0.2038574936877187,7.839779261623225e-33,0.2038574936877187
+EHG12,window_class_stratified,baseline,fwh_entropy_sdsampen,fwh_time_root_mean_square,SD SampEn,RMS,spearman,3358,0.01868115989898601,0.27914946650990047,0.01868115989898601
+EHG12,window_class_stratified,baseline,fwh_entropy_sdsampen,fwh_time_peak_to_peak,SD SampEn,Peak-to-peak,pearson,3358,-0.2609175600137016,2.1861028608450793e-53,0.2609175600137016
+EHG12,window_class_stratified,baseline,fwh_entropy_sdsampen,fwh_time_peak_to_peak,SD SampEn,Peak-to-peak,spearman,3358,-0.28940120560211235,8.572985515210532e-66,0.28940120560211235
+EHG12,window_class_stratified,baseline,fwh_entropy_sdsampen,fwh_time_waveform_length,SD SampEn,Waveform length,pearson,3358,-0.0367931662093538,0.033004565349546544,0.0367931662093538
+EHG12,window_class_stratified,baseline,fwh_entropy_sdsampen,fwh_time_waveform_length,SD SampEn,Waveform length,spearman,3358,0.15795780987879118,3.3277897534094125e-20,0.15795780987879118
+EHG12,window_class_stratified,baseline,fwh_entropy_kurtosissampen,fwh_time_mean_absolute_value,Kurtosis SampEn,MAV,pearson,3358,0.6868076380208621,0.0,0.6868076380208621
+EHG12,window_class_stratified,baseline,fwh_entropy_kurtosissampen,fwh_time_mean_absolute_value,Kurtosis SampEn,MAV,spearman,3358,0.06006176328567725,0.0004970848965761157,0.06006176328567725
+EHG12,window_class_stratified,baseline,fwh_entropy_kurtosissampen,fwh_time_root_mean_square,Kurtosis SampEn,RMS,pearson,3358,0.9305536399423098,0.0,0.9305536399423098
+EHG12,window_class_stratified,baseline,fwh_entropy_kurtosissampen,fwh_time_root_mean_square,Kurtosis SampEn,RMS,spearman,3358,0.1540790514034799,2.7335402083602593e-19,0.1540790514034799
+EHG12,window_class_stratified,baseline,fwh_entropy_kurtosissampen,fwh_time_peak_to_peak,Kurtosis SampEn,Peak-to-peak,pearson,3358,0.9702314752409822,0.0,0.9702314752409822
+EHG12,window_class_stratified,baseline,fwh_entropy_kurtosissampen,fwh_time_peak_to_peak,Kurtosis SampEn,Peak-to-peak,spearman,3358,0.48652587447733786,4.0460816293068153e-199,0.48652587447733786
+EHG12,window_class_stratified,baseline,fwh_entropy_kurtosissampen,fwh_time_waveform_length,Kurtosis SampEn,Waveform length,pearson,3358,0.7457466422249855,0.0,0.7457466422249855
+EHG12,window_class_stratified,baseline,fwh_entropy_kurtosissampen,fwh_time_waveform_length,Kurtosis SampEn,Waveform length,spearman,3358,0.04190044696972316,0.015173133989856494,0.04190044696972316
+EHG12,window_class_stratified,baseline,fwh_entropy_skewnesssampen,fwh_time_mean_absolute_value,Skewness SampEn,MAV,pearson,3358,0.5424470318903963,2.7655091326730225e-256,0.5424470318903963
+EHG12,window_class_stratified,baseline,fwh_entropy_skewnesssampen,fwh_time_mean_absolute_value,Skewness SampEn,MAV,spearman,3358,0.025152979157222886,0.14504488120738002,0.025152979157222886
+EHG12,window_class_stratified,baseline,fwh_entropy_skewnesssampen,fwh_time_root_mean_square,Skewness SampEn,RMS,pearson,3358,0.7297022200551465,0.0,0.7297022200551465
+EHG12,window_class_stratified,baseline,fwh_entropy_skewnesssampen,fwh_time_root_mean_square,Skewness SampEn,RMS,spearman,3358,0.11912896249958167,4.34686853850691e-12,0.11912896249958167
+EHG12,window_class_stratified,baseline,fwh_entropy_skewnesssampen,fwh_time_peak_to_peak,Skewness SampEn,Peak-to-peak,pearson,3358,0.7771866357047464,0.0,0.7771866357047464
+EHG12,window_class_stratified,baseline,fwh_entropy_skewnesssampen,fwh_time_peak_to_peak,Skewness SampEn,Peak-to-peak,spearman,3358,0.4566166630250185,1.2042700424568834e-172,0.4566166630250185
+EHG12,window_class_stratified,baseline,fwh_entropy_skewnesssampen,fwh_time_waveform_length,Skewness SampEn,Waveform length,pearson,3358,0.5653278060690395,5.884567892120383e-283,0.5653278060690395
+EHG12,window_class_stratified,baseline,fwh_entropy_skewnesssampen,fwh_time_waveform_length,Skewness SampEn,Waveform length,spearman,3358,0.006405176545487754,0.7106119058053582,0.006405176545487754
+EHG12,window_class_stratified,contraction,fwh_entropy_totalsampen,fwh_time_mean_absolute_value,Total SampEn,MAV,pearson,333,0.9986918712485305,0.0,0.9986918712485305
+EHG12,window_class_stratified,contraction,fwh_entropy_totalsampen,fwh_time_mean_absolute_value,Total SampEn,MAV,spearman,333,0.9555616867859852,1.1766003259514527e-177,0.9555616867859852
+EHG12,window_class_stratified,contraction,fwh_entropy_totalsampen,fwh_time_root_mean_square,Total SampEn,RMS,pearson,333,0.9978894287014499,0.0,0.9978894287014499
+EHG12,window_class_stratified,contraction,fwh_entropy_totalsampen,fwh_time_root_mean_square,Total SampEn,RMS,spearman,333,0.9204394857305905,4.423045683034801e-137,0.9204394857305905
+EHG12,window_class_stratified,contraction,fwh_entropy_totalsampen,fwh_time_peak_to_peak,Total SampEn,Peak-to-peak,pearson,333,0.9973308271185409,0.0,0.9973308271185409
+EHG12,window_class_stratified,contraction,fwh_entropy_totalsampen,fwh_time_peak_to_peak,Total SampEn,Peak-to-peak,spearman,333,0.790390563711392,1.9926284056572024e-72,0.790390563711392
+EHG12,window_class_stratified,contraction,fwh_entropy_totalsampen,fwh_time_waveform_length,Total SampEn,Waveform length,pearson,333,0.9988742562015133,0.0,0.9988742562015133
+EHG12,window_class_stratified,contraction,fwh_entropy_totalsampen,fwh_time_waveform_length,Total SampEn,Waveform length,spearman,333,0.9889806840243317,1.1128380104432393e-276,0.9889806840243317
+EHG12,window_class_stratified,contraction,fwh_entropy_averagesampen,fwh_time_mean_absolute_value,Average SampEn,MAV,pearson,333,-0.1513492485677475,0.005649867516022752,0.1513492485677475
+EHG12,window_class_stratified,contraction,fwh_entropy_averagesampen,fwh_time_mean_absolute_value,Average SampEn,MAV,spearman,333,-0.09621980396094819,0.07954805215876903,0.09621980396094819
+EHG12,window_class_stratified,contraction,fwh_entropy_averagesampen,fwh_time_root_mean_square,Average SampEn,RMS,pearson,333,-0.15409986173119197,0.004827299912479398,0.15409986173119197
+EHG12,window_class_stratified,contraction,fwh_entropy_averagesampen,fwh_time_root_mean_square,Average SampEn,RMS,spearman,333,-0.207778191581669,0.00013393943640492673,0.207778191581669
+EHG12,window_class_stratified,contraction,fwh_entropy_averagesampen,fwh_time_peak_to_peak,Average SampEn,Peak-to-peak,pearson,333,-0.15918579936314053,0.0035850325092868346,0.15918579936314053
+EHG12,window_class_stratified,contraction,fwh_entropy_averagesampen,fwh_time_peak_to_peak,Average SampEn,Peak-to-peak,spearman,333,-0.47918588092457226,1.6094720038897395e-20,0.47918588092457226
+EHG12,window_class_stratified,contraction,fwh_entropy_averagesampen,fwh_time_waveform_length,Average SampEn,Waveform length,pearson,333,-0.1449572722787282,0.008066295522291527,0.1449572722787282
+EHG12,window_class_stratified,contraction,fwh_entropy_averagesampen,fwh_time_waveform_length,Average SampEn,Waveform length,spearman,333,0.018164582589948727,0.7412085331784062,0.018164582589948727
+EHG12,window_class_stratified,contraction,fwh_entropy_sampen_fixed_r,fwh_time_mean_absolute_value,Fixed-r SampEn,MAV,pearson,333,-0.2991765632827314,2.5923579864275966e-08,0.2991765632827314
+EHG12,window_class_stratified,contraction,fwh_entropy_sampen_fixed_r,fwh_time_mean_absolute_value,Fixed-r SampEn,MAV,spearman,333,-0.22142137086946267,4.580250442919455e-05,0.22142137086946267
+EHG12,window_class_stratified,contraction,fwh_entropy_sampen_fixed_r,fwh_time_root_mean_square,Fixed-r SampEn,RMS,pearson,333,-0.3007029927086544,2.1842025820860386e-08,0.3007029927086544
+EHG12,window_class_stratified,contraction,fwh_entropy_sampen_fixed_r,fwh_time_root_mean_square,Fixed-r SampEn,RMS,spearman,333,-0.3206036640493029,2.134242923894839e-09,0.3206036640493029
+EHG12,window_class_stratified,contraction,fwh_entropy_sampen_fixed_r,fwh_time_peak_to_peak,Fixed-r SampEn,Peak-to-peak,pearson,333,-0.3043619080908037,1.4427346631376442e-08,0.3043619080908037
+EHG12,window_class_stratified,contraction,fwh_entropy_sampen_fixed_r,fwh_time_peak_to_peak,Fixed-r SampEn,Peak-to-peak,spearman,333,-0.4712821182772846,8.151087826810786e-20,0.4712821182772846
+EHG12,window_class_stratified,contraction,fwh_entropy_sampen_fixed_r,fwh_time_waveform_length,Fixed-r SampEn,Waveform length,pearson,333,-0.29314766769191997,5.0508140786075655e-08,0.29314766769191997
+EHG12,window_class_stratified,contraction,fwh_entropy_sampen_fixed_r,fwh_time_waveform_length,Fixed-r SampEn,Waveform length,spearman,333,-0.05670976510021313,0.30216800704278846,0.05670976510021313
+EHG12,window_class_stratified,contraction,fwh_entropy_mediansampen,fwh_time_mean_absolute_value,Median SampEn,MAV,pearson,333,0.08538216567592165,0.1199316732353746,0.08538216567592165
+EHG12,window_class_stratified,contraction,fwh_entropy_mediansampen,fwh_time_mean_absolute_value,Median SampEn,MAV,spearman,333,-0.030391512643875393,0.5805131462261162,0.030391512643875393
+EHG12,window_class_stratified,contraction,fwh_entropy_mediansampen,fwh_time_root_mean_square,Median SampEn,RMS,pearson,333,0.08274888436277933,0.13182787913382302,0.08274888436277933
+EHG12,window_class_stratified,contraction,fwh_entropy_mediansampen,fwh_time_root_mean_square,Median SampEn,RMS,spearman,333,-0.12568708236408982,0.0217874013616814,0.12568708236408982
+EHG12,window_class_stratified,contraction,fwh_entropy_mediansampen,fwh_time_peak_to_peak,Median SampEn,Peak-to-peak,pearson,333,0.0782318762882629,0.15432679939646776,0.0782318762882629
+EHG12,window_class_stratified,contraction,fwh_entropy_mediansampen,fwh_time_peak_to_peak,Median SampEn,Peak-to-peak,spearman,333,-0.4306609834710261,1.8081414126341691e-16,0.4306609834710261
+EHG12,window_class_stratified,contraction,fwh_entropy_mediansampen,fwh_time_waveform_length,Median SampEn,Waveform length,pearson,333,0.08859491247393443,0.10657059736796873,0.08859491247393443
+EHG12,window_class_stratified,contraction,fwh_entropy_mediansampen,fwh_time_waveform_length,Median SampEn,Waveform length,spearman,333,0.019339049026661753,0.7251304612378058,0.019339049026661753
+EHG12,window_class_stratified,contraction,fwh_entropy_sdsampen,fwh_time_mean_absolute_value,SD SampEn,MAV,pearson,333,-0.2684203222808761,6.649895364807412e-07,0.2684203222808761
+EHG12,window_class_stratified,contraction,fwh_entropy_sdsampen,fwh_time_mean_absolute_value,SD SampEn,MAV,spearman,333,-0.05798009971590522,0.29144968455509773,0.05798009971590522
+EHG12,window_class_stratified,contraction,fwh_entropy_sdsampen,fwh_time_root_mean_square,SD SampEn,RMS,pearson,333,-0.2715407201146424,4.869925567343873e-07,0.2715407201146424
+EHG12,window_class_stratified,contraction,fwh_entropy_sdsampen,fwh_time_root_mean_square,SD SampEn,RMS,spearman,333,-0.16871857067369656,0.0020054457180243962,0.16871857067369656
+EHG12,window_class_stratified,contraction,fwh_entropy_sdsampen,fwh_time_peak_to_peak,SD SampEn,Peak-to-peak,pearson,333,-0.2763846064895044,2.97935508208899e-07,0.2763846064895044
+EHG12,window_class_stratified,contraction,fwh_entropy_sdsampen,fwh_time_peak_to_peak,SD SampEn,Peak-to-peak,spearman,333,-0.40950303885878525,6.763027916035322e-15,0.40950303885878525
+EHG12,window_class_stratified,contraction,fwh_entropy_sdsampen,fwh_time_waveform_length,SD SampEn,Waveform length,pearson,333,-0.2615671459933704,1.3002152498473898e-06,0.2615671459933704
+EHG12,window_class_stratified,contraction,fwh_entropy_sdsampen,fwh_time_waveform_length,SD SampEn,Waveform length,spearman,333,0.07693080137348228,0.16131785387967232,0.07693080137348228
+EHG12,window_class_stratified,contraction,fwh_entropy_kurtosissampen,fwh_time_mean_absolute_value,Kurtosis SampEn,MAV,pearson,333,0.18308350495902673,0.0007884597940445896,0.18308350495902673
+EHG12,window_class_stratified,contraction,fwh_entropy_kurtosissampen,fwh_time_mean_absolute_value,Kurtosis SampEn,MAV,spearman,333,0.2695189237285767,5.961782205620318e-07,0.2695189237285767
+EHG12,window_class_stratified,contraction,fwh_entropy_kurtosissampen,fwh_time_root_mean_square,Kurtosis SampEn,RMS,pearson,333,0.18702407233637558,0.0006027986255675728,0.18702407233637558
+EHG12,window_class_stratified,contraction,fwh_entropy_kurtosissampen,fwh_time_root_mean_square,Kurtosis SampEn,RMS,spearman,333,0.37371561013433896,1.7745402881745565e-12,0.37371561013433896
+EHG12,window_class_stratified,contraction,fwh_entropy_kurtosissampen,fwh_time_peak_to_peak,Kurtosis SampEn,Peak-to-peak,pearson,333,0.1945301844715804,0.00035607757986480564,0.1945301844715804
+EHG12,window_class_stratified,contraction,fwh_entropy_kurtosissampen,fwh_time_peak_to_peak,Kurtosis SampEn,Peak-to-peak,spearman,333,0.6294516145176271,3.779797703602745e-38,0.6294516145176271
+EHG12,window_class_stratified,contraction,fwh_entropy_kurtosissampen,fwh_time_waveform_length,Kurtosis SampEn,Waveform length,pearson,333,0.18317196780147313,0.0007837678890757333,0.18317196780147313
+EHG12,window_class_stratified,contraction,fwh_entropy_kurtosissampen,fwh_time_waveform_length,Kurtosis SampEn,Waveform length,spearman,333,0.18438180623448644,0.000722136637425338,0.18438180623448644
+EHG12,window_class_stratified,contraction,fwh_entropy_skewnesssampen,fwh_time_mean_absolute_value,Skewness SampEn,MAV,pearson,333,0.06317810617170286,0.25026499692374926,0.06317810617170286
+EHG12,window_class_stratified,contraction,fwh_entropy_skewnesssampen,fwh_time_mean_absolute_value,Skewness SampEn,MAV,spearman,333,0.22993738995470475,2.2643126772968496e-05,0.22993738995470475
+EHG12,window_class_stratified,contraction,fwh_entropy_skewnesssampen,fwh_time_root_mean_square,Skewness SampEn,RMS,pearson,333,0.06624698237305786,0.22794356480089098,0.06624698237305786
+EHG12,window_class_stratified,contraction,fwh_entropy_skewnesssampen,fwh_time_root_mean_square,Skewness SampEn,RMS,spearman,333,0.3356283200450288,3.281845660088312e-10,0.3356283200450288
+EHG12,window_class_stratified,contraction,fwh_entropy_skewnesssampen,fwh_time_peak_to_peak,Skewness SampEn,Peak-to-peak,pearson,333,0.07331020767994455,0.18202311273072783,0.07331020767994455
+EHG12,window_class_stratified,contraction,fwh_entropy_skewnesssampen,fwh_time_peak_to_peak,Skewness SampEn,Peak-to-peak,spearman,333,0.5987672977067683,8.926642912426379e-34,0.5987672977067683
+EHG12,window_class_stratified,contraction,fwh_entropy_skewnesssampen,fwh_time_waveform_length,Skewness SampEn,Waveform length,pearson,333,0.06155184929547727,0.26269050437015695,0.06155184929547727
+EHG12,window_class_stratified,contraction,fwh_entropy_skewnesssampen,fwh_time_waveform_length,Skewness SampEn,Waveform length,spearman,333,0.13812199761986935,0.011631977269065114,0.13812199761986935
+EHG12,window_class_stratified,fetal_movement,fwh_entropy_totalsampen,fwh_time_mean_absolute_value,Total SampEn,MAV,pearson,392,0.921524404362398,2.664578106662748e-162,0.921524404362398
+EHG12,window_class_stratified,fetal_movement,fwh_entropy_totalsampen,fwh_time_mean_absolute_value,Total SampEn,MAV,spearman,392,0.9632034692403346,1.210324010486311e-224,0.9632034692403346
+EHG12,window_class_stratified,fetal_movement,fwh_entropy_totalsampen,fwh_time_root_mean_square,Total SampEn,RMS,pearson,392,0.7805315814572175,1.3733006645539363e-81,0.7805315814572175
+EHG12,window_class_stratified,fetal_movement,fwh_entropy_totalsampen,fwh_time_root_mean_square,Total SampEn,RMS,spearman,392,0.910500675544031,1.1889858482756908e-151,0.910500675544031
+EHG12,window_class_stratified,fetal_movement,fwh_entropy_totalsampen,fwh_time_peak_to_peak,Total SampEn,Peak-to-peak,pearson,392,0.45599024250507875,1.5931468798845635e-21,0.45599024250507875
+EHG12,window_class_stratified,fetal_movement,fwh_entropy_totalsampen,fwh_time_peak_to_peak,Total SampEn,Peak-to-peak,spearman,392,0.6918680515684535,3.981397685134638e-57,0.6918680515684535
+EHG12,window_class_stratified,fetal_movement,fwh_entropy_totalsampen,fwh_time_waveform_length,Total SampEn,Waveform length,pearson,392,0.972435434594793,1.0285473773667661e-248,0.972435434594793
+EHG12,window_class_stratified,fetal_movement,fwh_entropy_totalsampen,fwh_time_waveform_length,Total SampEn,Waveform length,spearman,392,0.9796438323088943,4.4178956409469853e-274,0.9796438323088943
+EHG12,window_class_stratified,fetal_movement,fwh_entropy_averagesampen,fwh_time_mean_absolute_value,Average SampEn,MAV,pearson,392,0.12088573067231725,0.01664033565526516,0.12088573067231725
+EHG12,window_class_stratified,fetal_movement,fwh_entropy_averagesampen,fwh_time_mean_absolute_value,Average SampEn,MAV,spearman,392,0.1479588848483303,0.003321971377684316,0.1479588848483303
+EHG12,window_class_stratified,fetal_movement,fwh_entropy_averagesampen,fwh_time_root_mean_square,Average SampEn,RMS,pearson,392,-0.08481526999543951,0.09355875207116966,0.08481526999543951
+EHG12,window_class_stratified,fetal_movement,fwh_entropy_averagesampen,fwh_time_root_mean_square,Average SampEn,RMS,spearman,392,-0.008253749558236836,0.8705996779154618,0.008253749558236836
+EHG12,window_class_stratified,fetal_movement,fwh_entropy_averagesampen,fwh_time_peak_to_peak,Average SampEn,Peak-to-peak,pearson,392,-0.3697773209488571,3.79782035199297e-14,0.3697773209488571
+EHG12,window_class_stratified,fetal_movement,fwh_entropy_averagesampen,fwh_time_peak_to_peak,Average SampEn,Peak-to-peak,spearman,392,-0.3978571846926623,2.5547491816562564e-16,0.3978571846926623
+EHG12,window_class_stratified,fetal_movement,fwh_entropy_averagesampen,fwh_time_waveform_length,Average SampEn,Waveform length,pearson,392,0.2645044494940002,1.0656697292952364e-07,0.2645044494940002
+EHG12,window_class_stratified,fetal_movement,fwh_entropy_averagesampen,fwh_time_waveform_length,Average SampEn,Waveform length,spearman,392,0.19740408609510843,8.329869498226626e-05,0.19740408609510843
+EHG12,window_class_stratified,fetal_movement,fwh_entropy_sampen_fixed_r,fwh_time_mean_absolute_value,Fixed-r SampEn,MAV,pearson,392,-0.09342698252848648,0.06461734544659269,0.09342698252848648
+EHG12,window_class_stratified,fetal_movement,fwh_entropy_sampen_fixed_r,fwh_time_mean_absolute_value,Fixed-r SampEn,MAV,spearman,392,0.04962987518273157,0.3270429231290489,0.04962987518273157
+EHG12,window_class_stratified,fetal_movement,fwh_entropy_sampen_fixed_r,fwh_time_root_mean_square,Fixed-r SampEn,RMS,pearson,392,-0.30589900690037003,6.168797672879803e-10,0.30589900690037003
+EHG12,window_class_stratified,fetal_movement,fwh_entropy_sampen_fixed_r,fwh_time_root_mean_square,Fixed-r SampEn,RMS,spearman,392,-0.09579875760460174,0.05808948721728993,0.09579875760460174
+EHG12,window_class_stratified,fetal_movement,fwh_entropy_sampen_fixed_r,fwh_time_peak_to_peak,Fixed-r SampEn,Peak-to-peak,pearson,392,-0.49743384020623693,6.78515571769697e-26,0.49743384020623693
+EHG12,window_class_stratified,fetal_movement,fwh_entropy_sampen_fixed_r,fwh_time_peak_to_peak,Fixed-r SampEn,Peak-to-peak,spearman,392,-0.3612190312567111,1.58803720873493e-13,0.3612190312567111
+EHG12,window_class_stratified,fetal_movement,fwh_entropy_sampen_fixed_r,fwh_time_waveform_length,Fixed-r SampEn,Waveform length,pearson,392,0.06709155213861222,0.18497324032171478,0.06709155213861222
+EHG12,window_class_stratified,fetal_movement,fwh_entropy_sampen_fixed_r,fwh_time_waveform_length,Fixed-r SampEn,Waveform length,spearman,392,0.14153514044183885,0.004993545812381227,0.14153514044183885
+EHG12,window_class_stratified,fetal_movement,fwh_entropy_mediansampen,fwh_time_mean_absolute_value,Median SampEn,MAV,pearson,392,0.28714887906127473,7.060704410291205e-09,0.28714887906127473
+EHG12,window_class_stratified,fetal_movement,fwh_entropy_mediansampen,fwh_time_mean_absolute_value,Median SampEn,MAV,spearman,392,0.16434047897287024,0.00109226674950461,0.16434047897287024
+EHG12,window_class_stratified,fetal_movement,fwh_entropy_mediansampen,fwh_time_root_mean_square,Median SampEn,RMS,pearson,392,0.13083233776926828,0.009507877617005946,0.13083233776926828
+EHG12,window_class_stratified,fetal_movement,fwh_entropy_mediansampen,fwh_time_root_mean_square,Median SampEn,RMS,spearman,392,0.034929072857154804,0.4904694640672409,0.034929072857154804
+EHG12,window_class_stratified,fetal_movement,fwh_entropy_mediansampen,fwh_time_peak_to_peak,Median SampEn,Peak-to-peak,pearson,392,-0.15380968476440826,0.0022600602723372902,0.15380968476440826
+EHG12,window_class_stratified,fetal_movement,fwh_entropy_mediansampen,fwh_time_peak_to_peak,Median SampEn,Peak-to-peak,spearman,392,-0.3805892752056016,5.858516426330232e-15,0.3805892752056016
+EHG12,window_class_stratified,fetal_movement,fwh_entropy_mediansampen,fwh_time_waveform_length,Median SampEn,Waveform length,pearson,392,0.33826181538096184,5.998002445080702e-12,0.33826181538096184
+EHG12,window_class_stratified,fetal_movement,fwh_entropy_mediansampen,fwh_time_waveform_length,Median SampEn,Waveform length,spearman,392,0.17765194361846962,0.00040893546185417836,0.17765194361846962
+EHG12,window_class_stratified,fetal_movement,fwh_entropy_sdsampen,fwh_time_mean_absolute_value,SD SampEn,MAV,pearson,392,0.0928711732219894,0.0662313010431857,0.0928711732219894
+EHG12,window_class_stratified,fetal_movement,fwh_entropy_sdsampen,fwh_time_mean_absolute_value,SD SampEn,MAV,spearman,392,0.17761190104983246,0.0004101898265798181,0.17761190104983246
+EHG12,window_class_stratified,fetal_movement,fwh_entropy_sdsampen,fwh_time_root_mean_square,SD SampEn,RMS,pearson,392,-0.12757204998063268,0.011469181286511684,0.12757204998063268
+EHG12,window_class_stratified,fetal_movement,fwh_entropy_sdsampen,fwh_time_root_mean_square,SD SampEn,RMS,spearman,392,0.023051570445635935,0.6491086736856707,0.023051570445635935
+EHG12,window_class_stratified,fetal_movement,fwh_entropy_sdsampen,fwh_time_peak_to_peak,SD SampEn,Peak-to-peak,pearson,392,-0.40272779025945316,1.0209029222773336e-16,0.40272779025945316
+EHG12,window_class_stratified,fetal_movement,fwh_entropy_sdsampen,fwh_time_peak_to_peak,SD SampEn,Peak-to-peak,spearman,392,-0.3403335446359094,4.374347918331038e-12,0.3403335446359094
+EHG12,window_class_stratified,fetal_movement,fwh_entropy_sdsampen,fwh_time_waveform_length,SD SampEn,Waveform length,pearson,392,0.25485422415094094,3.1467732017699175e-07,0.25485422415094094
+EHG12,window_class_stratified,fetal_movement,fwh_entropy_sdsampen,fwh_time_waveform_length,SD SampEn,Waveform length,spearman,392,0.23929956981132974,1.646602784378926e-06,0.23929956981132974
+EHG12,window_class_stratified,fetal_movement,fwh_entropy_kurtosissampen,fwh_time_mean_absolute_value,Kurtosis SampEn,MAV,pearson,392,0.2745797372791073,3.283613072768584e-08,0.2745797372791073
+EHG12,window_class_stratified,fetal_movement,fwh_entropy_kurtosissampen,fwh_time_mean_absolute_value,Kurtosis SampEn,MAV,spearman,392,-0.006196637300788221,0.9026641750867113,0.006196637300788221
+EHG12,window_class_stratified,fetal_movement,fwh_entropy_kurtosissampen,fwh_time_root_mean_square,Kurtosis SampEn,RMS,pearson,392,0.5675726095271069,8.361321091769031e-35,0.5675726095271069
+EHG12,window_class_stratified,fetal_movement,fwh_entropy_kurtosissampen,fwh_time_root_mean_square,Kurtosis SampEn,RMS,spearman,392,0.1525839011343004,0.002452708798588084,0.1525839011343004
+EHG12,window_class_stratified,fetal_movement,fwh_entropy_kurtosissampen,fwh_time_peak_to_peak,Kurtosis SampEn,Peak-to-peak,pearson,392,0.846599406166528,7.193867682754002e-109,0.846599406166528
+EHG12,window_class_stratified,fetal_movement,fwh_entropy_kurtosissampen,fwh_time_peak_to_peak,Kurtosis SampEn,Peak-to-peak,spearman,392,0.5301122108318932,8.687052682993024e-30,0.5301122108318932
+EHG12,window_class_stratified,fetal_movement,fwh_entropy_kurtosissampen,fwh_time_waveform_length,Kurtosis SampEn,Waveform length,pearson,392,0.18350568863631775,0.00025950806716871664,0.18350568863631775
+EHG12,window_class_stratified,fetal_movement,fwh_entropy_kurtosissampen,fwh_time_waveform_length,Kurtosis SampEn,Waveform length,spearman,392,-0.05021059203634988,0.32140739056378237,0.05021059203634988
+EHG12,window_class_stratified,fetal_movement,fwh_entropy_skewnesssampen,fwh_time_mean_absolute_value,Skewness SampEn,MAV,pearson,392,0.1725755571934778,0.0005998278853063692,0.1725755571934778
+EHG12,window_class_stratified,fetal_movement,fwh_entropy_skewnesssampen,fwh_time_mean_absolute_value,Skewness SampEn,MAV,spearman,392,-0.03867693775153606,0.4451028993992795,0.03867693775153606
+EHG12,window_class_stratified,fetal_movement,fwh_entropy_skewnesssampen,fwh_time_root_mean_square,Skewness SampEn,RMS,pearson,392,0.44241198558174893,3.2314662991118616e-20,0.44241198558174893
+EHG12,window_class_stratified,fetal_movement,fwh_entropy_skewnesssampen,fwh_time_root_mean_square,Skewness SampEn,RMS,spearman,392,0.11924457801706809,0.01818569607632286,0.11924457801706809
+EHG12,window_class_stratified,fetal_movement,fwh_entropy_skewnesssampen,fwh_time_peak_to_peak,Skewness SampEn,Peak-to-peak,pearson,392,0.729923804577309,1.9814157675060367e-66,0.729923804577309
+EHG12,window_class_stratified,fetal_movement,fwh_entropy_skewnesssampen,fwh_time_peak_to_peak,Skewness SampEn,Peak-to-peak,spearman,392,0.5019110863728167,2.1025025361981685e-26,0.5019110863728167
+EHG12,window_class_stratified,fetal_movement,fwh_entropy_skewnesssampen,fwh_time_waveform_length,Skewness SampEn,Waveform length,pearson,392,0.07150569563955834,0.15764727377260648,0.07150569563955834
+EHG12,window_class_stratified,fetal_movement,fwh_entropy_skewnesssampen,fwh_time_waveform_length,Skewness SampEn,Waveform length,spearman,392,-0.08367900761366612,0.09805202762099688,0.08367900761366612
+EHG12,recording_class_median,all,fwh_entropy_totalsampen,fwh_time_mean_absolute_value,Total SampEn,MAV,pearson,271,0.9513715034952543,1.3985726194405589e-139,0.9513715034952543
+EHG12,recording_class_median,all,fwh_entropy_totalsampen,fwh_time_mean_absolute_value,Total SampEn,MAV,spearman,271,0.9808708969442637,3.236421172182105e-193,0.9808708969442637
+EHG12,recording_class_median,all,fwh_entropy_totalsampen,fwh_time_root_mean_square,Total SampEn,RMS,pearson,271,0.9247422662947421,7.321647143847969e-115,0.9247422662947421
+EHG12,recording_class_median,all,fwh_entropy_totalsampen,fwh_time_root_mean_square,Total SampEn,RMS,spearman,271,0.9654469044690448,3.9706213473447934e-159,0.9654469044690448
+EHG12,recording_class_median,all,fwh_entropy_totalsampen,fwh_time_peak_to_peak,Total SampEn,Peak-to-peak,pearson,271,0.7778299494014999,3.421145572356065e-56,0.7778299494014999
+EHG12,recording_class_median,all,fwh_entropy_totalsampen,fwh_time_peak_to_peak,Total SampEn,Peak-to-peak,spearman,271,0.8849721438390856,2.791316410945841e-91,0.8849721438390856
+EHG12,recording_class_median,all,fwh_entropy_totalsampen,fwh_time_waveform_length,Total SampEn,Waveform length,pearson,271,0.9921440247068704,7.1303912862194e-245,0.9921440247068704
+EHG12,recording_class_median,all,fwh_entropy_totalsampen,fwh_time_waveform_length,Total SampEn,Waveform length,spearman,271,0.9936165979306854,5.898511042365413e-257,0.9936165979306854
+EHG12,recording_class_median,all,fwh_entropy_averagesampen,fwh_time_mean_absolute_value,Average SampEn,MAV,pearson,271,0.1048091636124113,0.08504281983860704,0.1048091636124113
+EHG12,recording_class_median,all,fwh_entropy_averagesampen,fwh_time_mean_absolute_value,Average SampEn,MAV,spearman,271,0.19858729469647637,0.001013166052084422,0.19858729469647637
+EHG12,recording_class_median,all,fwh_entropy_averagesampen,fwh_time_root_mean_square,Average SampEn,RMS,pearson,271,0.005364845201788652,0.929949083308609,0.005364845201788652
+EHG12,recording_class_median,all,fwh_entropy_averagesampen,fwh_time_root_mean_square,Average SampEn,RMS,spearman,271,0.12575127221860455,0.03856697106876337,0.12575127221860455
+EHG12,recording_class_median,all,fwh_entropy_averagesampen,fwh_time_peak_to_peak,Average SampEn,Peak-to-peak,pearson,271,-0.24531919211884207,4.4582496164558374e-05,0.24531919211884207
+EHG12,recording_class_median,all,fwh_entropy_averagesampen,fwh_time_peak_to_peak,Average SampEn,Peak-to-peak,spearman,271,-0.11373513735137353,0.06152082886568212,0.11373513735137353
+EHG12,recording_class_median,all,fwh_entropy_averagesampen,fwh_time_waveform_length,Average SampEn,Waveform length,pearson,271,0.2839935445598915,2.0170379400910826e-06,0.2839935445598915
+EHG12,recording_class_median,all,fwh_entropy_averagesampen,fwh_time_waveform_length,Average SampEn,Waveform length,spearman,271,0.2358620939150568,8.844471371614164e-05,0.2358620939150568
+EHG12,recording_class_median,all,fwh_entropy_sampen_fixed_r,fwh_time_mean_absolute_value,Fixed-r SampEn,MAV,pearson,271,-0.08282563662666084,0.1739829621921509,0.08282563662666084
+EHG12,recording_class_median,all,fwh_entropy_sampen_fixed_r,fwh_time_mean_absolute_value,Fixed-r SampEn,MAV,spearman,271,0.013806285121674745,0.8210144896230248,0.013806285121674745
+EHG12,recording_class_median,all,fwh_entropy_sampen_fixed_r,fwh_time_root_mean_square,Fixed-r SampEn,RMS,pearson,271,-0.16821573893916877,0.005500001547406683,0.16821573893916877
+EHG12,recording_class_median,all,fwh_entropy_sampen_fixed_r,fwh_time_root_mean_square,Fixed-r SampEn,RMS,spearman,271,-0.04487615464389938,0.46190678705015187,0.04487615464389938
+EHG12,recording_class_median,all,fwh_entropy_sampen_fixed_r,fwh_time_peak_to_peak,Fixed-r SampEn,Peak-to-peak,pearson,271,-0.3334115841300923,1.854589269729887e-08,0.3334115841300923
+EHG12,recording_class_median,all,fwh_entropy_sampen_fixed_r,fwh_time_peak_to_peak,Fixed-r SampEn,Peak-to-peak,spearman,271,-0.18072498372042545,0.002826689219297284,0.18072498372042545
+EHG12,recording_class_median,all,fwh_entropy_sampen_fixed_r,fwh_time_waveform_length,Fixed-r SampEn,Waveform length,pearson,271,0.13089670806767234,0.031228565616009285,0.13089670806767234
+EHG12,recording_class_median,all,fwh_entropy_sampen_fixed_r,fwh_time_waveform_length,Fixed-r SampEn,Waveform length,spearman,271,0.10654680076212528,0.07996980543632098,0.10654680076212528
+EHG12,recording_class_median,all,fwh_entropy_mediansampen,fwh_time_mean_absolute_value,Median SampEn,MAV,pearson,271,0.2058328589565591,0.000651171543841297,0.2058328589565591
+EHG12,recording_class_median,all,fwh_entropy_mediansampen,fwh_time_mean_absolute_value,Median SampEn,MAV,spearman,271,0.2432307117188819,5.1987082248233244e-05,0.2432307117188819
+EHG12,recording_class_median,all,fwh_entropy_mediansampen,fwh_time_root_mean_square,Median SampEn,RMS,pearson,271,0.11912133862807082,0.05012442641661885,0.11912133862807082
+EHG12,recording_class_median,all,fwh_entropy_mediansampen,fwh_time_root_mean_square,Median SampEn,RMS,spearman,271,0.17399850469092926,0.004064851345739392,0.17399850469092926
+EHG12,recording_class_median,all,fwh_entropy_mediansampen,fwh_time_peak_to_peak,Median SampEn,Peak-to-peak,pearson,271,-0.128653334339131,0.03426693656665203,0.128653334339131
+EHG12,recording_class_median,all,fwh_entropy_mediansampen,fwh_time_peak_to_peak,Median SampEn,Peak-to-peak,spearman,271,-0.07930866073366616,0.19305262664725978,0.07930866073366616
+EHG12,recording_class_median,all,fwh_entropy_mediansampen,fwh_time_waveform_length,Median SampEn,Waveform length,pearson,271,0.25678100371214146,1.872432978163018e-05,0.25678100371214146
+EHG12,recording_class_median,all,fwh_entropy_mediansampen,fwh_time_waveform_length,Median SampEn,Waveform length,spearman,271,0.24765875599932471,3.747245825536837e-05,0.24765875599932471
+EHG12,recording_class_median,all,fwh_entropy_sdsampen,fwh_time_mean_absolute_value,SD SampEn,MAV,pearson,271,0.13704073033334133,0.02405797918903606,0.13704073033334133
+EHG12,recording_class_median,all,fwh_entropy_sdsampen,fwh_time_mean_absolute_value,SD SampEn,MAV,spearman,271,0.236785206087355,8.282422919177048e-05,0.236785206087355
+EHG12,recording_class_median,all,fwh_entropy_sdsampen,fwh_time_root_mean_square,SD SampEn,RMS,pearson,271,0.0427491436677445,0.48342332800065124,0.0427491436677445
+EHG12,recording_class_median,all,fwh_entropy_sdsampen,fwh_time_root_mean_square,SD SampEn,RMS,spearman,271,0.1668294624122712,0.005905477746415849,0.1668294624122712
+EHG12,recording_class_median,all,fwh_entropy_sdsampen,fwh_time_peak_to_peak,SD SampEn,Peak-to-peak,pearson,271,-0.18785952686304733,0.001896607248904663,0.18785952686304733
+EHG12,recording_class_median,all,fwh_entropy_sdsampen,fwh_time_peak_to_peak,SD SampEn,Peak-to-peak,spearman,271,-0.05348202011431879,0.3804956820661559,0.05348202011431879
+EHG12,recording_class_median,all,fwh_entropy_sdsampen,fwh_time_waveform_length,SD SampEn,Waveform length,pearson,271,0.340899293980975,8.441019408474749e-09,0.340899293980975
+EHG12,recording_class_median,all,fwh_entropy_sdsampen,fwh_time_waveform_length,SD SampEn,Waveform length,spearman,271,0.28684188312471365,1.575111250614193e-06,0.28684188312471365
+EHG12,recording_class_median,all,fwh_entropy_kurtosissampen,fwh_time_mean_absolute_value,Kurtosis SampEn,MAV,pearson,271,0.32193403830596756,5.953632263110233e-08,0.32193403830596756
+EHG12,recording_class_median,all,fwh_entropy_kurtosissampen,fwh_time_mean_absolute_value,Kurtosis SampEn,MAV,spearman,271,0.019378120251790754,0.7508191834349963,0.019378120251790754
+EHG12,recording_class_median,all,fwh_entropy_kurtosissampen,fwh_time_root_mean_square,Kurtosis SampEn,RMS,pearson,271,0.4311971783889419,1.0694539757226174e-13,0.4311971783889419
+EHG12,recording_class_median,all,fwh_entropy_kurtosissampen,fwh_time_root_mean_square,Kurtosis SampEn,RMS,spearman,271,0.09354665605479584,0.12448332367470863,0.09354665605479584
+EHG12,recording_class_median,all,fwh_entropy_kurtosissampen,fwh_time_peak_to_peak,Kurtosis SampEn,Peak-to-peak,pearson,271,0.7002226361544961,2.966515111944538e-41,0.7002226361544961
+EHG12,recording_class_median,all,fwh_entropy_kurtosissampen,fwh_time_peak_to_peak,Kurtosis SampEn,Peak-to-peak,spearman,271,0.33850239972987967,1.0884723266155309e-08,0.33850239972987967
+EHG12,recording_class_median,all,fwh_entropy_kurtosissampen,fwh_time_waveform_length,Kurtosis SampEn,Waveform length,pearson,271,0.23870276579843222,7.220430539617111e-05,0.23870276579843222
+EHG12,recording_class_median,all,fwh_entropy_kurtosissampen,fwh_time_waveform_length,Kurtosis SampEn,Waveform length,spearman,271,-0.011302848322600874,0.8530610261438679,0.011302848322600874
+EHG12,recording_class_median,all,fwh_entropy_skewnesssampen,fwh_time_mean_absolute_value,Skewness SampEn,MAV,pearson,271,0.23250040137583808,0.00011208812198980517,0.23250040137583808
+EHG12,recording_class_median,all,fwh_entropy_skewnesssampen,fwh_time_mean_absolute_value,Skewness SampEn,MAV,spearman,271,-0.03230289655837735,0.5964912797070842,0.03230289655837735
+EHG12,recording_class_median,all,fwh_entropy_skewnesssampen,fwh_time_root_mean_square,Skewness SampEn,RMS,pearson,271,0.3410113498321315,8.340836634407604e-09,0.3410113498321315
+EHG12,recording_class_median,all,fwh_entropy_skewnesssampen,fwh_time_root_mean_square,Skewness SampEn,RMS,spearman,271,0.04202843499023226,0.4908347464264565,0.04202843499023226
+EHG12,recording_class_median,all,fwh_entropy_skewnesssampen,fwh_time_peak_to_peak,Skewness SampEn,Peak-to-peak,pearson,271,0.6086494400875034,7.39251593411126e-29,0.6086494400875034
+EHG12,recording_class_median,all,fwh_entropy_skewnesssampen,fwh_time_peak_to_peak,Skewness SampEn,Peak-to-peak,spearman,271,0.2879253792537926,1.4326668295273194e-06,0.2879253792537926
+EHG12,recording_class_median,all,fwh_entropy_skewnesssampen,fwh_time_waveform_length,Skewness SampEn,Waveform length,pearson,271,0.12976354219545846,0.032733274429134936,0.12976354219545846
+EHG12,recording_class_median,all,fwh_entropy_skewnesssampen,fwh_time_waveform_length,Skewness SampEn,Waveform length,spearman,271,-0.06545594867713384,0.28295178670542587,0.06545594867713384
+EHG12,patient_class_median,all,fwh_entropy_totalsampen,fwh_time_mean_absolute_value,Total SampEn,MAV,pearson,113,0.9502046256219391,4.9375397826789135e-58,0.9502046256219391
+EHG12,patient_class_median,all,fwh_entropy_totalsampen,fwh_time_mean_absolute_value,Total SampEn,MAV,spearman,113,0.9806956550668707,1.6362698321343904e-80,0.9806956550668707
+EHG12,patient_class_median,all,fwh_entropy_totalsampen,fwh_time_root_mean_square,Total SampEn,RMS,pearson,113,0.9297902894033324,5.372423700889387e-50,0.9297902894033324
+EHG12,patient_class_median,all,fwh_entropy_totalsampen,fwh_time_root_mean_square,Total SampEn,RMS,spearman,113,0.9701576951227627,3.883465088661883e-70,0.9701576951227627
+EHG12,patient_class_median,all,fwh_entropy_totalsampen,fwh_time_peak_to_peak,Total SampEn,Peak-to-peak,pearson,113,0.7964894116542606,5.273273572525932e-26,0.7964894116542606
+EHG12,patient_class_median,all,fwh_entropy_totalsampen,fwh_time_peak_to_peak,Total SampEn,Peak-to-peak,spearman,113,0.8815373611018699,5.638907547513986e-38,0.8815373611018699
+EHG12,patient_class_median,all,fwh_entropy_totalsampen,fwh_time_waveform_length,Total SampEn,Waveform length,pearson,113,0.9884017303830109,1.0570078940851487e-92,0.9884017303830109
+EHG12,patient_class_median,all,fwh_entropy_totalsampen,fwh_time_waveform_length,Total SampEn,Waveform length,spearman,113,0.9900109787743696,2.7706660542807756e-96,0.9900109787743696
+EHG12,patient_class_median,all,fwh_entropy_averagesampen,fwh_time_mean_absolute_value,Average SampEn,MAV,pearson,113,0.07921594575831642,0.40426632734670853,0.07921594575831642
+EHG12,patient_class_median,all,fwh_entropy_averagesampen,fwh_time_mean_absolute_value,Average SampEn,MAV,spearman,113,0.09035032270942844,0.3412458061766973,0.09035032270942844
+EHG12,patient_class_median,all,fwh_entropy_averagesampen,fwh_time_root_mean_square,Average SampEn,RMS,pearson,113,-0.008621894225979672,0.9277829204206396,0.008621894225979672
+EHG12,patient_class_median,all,fwh_entropy_averagesampen,fwh_time_root_mean_square,Average SampEn,RMS,spearman,113,0.019445738239403824,0.8380159210287189,0.019445738239403824
+EHG12,patient_class_median,all,fwh_entropy_averagesampen,fwh_time_peak_to_peak,Average SampEn,Peak-to-peak,pearson,113,-0.2942103909572332,0.0015613126270034275,0.2942103909572332
+EHG12,patient_class_median,all,fwh_entropy_averagesampen,fwh_time_peak_to_peak,Average SampEn,Peak-to-peak,spearman,113,-0.23156896666444876,0.013591414562249429,0.23156896666444876
+EHG12,patient_class_median,all,fwh_entropy_averagesampen,fwh_time_waveform_length,Average SampEn,Waveform length,pearson,113,0.22911286705724668,0.014647217536293885,0.22911286705724668
+EHG12,patient_class_median,all,fwh_entropy_averagesampen,fwh_time_waveform_length,Average SampEn,Waveform length,spearman,113,0.10105462771974183,0.28687115149252984,0.10105462771974183
+EHG12,patient_class_median,all,fwh_entropy_sampen_fixed_r,fwh_time_mean_absolute_value,Fixed-r SampEn,MAV,pearson,113,-0.009085545737714635,0.9239107074763977,0.009085545737714635
+EHG12,patient_class_median,all,fwh_entropy_sampen_fixed_r,fwh_time_mean_absolute_value,Fixed-r SampEn,MAV,spearman,113,0.027155832058021162,0.775250773413092,0.027155832058021162
+EHG12,patient_class_median,all,fwh_entropy_sampen_fixed_r,fwh_time_root_mean_square,Fixed-r SampEn,RMS,pearson,113,-0.09430911550176722,0.3204227066156052,0.09430911550176722
+EHG12,patient_class_median,all,fwh_entropy_sampen_fixed_r,fwh_time_root_mean_square,Fixed-r SampEn,RMS,spearman,113,-0.03647115576552,0.7013411312435754,0.03647115576552
+EHG12,patient_class_median,all,fwh_entropy_sampen_fixed_r,fwh_time_peak_to_peak,Fixed-r SampEn,Peak-to-peak,pearson,113,-0.2935463303974849,0.0016018603690421897,0.2935463303974849
+EHG12,patient_class_median,all,fwh_entropy_sampen_fixed_r,fwh_time_peak_to_peak,Fixed-r SampEn,Peak-to-peak,spearman,113,-0.2063177856144787,0.02834714674343425,0.2063177856144787
+EHG12,patient_class_median,all,fwh_entropy_sampen_fixed_r,fwh_time_waveform_length,Fixed-r SampEn,Waveform length,pearson,113,0.1812793275751262,0.05466212785267239,0.1812793275751262
+EHG12,patient_class_median,all,fwh_entropy_sampen_fixed_r,fwh_time_waveform_length,Fixed-r SampEn,Waveform length,spearman,113,0.07240169006587265,0.44600982651843424,0.07240169006587265
+EHG12,patient_class_median,all,fwh_entropy_mediansampen,fwh_time_mean_absolute_value,Median SampEn,MAV,pearson,113,0.1361431562020758,0.15048108126064033,0.1361431562020758
+EHG12,patient_class_median,all,fwh_entropy_mediansampen,fwh_time_mean_absolute_value,Median SampEn,MAV,spearman,113,0.1115925876638499,0.23930108732195482,0.1115925876638499
+EHG12,patient_class_median,all,fwh_entropy_mediansampen,fwh_time_root_mean_square,Median SampEn,RMS,pearson,113,0.06301894403300913,0.5072589965249993,0.06301894403300913
+EHG12,patient_class_median,all,fwh_entropy_mediansampen,fwh_time_root_mean_square,Median SampEn,RMS,spearman,113,0.04129516268547476,0.6640864794544958,0.04129516268547476
+EHG12,patient_class_median,all,fwh_entropy_mediansampen,fwh_time_peak_to_peak,Median SampEn,Peak-to-peak,pearson,113,-0.2086046542830751,0.0266028791010365,0.2086046542830751
+EHG12,patient_class_median,all,fwh_entropy_mediansampen,fwh_time_peak_to_peak,Median SampEn,Peak-to-peak,spearman,113,-0.2022173797325172,0.03171834611909933,0.2022173797325172
+EHG12,patient_class_median,all,fwh_entropy_mediansampen,fwh_time_waveform_length,Median SampEn,Waveform length,pearson,113,0.21510576722442634,0.022135476857384383,0.21510576722442634
+EHG12,patient_class_median,all,fwh_entropy_mediansampen,fwh_time_waveform_length,Median SampEn,Waveform length,spearman,113,0.09939117705768849,0.29491909423067203,0.09939117705768849
+EHG12,patient_class_median,all,fwh_entropy_sdsampen,fwh_time_mean_absolute_value,SD SampEn,MAV,pearson,113,0.1263377493496393,0.18239858930684508,0.1263377493496393
+EHG12,patient_class_median,all,fwh_entropy_sdsampen,fwh_time_mean_absolute_value,SD SampEn,MAV,spearman,113,0.16825803446669774,0.07483991910624023,0.16825803446669774
+EHG12,patient_class_median,all,fwh_entropy_sdsampen,fwh_time_root_mean_square,SD SampEn,RMS,pearson,113,0.03953575592701738,0.6775851742670742,0.03953575592701738
+EHG12,patient_class_median,all,fwh_entropy_sdsampen,fwh_time_root_mean_square,SD SampEn,RMS,spearman,113,0.10012309534899196,0.2913597986486054,0.10012309534899196
+EHG12,patient_class_median,all,fwh_entropy_sdsampen,fwh_time_peak_to_peak,SD SampEn,Peak-to-peak,pearson,113,-0.2259618108511965,0.016105678672683855,0.2259618108511965
+EHG12,patient_class_median,all,fwh_entropy_sdsampen,fwh_time_peak_to_peak,SD SampEn,Peak-to-peak,spearman,113,-0.13529675959811033,0.15305830266712925,0.13529675959811033
+EHG12,patient_class_median,all,fwh_entropy_sdsampen,fwh_time_waveform_length,SD SampEn,Waveform length,pearson,113,0.3022211911763485,0.0011404782511843191,0.3022211911763485
+EHG12,patient_class_median,all,fwh_entropy_sdsampen,fwh_time_waveform_length,SD SampEn,Waveform length,spearman,113,0.1896999135005656,0.04417476005029984,0.1896999135005656
+EHG12,patient_class_median,all,fwh_entropy_kurtosissampen,fwh_time_mean_absolute_value,Kurtosis SampEn,MAV,pearson,113,0.2256374908536425,0.01626270369001406,0.2256374908536425
+EHG12,patient_class_median,all,fwh_entropy_kurtosissampen,fwh_time_mean_absolute_value,Kurtosis SampEn,MAV,spearman,113,0.10030607492181783,0.29047444464614147,0.10030607492181783
+EHG12,patient_class_median,all,fwh_entropy_kurtosissampen,fwh_time_root_mean_square,Kurtosis SampEn,RMS,pearson,113,0.3161386771390924,0.0006468751178604472,0.3161386771390924
+EHG12,patient_class_median,all,fwh_entropy_kurtosissampen,fwh_time_root_mean_square,Kurtosis SampEn,RMS,spearman,113,0.17126056291170405,0.06972275832673118,0.17126056291170405
+EHG12,patient_class_median,all,fwh_entropy_kurtosissampen,fwh_time_peak_to_peak,Kurtosis SampEn,Peak-to-peak,pearson,113,0.6071888338297147,1.005863727401459e-12,0.6071888338297147
+EHG12,patient_class_median,all,fwh_entropy_kurtosissampen,fwh_time_peak_to_peak,Kurtosis SampEn,Peak-to-peak,spearman,113,0.41512242996872717,4.835643991678159e-06,0.41512242996872717
+EHG12,patient_class_median,all,fwh_entropy_kurtosissampen,fwh_time_waveform_length,Kurtosis SampEn,Waveform length,pearson,113,0.1630325464972592,0.084463703839215,0.1630325464972592
+EHG12,patient_class_median,all,fwh_entropy_kurtosissampen,fwh_time_waveform_length,Kurtosis SampEn,Waveform length,spearman,113,0.1037743695521991,0.27403059949497666,0.1037743695521991
+EHG12,patient_class_median,all,fwh_entropy_skewnesssampen,fwh_time_mean_absolute_value,Skewness SampEn,MAV,pearson,113,0.16818897674039035,0.07496107973690477,0.16818897674039035
+EHG12,patient_class_median,all,fwh_entropy_skewnesssampen,fwh_time_mean_absolute_value,Skewness SampEn,MAV,spearman,113,0.06450861667442945,0.4972525118055948,0.06450861667442945
+EHG12,patient_class_median,all,fwh_entropy_skewnesssampen,fwh_time_root_mean_square,Skewness SampEn,RMS,pearson,113,0.25773022123052547,0.005851860479174207,0.25773022123052547
+EHG12,patient_class_median,all,fwh_entropy_skewnesssampen,fwh_time_root_mean_square,Skewness SampEn,RMS,spearman,113,0.1344317652538426,0.15572622738244163,0.1344317652538426
+EHG12,patient_class_median,all,fwh_entropy_skewnesssampen,fwh_time_peak_to_peak,Skewness SampEn,Peak-to-peak,pearson,113,0.5551645958136675,1.7550449605881417e-10,0.5551645958136675
+EHG12,patient_class_median,all,fwh_entropy_skewnesssampen,fwh_time_peak_to_peak,Skewness SampEn,Peak-to-peak,spearman,113,0.37970756537361106,3.355120338453111e-05,0.37970756537361106
+EHG12,patient_class_median,all,fwh_entropy_skewnesssampen,fwh_time_waveform_length,Skewness SampEn,Waveform length,pearson,113,0.09256460687727924,0.32949563523121195,0.09256460687727924
+EHG12,patient_class_median,all,fwh_entropy_skewnesssampen,fwh_time_waveform_length,Skewness SampEn,Waveform length,spearman,113,0.06741965533302283,0.47800177400531185,0.06741965533302283
+EHG12,patient_contraction_minus_baseline,all,fwh_entropy_totalsampen,fwh_time_mean_absolute_value,Total SampEn,MAV,pearson,34,0.9672960794149769,1.2446630255254405e-20,0.9672960794149769
+EHG12,patient_contraction_minus_baseline,all,fwh_entropy_totalsampen,fwh_time_mean_absolute_value,Total SampEn,MAV,spearman,34,0.9636363636363636,6.618146686107677e-20,0.9636363636363636
+EHG12,patient_contraction_minus_baseline,all,fwh_entropy_totalsampen,fwh_time_root_mean_square,Total SampEn,RMS,pearson,34,0.9230078377391379,8.042933983780889e-15,0.9230078377391379
+EHG12,patient_contraction_minus_baseline,all,fwh_entropy_totalsampen,fwh_time_root_mean_square,Total SampEn,RMS,spearman,34,0.9156608097784569,3.2762504690741535e-14,0.9156608097784569
+EHG12,patient_contraction_minus_baseline,all,fwh_entropy_totalsampen,fwh_time_peak_to_peak,Total SampEn,Peak-to-peak,pearson,34,0.6761494970031251,1.1385713014374858e-05,0.6761494970031251
+EHG12,patient_contraction_minus_baseline,all,fwh_entropy_totalsampen,fwh_time_peak_to_peak,Total SampEn,Peak-to-peak,spearman,34,0.8252100840336133,1.9269631904938037e-09,0.8252100840336133
+EHG12,patient_contraction_minus_baseline,all,fwh_entropy_totalsampen,fwh_time_waveform_length,Total SampEn,Waveform length,pearson,34,0.9751909711292249,1.583904008166393e-22,0.9751909711292249
+EHG12,patient_contraction_minus_baseline,all,fwh_entropy_totalsampen,fwh_time_waveform_length,Total SampEn,Waveform length,spearman,34,0.9602750190985484,2.658249908265682e-19,0.9602750190985484
+EHG12,patient_contraction_minus_baseline,all,fwh_entropy_averagesampen,fwh_time_mean_absolute_value,Average SampEn,MAV,pearson,34,-0.2423796468418123,0.1672371091421883,0.2423796468418123
+EHG12,patient_contraction_minus_baseline,all,fwh_entropy_averagesampen,fwh_time_mean_absolute_value,Average SampEn,MAV,spearman,34,-0.1755538579067991,0.320662421706671,0.1755538579067991
+EHG12,patient_contraction_minus_baseline,all,fwh_entropy_averagesampen,fwh_time_root_mean_square,Average SampEn,RMS,pearson,34,-0.36401413588727455,0.034313069221431194,0.36401413588727455
+EHG12,patient_contraction_minus_baseline,all,fwh_entropy_averagesampen,fwh_time_root_mean_square,Average SampEn,RMS,spearman,34,-0.2675324675324675,0.12610200124776932,0.2675324675324675
+EHG12,patient_contraction_minus_baseline,all,fwh_entropy_averagesampen,fwh_time_peak_to_peak,Average SampEn,Peak-to-peak,pearson,34,-0.6787367760063219,1.022978675809538e-05,0.6787367760063219
+EHG12,patient_contraction_minus_baseline,all,fwh_entropy_averagesampen,fwh_time_peak_to_peak,Average SampEn,Peak-to-peak,spearman,34,-0.45851795263559963,0.006385984840076408,0.45851795263559963
+EHG12,patient_contraction_minus_baseline,all,fwh_entropy_averagesampen,fwh_time_waveform_length,Average SampEn,Waveform length,pearson,34,-0.2484442947427921,0.1565394353274007,0.2484442947427921
+EHG12,patient_contraction_minus_baseline,all,fwh_entropy_averagesampen,fwh_time_waveform_length,Average SampEn,Waveform length,spearman,34,-0.23911382734912145,0.17320975035189545,0.23911382734912145
+EHG12,patient_contraction_minus_baseline,all,fwh_entropy_sampen_fixed_r,fwh_time_mean_absolute_value,Fixed-r SampEn,MAV,pearson,34,-0.4090596450860554,0.016299000097303413,0.4090596450860554
+EHG12,patient_contraction_minus_baseline,all,fwh_entropy_sampen_fixed_r,fwh_time_mean_absolute_value,Fixed-r SampEn,MAV,spearman,34,-0.4190985485103132,0.013620967643419187,0.4190985485103132
+EHG12,patient_contraction_minus_baseline,all,fwh_entropy_sampen_fixed_r,fwh_time_root_mean_square,Fixed-r SampEn,RMS,pearson,34,-0.5256386967424401,0.0014106069255924638,0.5256386967424401
+EHG12,patient_contraction_minus_baseline,all,fwh_entropy_sampen_fixed_r,fwh_time_root_mean_square,Fixed-r SampEn,RMS,spearman,34,-0.46340718105423984,0.005777371849580424,0.46340718105423984
+EHG12,patient_contraction_minus_baseline,all,fwh_entropy_sampen_fixed_r,fwh_time_peak_to_peak,Fixed-r SampEn,Peak-to-peak,pearson,34,-0.7172650455657609,1.8130379904582692e-06,0.7172650455657609
+EHG12,patient_contraction_minus_baseline,all,fwh_entropy_sampen_fixed_r,fwh_time_peak_to_peak,Fixed-r SampEn,Peak-to-peak,spearman,34,-0.5663865546218487,0.0004797143688024098,0.5663865546218487
+EHG12,patient_contraction_minus_baseline,all,fwh_entropy_sampen_fixed_r,fwh_time_waveform_length,Fixed-r SampEn,Waveform length,pearson,34,-0.3670256291834226,0.032743920490484565,0.3670256291834226
+EHG12,patient_contraction_minus_baseline,all,fwh_entropy_sampen_fixed_r,fwh_time_waveform_length,Fixed-r SampEn,Waveform length,spearman,34,-0.39831932773109235,0.019638069015934706,0.39831932773109235
+EHG12,patient_contraction_minus_baseline,all,fwh_entropy_mediansampen,fwh_time_mean_absolute_value,Median SampEn,MAV,pearson,34,-0.08336672956814449,0.6392538340846186,0.08336672956814449
+EHG12,patient_contraction_minus_baseline,all,fwh_entropy_mediansampen,fwh_time_mean_absolute_value,Median SampEn,MAV,spearman,34,-0.009014514896867836,0.9596458127682785,0.009014514896867836
+EHG12,patient_contraction_minus_baseline,all,fwh_entropy_mediansampen,fwh_time_root_mean_square,Median SampEn,RMS,pearson,34,-0.1579758727601604,0.372223402205326,0.1579758727601604
+EHG12,patient_contraction_minus_baseline,all,fwh_entropy_mediansampen,fwh_time_root_mean_square,Median SampEn,RMS,spearman,34,-0.10893812070282656,0.5396893152422026,0.10893812070282656
+EHG12,patient_contraction_minus_baseline,all,fwh_entropy_mediansampen,fwh_time_peak_to_peak,Median SampEn,Peak-to-peak,pearson,34,-0.3777800618006071,0.027610528029462313,0.3777800618006071
+EHG12,patient_contraction_minus_baseline,all,fwh_entropy_mediansampen,fwh_time_peak_to_peak,Median SampEn,Peak-to-peak,spearman,34,-0.28953399541634833,0.09673319153207798,0.28953399541634833
+EHG12,patient_contraction_minus_baseline,all,fwh_entropy_mediansampen,fwh_time_waveform_length,Median SampEn,Waveform length,pearson,34,-0.1288956657990572,0.4675255567097887,0.1288956657990572
+EHG12,patient_contraction_minus_baseline,all,fwh_entropy_mediansampen,fwh_time_waveform_length,Median SampEn,Waveform length,spearman,34,-0.09182582123758594,0.6055066799799137,0.09182582123758594
+EHG12,patient_contraction_minus_baseline,all,fwh_entropy_sdsampen,fwh_time_mean_absolute_value,SD SampEn,MAV,pearson,34,-0.25595002659563015,0.14399524774679823,0.25595002659563015
+EHG12,patient_contraction_minus_baseline,all,fwh_entropy_sdsampen,fwh_time_mean_absolute_value,SD SampEn,MAV,spearman,34,-0.2436974789915966,0.16486923348654378,0.2436974789915966
+EHG12,patient_contraction_minus_baseline,all,fwh_entropy_sdsampen,fwh_time_root_mean_square,SD SampEn,RMS,pearson,34,-0.38224100806514805,0.025684789203165373,0.38224100806514805
+EHG12,patient_contraction_minus_baseline,all,fwh_entropy_sdsampen,fwh_time_root_mean_square,SD SampEn,RMS,spearman,34,-0.3359816653934301,0.05205139530198169,0.3359816653934301
+EHG12,patient_contraction_minus_baseline,all,fwh_entropy_sdsampen,fwh_time_peak_to_peak,SD SampEn,Peak-to-peak,pearson,34,-0.6918253514756045,5.853538589001192e-06,0.6918253514756045
+EHG12,patient_contraction_minus_baseline,all,fwh_entropy_sdsampen,fwh_time_peak_to_peak,SD SampEn,Peak-to-peak,spearman,34,-0.494576012223071,0.0029460061238698334,0.494576012223071
+EHG12,patient_contraction_minus_baseline,all,fwh_entropy_sdsampen,fwh_time_waveform_length,SD SampEn,Waveform length,pearson,34,-0.24621037043072097,0.1604208699610161,0.24621037043072097
+EHG12,patient_contraction_minus_baseline,all,fwh_entropy_sdsampen,fwh_time_waveform_length,SD SampEn,Waveform length,spearman,34,-0.26569900687547743,0.12881871267063238,0.26569900687547743
+EHG12,patient_contraction_minus_baseline,all,fwh_entropy_kurtosissampen,fwh_time_mean_absolute_value,Kurtosis SampEn,MAV,pearson,34,0.34584318423692856,0.04512703345637192,0.34584318423692856
+EHG12,patient_contraction_minus_baseline,all,fwh_entropy_kurtosissampen,fwh_time_mean_absolute_value,Kurtosis SampEn,MAV,spearman,34,0.3393430099312452,0.04960208964649447,0.3393430099312452
+EHG12,patient_contraction_minus_baseline,all,fwh_entropy_kurtosissampen,fwh_time_root_mean_square,Kurtosis SampEn,RMS,pearson,34,0.4771302853524467,0.00432769407624631,0.4771302853524467
+EHG12,patient_contraction_minus_baseline,all,fwh_entropy_kurtosissampen,fwh_time_root_mean_square,Kurtosis SampEn,RMS,spearman,34,0.4102368220015278,0.015963808678620035,0.4102368220015278
+EHG12,patient_contraction_minus_baseline,all,fwh_entropy_kurtosissampen,fwh_time_peak_to_peak,Kurtosis SampEn,Peak-to-peak,pearson,34,0.814901529726929,4.453598862964544e-09,0.814901529726929
+EHG12,patient_contraction_minus_baseline,all,fwh_entropy_kurtosissampen,fwh_time_peak_to_peak,Kurtosis SampEn,Peak-to-peak,spearman,34,0.6106951871657753,0.00012519398800849333,0.6106951871657753
+EHG12,patient_contraction_minus_baseline,all,fwh_entropy_kurtosissampen,fwh_time_waveform_length,Kurtosis SampEn,Waveform length,pearson,34,0.3687095149600659,0.03189234494254582,0.3687095149600659
+EHG12,patient_contraction_minus_baseline,all,fwh_entropy_kurtosissampen,fwh_time_waveform_length,Kurtosis SampEn,Waveform length,spearman,34,0.4197097020626432,0.013470662315988249,0.4197097020626432
+EHG12,patient_contraction_minus_baseline,all,fwh_entropy_skewnesssampen,fwh_time_mean_absolute_value,Skewness SampEn,MAV,pearson,34,0.34689463511080154,0.04443462044270616,0.34689463511080154
+EHG12,patient_contraction_minus_baseline,all,fwh_entropy_skewnesssampen,fwh_time_mean_absolute_value,Skewness SampEn,MAV,spearman,34,0.3423987776928953,0.04745613666523362,0.3423987776928953
+EHG12,patient_contraction_minus_baseline,all,fwh_entropy_skewnesssampen,fwh_time_root_mean_square,Skewness SampEn,RMS,pearson,34,0.4717760055708972,0.004850816404887648,0.4717760055708972
+EHG12,patient_contraction_minus_baseline,all,fwh_entropy_skewnesssampen,fwh_time_root_mean_square,Skewness SampEn,RMS,spearman,34,0.41665393430099307,0.014236367106908007,0.41665393430099307
+EHG12,patient_contraction_minus_baseline,all,fwh_entropy_skewnesssampen,fwh_time_peak_to_peak,Skewness SampEn,Peak-to-peak,pearson,34,0.7957789404574085,1.8523006699863932e-08,0.7957789404574085
+EHG12,patient_contraction_minus_baseline,all,fwh_entropy_skewnesssampen,fwh_time_peak_to_peak,Skewness SampEn,Peak-to-peak,spearman,34,0.6125286478227654,0.00011791056348645899,0.6125286478227654
+EHG12,patient_contraction_minus_baseline,all,fwh_entropy_skewnesssampen,fwh_time_waveform_length,Skewness SampEn,Waveform length,pearson,34,0.3684500758981178,0.0320223580585296,0.3684500758981178
+EHG12,patient_contraction_minus_baseline,all,fwh_entropy_skewnesssampen,fwh_time_waveform_length,Skewness SampEn,Waveform length,spearman,34,0.42245989304812837,0.01281143548262766,0.42245989304812837
+EHG12,patient_fetal_movement_minus_baseline,all,fwh_entropy_totalsampen,fwh_time_mean_absolute_value,Total SampEn,MAV,pearson,36,0.9619394886954713,9.831399878301084e-21,0.9619394886954713
+EHG12,patient_fetal_movement_minus_baseline,all,fwh_entropy_totalsampen,fwh_time_mean_absolute_value,Total SampEn,MAV,spearman,36,0.9583011583011584,4.513341208007323e-20,0.9583011583011584
+EHG12,patient_fetal_movement_minus_baseline,all,fwh_entropy_totalsampen,fwh_time_root_mean_square,Total SampEn,RMS,pearson,36,0.9314387515034682,1.7192705509379258e-16,0.9314387515034682
+EHG12,patient_fetal_movement_minus_baseline,all,fwh_entropy_totalsampen,fwh_time_root_mean_square,Total SampEn,RMS,spearman,36,0.9490347490347492,1.2734980248736797e-18,0.9490347490347492
+EHG12,patient_fetal_movement_minus_baseline,all,fwh_entropy_totalsampen,fwh_time_peak_to_peak,Total SampEn,Peak-to-peak,pearson,36,0.6644705197757149,9.896533214412326e-06,0.6644705197757149
+EHG12,patient_fetal_movement_minus_baseline,all,fwh_entropy_totalsampen,fwh_time_peak_to_peak,Total SampEn,Peak-to-peak,spearman,36,0.6694980694980697,8.005105187600674e-06,0.6694980694980697
+EHG12,patient_fetal_movement_minus_baseline,all,fwh_entropy_totalsampen,fwh_time_waveform_length,Total SampEn,Waveform length,pearson,36,0.9688284457001111,3.4785885136023124e-22,0.9688284457001111
+EHG12,patient_fetal_movement_minus_baseline,all,fwh_entropy_totalsampen,fwh_time_waveform_length,Total SampEn,Waveform length,spearman,36,0.9832689832689833,9.892122169539597e-27,0.9832689832689833
+EHG12,patient_fetal_movement_minus_baseline,all,fwh_entropy_averagesampen,fwh_time_mean_absolute_value,Average SampEn,MAV,pearson,36,0.023135677588902465,0.8934556829503746,0.023135677588902465
+EHG12,patient_fetal_movement_minus_baseline,all,fwh_entropy_averagesampen,fwh_time_mean_absolute_value,Average SampEn,MAV,spearman,36,-0.06795366795366796,0.6937371763828443,0.06795366795366796
+EHG12,patient_fetal_movement_minus_baseline,all,fwh_entropy_averagesampen,fwh_time_root_mean_square,Average SampEn,RMS,pearson,36,-0.14122034687787519,0.41133434467829333,0.14122034687787519
+EHG12,patient_fetal_movement_minus_baseline,all,fwh_entropy_averagesampen,fwh_time_root_mean_square,Average SampEn,RMS,spearman,36,-0.16241956241956243,0.34392952606075067,0.16241956241956243
+EHG12,patient_fetal_movement_minus_baseline,all,fwh_entropy_averagesampen,fwh_time_peak_to_peak,Average SampEn,Peak-to-peak,pearson,36,-0.5831708779080207,0.00018944529964219655,0.5831708779080207
+EHG12,patient_fetal_movement_minus_baseline,all,fwh_entropy_averagesampen,fwh_time_peak_to_peak,Average SampEn,Peak-to-peak,spearman,36,-0.5791505791505791,0.0002148738534078123,0.5791505791505791
+EHG12,patient_fetal_movement_minus_baseline,all,fwh_entropy_averagesampen,fwh_time_waveform_length,Average SampEn,Waveform length,pearson,36,-0.04417781065561045,0.7980766965847608,0.04417781065561045
+EHG12,patient_fetal_movement_minus_baseline,all,fwh_entropy_averagesampen,fwh_time_waveform_length,Average SampEn,Waveform length,spearman,36,-0.08751608751608753,0.6117755602203854,0.08751608751608753
+EHG12,patient_fetal_movement_minus_baseline,all,fwh_entropy_sampen_fixed_r,fwh_time_mean_absolute_value,Fixed-r SampEn,MAV,pearson,36,0.09124430733636053,0.5966313348123862,0.09124430733636053
+EHG12,patient_fetal_movement_minus_baseline,all,fwh_entropy_sampen_fixed_r,fwh_time_mean_absolute_value,Fixed-r SampEn,MAV,spearman,36,0.09369369369369371,0.5867714738199759,0.09369369369369371
+EHG12,patient_fetal_movement_minus_baseline,all,fwh_entropy_sampen_fixed_r,fwh_time_root_mean_square,Fixed-r SampEn,RMS,pearson,36,-0.05448992144686723,0.7522789191031237,0.05448992144686723
+EHG12,patient_fetal_movement_minus_baseline,all,fwh_entropy_sampen_fixed_r,fwh_time_root_mean_square,Fixed-r SampEn,RMS,spearman,36,0.025225225225225228,0.883895364266509,0.025225225225225228
+EHG12,patient_fetal_movement_minus_baseline,all,fwh_entropy_sampen_fixed_r,fwh_time_peak_to_peak,Fixed-r SampEn,Peak-to-peak,pearson,36,-0.35060193106946924,0.03604376793586422,0.35060193106946924
+EHG12,patient_fetal_movement_minus_baseline,all,fwh_entropy_sampen_fixed_r,fwh_time_peak_to_peak,Fixed-r SampEn,Peak-to-peak,spearman,36,-0.3580437580437581,0.03202503203747255,0.3580437580437581
+EHG12,patient_fetal_movement_minus_baseline,all,fwh_entropy_sampen_fixed_r,fwh_time_waveform_length,Fixed-r SampEn,Waveform length,pearson,36,0.07651282462717662,0.6573849615026607,0.07651282462717662
+EHG12,patient_fetal_movement_minus_baseline,all,fwh_entropy_sampen_fixed_r,fwh_time_waveform_length,Fixed-r SampEn,Waveform length,spearman,36,0.09755469755469756,0.5713775489256785,0.09755469755469756
+EHG12,patient_fetal_movement_minus_baseline,all,fwh_entropy_mediansampen,fwh_time_mean_absolute_value,Median SampEn,MAV,pearson,36,0.02566848941641447,0.8818693237266466,0.02566848941641447
+EHG12,patient_fetal_movement_minus_baseline,all,fwh_entropy_mediansampen,fwh_time_mean_absolute_value,Median SampEn,MAV,spearman,36,-0.068983268983269,0.6893265182200805,0.068983268983269
+EHG12,patient_fetal_movement_minus_baseline,all,fwh_entropy_mediansampen,fwh_time_root_mean_square,Median SampEn,RMS,pearson,36,-0.11006241722582134,0.5228133845441878,0.11006241722582134
+EHG12,patient_fetal_movement_minus_baseline,all,fwh_entropy_mediansampen,fwh_time_root_mean_square,Median SampEn,RMS,spearman,36,-0.14723294723294725,0.39149742242481256,0.14723294723294725
+EHG12,patient_fetal_movement_minus_baseline,all,fwh_entropy_mediansampen,fwh_time_peak_to_peak,Median SampEn,Peak-to-peak,pearson,36,-0.5301064713136219,0.000883147259963859,0.5301064713136219
+EHG12,patient_fetal_movement_minus_baseline,all,fwh_entropy_mediansampen,fwh_time_peak_to_peak,Median SampEn,Peak-to-peak,spearman,36,-0.5436293436293437,0.0006110811558000683,0.5436293436293437
+EHG12,patient_fetal_movement_minus_baseline,all,fwh_entropy_mediansampen,fwh_time_waveform_length,Median SampEn,Waveform length,pearson,36,-0.04947166037397283,0.7744724094014637,0.04947166037397283
+EHG12,patient_fetal_movement_minus_baseline,all,fwh_entropy_mediansampen,fwh_time_waveform_length,Median SampEn,Waveform length,spearman,36,-0.08262548262548262,0.6318834905113795,0.08262548262548262
+EHG12,patient_fetal_movement_minus_baseline,all,fwh_entropy_sdsampen,fwh_time_mean_absolute_value,SD SampEn,MAV,pearson,36,0.08087236165328335,0.6391563262731277,0.08087236165328335
+EHG12,patient_fetal_movement_minus_baseline,all,fwh_entropy_sdsampen,fwh_time_mean_absolute_value,SD SampEn,MAV,spearman,36,0.019305019305019308,0.9110196224571777,0.019305019305019308
+EHG12,patient_fetal_movement_minus_baseline,all,fwh_entropy_sdsampen,fwh_time_root_mean_square,SD SampEn,RMS,pearson,36,-0.08008233618198732,0.6424446685666266,0.08008233618198732
+EHG12,patient_fetal_movement_minus_baseline,all,fwh_entropy_sdsampen,fwh_time_root_mean_square,SD SampEn,RMS,spearman,36,-0.07850707850707851,0.6490213690532615,0.07850707850707851
+EHG12,patient_fetal_movement_minus_baseline,all,fwh_entropy_sdsampen,fwh_time_peak_to_peak,SD SampEn,Peak-to-peak,pearson,36,-0.5072741647703534,0.0015902285676015874,0.5072741647703534
+EHG12,patient_fetal_movement_minus_baseline,all,fwh_entropy_sdsampen,fwh_time_peak_to_peak,SD SampEn,Peak-to-peak,spearman,36,-0.5184041184041185,0.001199957750453108,0.5184041184041185
+EHG12,patient_fetal_movement_minus_baseline,all,fwh_entropy_sdsampen,fwh_time_waveform_length,SD SampEn,Waveform length,pearson,36,0.030222168643860094,0.8611006539503627,0.030222168643860094
+EHG12,patient_fetal_movement_minus_baseline,all,fwh_entropy_sdsampen,fwh_time_waveform_length,SD SampEn,Waveform length,spearman,36,0.007207207207207207,0.9667238292927838,0.007207207207207207
+EHG12,patient_fetal_movement_minus_baseline,all,fwh_entropy_kurtosissampen,fwh_time_mean_absolute_value,Kurtosis SampEn,MAV,pearson,36,0.00785451195459987,0.9637370640500045,0.00785451195459987
+EHG12,patient_fetal_movement_minus_baseline,all,fwh_entropy_kurtosissampen,fwh_time_mean_absolute_value,Kurtosis SampEn,MAV,spearman,36,0.08880308880308882,0.6065293251960965,0.08880308880308882
+EHG12,patient_fetal_movement_minus_baseline,all,fwh_entropy_kurtosissampen,fwh_time_root_mean_square,Kurtosis SampEn,RMS,pearson,36,0.17129599409513344,0.31783727458829736,0.17129599409513344
+EHG12,patient_fetal_movement_minus_baseline,all,fwh_entropy_kurtosissampen,fwh_time_root_mean_square,Kurtosis SampEn,RMS,spearman,36,0.19845559845559846,0.24592832224250555,0.19845559845559846
+EHG12,patient_fetal_movement_minus_baseline,all,fwh_entropy_kurtosissampen,fwh_time_peak_to_peak,Kurtosis SampEn,Peak-to-peak,pearson,36,0.5612115104821304,0.00036966782045811243,0.5612115104821304
+EHG12,patient_fetal_movement_minus_baseline,all,fwh_entropy_kurtosissampen,fwh_time_peak_to_peak,Kurtosis SampEn,Peak-to-peak,spearman,36,0.584041184041184,0.00018430967153878312,0.584041184041184
+EHG12,patient_fetal_movement_minus_baseline,all,fwh_entropy_kurtosissampen,fwh_time_waveform_length,Kurtosis SampEn,Waveform length,pearson,36,0.07389639045836625,0.6684201950685854,0.07389639045836625
+EHG12,patient_fetal_movement_minus_baseline,all,fwh_entropy_kurtosissampen,fwh_time_waveform_length,Kurtosis SampEn,Waveform length,spearman,36,0.1281853281853282,0.45624117172724643,0.1281853281853282
+EHG12,patient_fetal_movement_minus_baseline,all,fwh_entropy_skewnesssampen,fwh_time_mean_absolute_value,Skewness SampEn,MAV,pearson,36,0.009973859382853693,0.9539616758064406,0.009973859382853693
+EHG12,patient_fetal_movement_minus_baseline,all,fwh_entropy_skewnesssampen,fwh_time_mean_absolute_value,Skewness SampEn,MAV,spearman,36,0.08442728442728444,0.6244439950368661,0.08442728442728444
+EHG12,patient_fetal_movement_minus_baseline,all,fwh_entropy_skewnesssampen,fwh_time_root_mean_square,Skewness SampEn,RMS,pearson,36,0.17502185162898293,0.30726485098153555,0.17502185162898293
+EHG12,patient_fetal_movement_minus_baseline,all,fwh_entropy_skewnesssampen,fwh_time_root_mean_square,Skewness SampEn,RMS,spearman,36,0.19433719433719435,0.2560648502909872,0.19433719433719435
+EHG12,patient_fetal_movement_minus_baseline,all,fwh_entropy_skewnesssampen,fwh_time_peak_to_peak,Skewness SampEn,Peak-to-peak,pearson,36,0.5913351443851419,0.0001459386287680049,0.5913351443851419
+EHG12,patient_fetal_movement_minus_baseline,all,fwh_entropy_skewnesssampen,fwh_time_peak_to_peak,Skewness SampEn,Peak-to-peak,spearman,36,0.5858429858429859,0.00017407228864448198,0.5858429858429859
+EHG12,patient_fetal_movement_minus_baseline,all,fwh_entropy_skewnesssampen,fwh_time_waveform_length,Skewness SampEn,Waveform length,pearson,36,0.0818428717597764,0.6351260073328441,0.0818428717597764
+EHG12,patient_fetal_movement_minus_baseline,all,fwh_entropy_skewnesssampen,fwh_time_waveform_length,Skewness SampEn,Waveform length,spearman,36,0.12329472329472331,0.4737437158750939,0.12329472329472331

@@ -1,0 +1,8 @@
+summary,n_windows,max_abs_difference,mask_agreement,check,source
+auc,12,0,yes,independent explicit pairwise vs reference,C3/independent_grid_agreement.csv
+slope,12,0,yes,independent explicit pairwise vs reference,C3/independent_grid_agreement.csv
+centroid,12,0,yes,independent explicit pairwise vs reference,C3/independent_grid_agreement.csv
+sd,12,0,yes,independent explicit pairwise vs reference,C3/independent_grid_agreement.csv
+kurtosis,12,0,yes,independent explicit pairwise vs reference,C3/independent_grid_agreement.csv
+skewness,12,0,yes,independent explicit pairwise vs reference,C3/independent_grid_agreement.csv
+valid_fraction,12,0,yes,independent explicit pairwise vs reference,C3/independent_grid_agreement.csv

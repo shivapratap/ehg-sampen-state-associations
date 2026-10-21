@@ -1,0 +1,7 @@
+resolution,mode,approx_bin_count_documented,approx_bin_count_measured_median,worst_median_relative_difference_percent,worst_max_relative_difference_percent,proportion_pass
+frozen_d3,frozen,80,84.0,630.6385670280724,673.1570855038561,0.0
+frozen_d4,frozen,800,793.0,604.1486821180345,629.0289188570605,0.0
+frozen_d5,frozen,7000,6902.5,604.2731318402214,610.6597212667757,0.0
+gi_d1,GI,60,60.5,0.0,0.0,1.0
+gi_d2,GI,600,588.0,0.0,0.0,1.0
+gi_d3,GI,5000,5258.0,0.0,0.0,1.0

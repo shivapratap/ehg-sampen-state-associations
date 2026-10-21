@@ -1,0 +1,7 @@
+# Extra packages for the stages that start from the raw PhysioNet recordings.
+-r requirements.txt
+wfdb==4.3.1
+pyarrow==21.0.0
+Pillow==12.0.0
+# Only the `features` stage needs this (computes the 34-feature table). Skip it if you restore data/derived.
+amrita-biosignal-feature-engine @ git+https://github.com/shivapratap/amrita-biosignal-feature-engine@4dc5025b265f300d7e3375118f7794bfb5fca711

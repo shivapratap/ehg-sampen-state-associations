@@ -1,0 +1,5 @@
+feature,n_windows,max_abs_difference_across_gains,zero_difference_windows,source
+fp_total,12,0,12,results/gi/tables/full_precision_gain_test.csv
+fp_average,12,0,12,results/gi/tables/full_precision_gain_test.csv
+fp_sd,12,0,12,results/gi/tables/full_precision_gain_test.csv
+fp_n_retained,12,0,12,results/gi/tables/full_precision_gain_test.csv

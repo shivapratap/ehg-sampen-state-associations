@@ -1,0 +1,9 @@
+{
+  "n_windows": 60,
+  "n_samples": 1200,
+  "channel": "EHG9",
+  "band": "FWH",
+  "sampling_hz": 20,
+  "source": "Paper1 raw WFDB; full-recording filter then slice/decimate",
+  "sha256_npz": "a95daa4319800e68a78cfad04f7db2c608d7cc048aca0132b08083c4a271d468"
+}

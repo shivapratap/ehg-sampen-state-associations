@@ -1,0 +1,32 @@
+{
+  "analysis_scope": "EHG9 UC-versus-IN window-length sensitivity",
+  "durations_seconds": [40, 60, 80],
+  "frozen_duration_seconds": 60,
+  "regenerated_durations_seconds": [40, 80],
+  "channel": "EHG9",
+  "primary_band_hz": [0.3, 1.0],
+  "input_sampling_frequency_hz": 200.0,
+  "analysis_sampling_frequency_hz": 20.0,
+  "decimation_factor": 10,
+  "filter": "fourth-order zero-phase Butterworth SOS applied to full recording before slicing",
+  "edge_trim_seconds": 15.0,
+  "baseline_guard_seconds": 120.0,
+  "welch_window_seconds": 10.0,
+  "welch_overlap_seconds": 5.0,
+  "feature_family": "exact frozen 34 primary FWH features",
+  "standardization_primary": "common frozen 60-s Stage 06 feature mean and sample SD",
+  "standardization_secondary": "within-duration sample SD, derived from the same raw coefficient",
+  "model_formula": "z_feature ~ C(window_class, Treatment(reference=baseline))",
+  "random_effects": "woman random intercept plus recording variance component",
+  "optimizer_fallback_order": [
+    "woman_recording/lbfgs",
+    "woman_recording/bfgs",
+    "woman_only/lbfgs",
+    "woman_only/bfgs"
+  ],
+  "estimation": "REML",
+  "multiplicity": "BH-FDR separately across 34 UC-versus-IN p-values within each duration",
+  "magnitude_stability_rule": "same sign and both common-scale duration estimates within 20% of frozen when abs(frozen)>=0.10; otherwise both absolute differences <=0.05 frozen SD",
+  "central_pattern_rule": "all four core features positive at every duration and at least three of four individually direction-and-magnitude stable; any duration-additive exception must be named and qualified",
+  "design_lock_timing": "defined after pipeline audit and before inspecting regenerated 40-s/80-s feature outcomes"
+}

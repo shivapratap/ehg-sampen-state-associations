@@ -1,0 +1,173 @@
+channel,scope,sampen_label,amplitude_label,coupling_strength,n_units,spearman_rho,p_value,interpretation
+EHG10,patient_class_median,Average SampEn,MAV,weak,113,-0.0836715683012842,0.37826480812080776,weak coupling
+EHG10,patient_class_median,Average SampEn,Peak-to-peak,weak,113,-0.39672466564641695,1.3597935693252945e-05,weak coupling
+EHG10,patient_class_median,Average SampEn,RMS,weak,113,-0.16948067070330697,0.0727208294803662,weak coupling
+EHG10,patient_class_median,Average SampEn,Waveform length,weak,113,-0.053937387717080315,0.5704420696837613,weak coupling
+EHG10,patient_class_median,Fixed-r SampEn,MAV,weak,113,-0.05645751547009116,0.552543696342349,weak coupling
+EHG10,patient_class_median,Fixed-r SampEn,Peak-to-peak,weak,113,-0.3054095415529976,0.001003967615382552,weak coupling
+EHG10,patient_class_median,Fixed-r SampEn,RMS,weak,113,-0.14024552531771908,0.1384501589050275,weak coupling
+EHG10,patient_class_median,Fixed-r SampEn,Waveform length,weak,113,0.00046576618537494185,0.9960934834604913,weak coupling
+EHG10,patient_class_median,Kurtosis SampEn,MAV,weak,113,0.26393139929469694,0.004732453236648378,weak coupling
+EHG10,patient_class_median,Kurtosis SampEn,Peak-to-peak,moderate,113,0.5662801916295164,6.278267727724936e-11,moderate amplitude-coupling
+EHG10,patient_class_median,Kurtosis SampEn,RMS,weak,113,0.35216082241000735,0.00013067250636842774,weak coupling
+EHG10,patient_class_median,Kurtosis SampEn,Waveform length,weak,113,0.24812030075187974,0.008053937789527527,weak coupling
+EHG10,patient_class_median,Median SampEn,MAV,weak,113,-0.0041336748952026095,0.9653402884862389,weak coupling
+EHG10,patient_class_median,Median SampEn,Peak-to-peak,weak,113,-0.3089360569565507,0.0008704768248903475,weak coupling
+EHG10,patient_class_median,Median SampEn,RMS,weak,113,-0.08594217845498704,0.36541443027593246,weak coupling
+EHG10,patient_class_median,Median SampEn,Waveform length,weak,113,4.158626655133409e-05,0.9996512025167383,weak coupling
+EHG10,patient_class_median,SD SampEn,MAV,weak,113,-0.022398363164548542,0.8138361416003062,weak coupling
+EHG10,patient_class_median,SD SampEn,Peak-to-peak,weak,113,-0.3369652006121499,0.00026275648496828824,weak coupling
+EHG10,patient_class_median,SD SampEn,RMS,weak,113,-0.11167576019695258,0.23894889343983863,weak coupling
+EHG10,patient_class_median,SD SampEn,Waveform length,weak,113,0.014164282387384392,0.8816311772097266,weak coupling
+EHG10,patient_class_median,Skewness SampEn,MAV,weak,113,0.2074988355845366,0.027434556198294498,weak coupling
+EHG10,patient_class_median,Skewness SampEn,Peak-to-peak,moderate,113,0.5140062545744893,5.784922392126647e-09,moderate amplitude-coupling
+EHG10,patient_class_median,Skewness SampEn,RMS,weak,113,0.294730188302615,0.0015302265586254462,weak coupling
+EHG10,patient_class_median,Skewness SampEn,Waveform length,weak,113,0.18797824206534036,0.04617062734271336,weak coupling
+EHG10,patient_class_median,Total SampEn,MAV,strong,113,0.9784084104065475,7.690248259694731e-78,strong amplitude-coupling
+EHG10,patient_class_median,Total SampEn,Peak-to-peak,strong,113,0.8639879566172067,7.305212593232092e-35,strong amplitude-coupling
+EHG10,patient_class_median,Total SampEn,RMS,strong,113,0.9601603566438222,2.7247246969258697e-63,strong amplitude-coupling
+EHG10,patient_class_median,Total SampEn,Waveform length,strong,113,0.990485062213055,1.8885520291624573e-97,strong amplitude-coupling
+EHG10,patient_contraction_minus_baseline,Average SampEn,MAV,weak,34,-0.02857142857142857,0.8725662505924165,weak coupling
+EHG10,patient_contraction_minus_baseline,Average SampEn,Peak-to-peak,weak,34,-0.3454545454545454,0.045385145468826604,weak coupling
+EHG10,patient_contraction_minus_baseline,Average SampEn,RMS,weak,34,-0.10435446906035142,0.5569799373347244,weak coupling
+EHG10,patient_contraction_minus_baseline,Average SampEn,Waveform length,weak,34,-0.012070282658517952,0.9459838247304326,weak coupling
+EHG10,patient_contraction_minus_baseline,Fixed-r SampEn,MAV,weak,34,-0.3381207028265852,0.05048186827704564,weak coupling
+EHG10,patient_contraction_minus_baseline,Fixed-r SampEn,Peak-to-peak,moderate,34,-0.5058823529411766,0.002271254289588552,moderate amplitude-coupling
+EHG10,patient_contraction_minus_baseline,Fixed-r SampEn,RMS,weak,34,-0.38762414056531697,0.023509587275308687,weak coupling
+EHG10,patient_contraction_minus_baseline,Fixed-r SampEn,Waveform length,weak,34,-0.2565317035905271,0.14305469490886247,weak coupling
+EHG10,patient_contraction_minus_baseline,Kurtosis SampEn,MAV,weak,34,0.10343773873185637,0.560468627873156,weak coupling
+EHG10,patient_contraction_minus_baseline,Kurtosis SampEn,Peak-to-peak,weak,34,0.3967914438502674,0.020156286125556064,weak coupling
+EHG10,patient_contraction_minus_baseline,Kurtosis SampEn,RMS,weak,34,0.18563789152024446,0.29319961790870386,weak coupling
+EHG10,patient_contraction_minus_baseline,Kurtosis SampEn,Waveform length,weak,34,0.11718869365928188,0.509226495458543,weak coupling
+EHG10,patient_contraction_minus_baseline,Median SampEn,MAV,weak,34,0.14835752482811307,0.4023921045178426,weak coupling
+EHG10,patient_contraction_minus_baseline,Median SampEn,Peak-to-peak,weak,34,-0.08113063407181054,0.64829848998344,weak coupling
+EHG10,patient_contraction_minus_baseline,Median SampEn,RMS,weak,34,0.0912146676852559,0.6079192426050848,weak coupling
+EHG10,patient_contraction_minus_baseline,Median SampEn,Waveform length,weak,34,0.13827349121466767,0.4354700621043215,weak coupling
+EHG10,patient_contraction_minus_baseline,SD SampEn,MAV,weak,34,-0.11168831168831168,0.529439346620845,weak coupling
+EHG10,patient_contraction_minus_baseline,SD SampEn,Peak-to-peak,weak,34,-0.4068754774637128,0.016936522116578215,weak coupling
+EHG10,patient_contraction_minus_baseline,SD SampEn,RMS,weak,34,-0.1844155844155844,0.2964458207702869,weak coupling
+EHG10,patient_contraction_minus_baseline,SD SampEn,Waveform length,weak,34,-0.0750190985485103,0.6732688476180064,weak coupling
+EHG10,patient_contraction_minus_baseline,Skewness SampEn,MAV,weak,34,0.057601222307104655,0.746259228577131,weak coupling
+EHG10,patient_contraction_minus_baseline,Skewness SampEn,Peak-to-peak,weak,34,0.35126050420168065,0.04165029646830007,weak coupling
+EHG10,patient_contraction_minus_baseline,Skewness SampEn,RMS,weak,34,0.13705118411000763,0.4395783764023753,weak coupling
+EHG10,patient_contraction_minus_baseline,Skewness SampEn,Waveform length,weak,34,0.06462948815889992,0.7165035882925725,weak coupling
+EHG10,patient_contraction_minus_baseline,Total SampEn,MAV,strong,34,0.9596638655462184,3.378915881168225e-19,strong amplitude-coupling
+EHG10,patient_contraction_minus_baseline,Total SampEn,Peak-to-peak,strong,34,0.8010695187165774,1.2680462975934539e-08,strong amplitude-coupling
+EHG10,patient_contraction_minus_baseline,Total SampEn,RMS,strong,34,0.922383498854087,9.11072340021916e-15,strong amplitude-coupling
+EHG10,patient_contraction_minus_baseline,Total SampEn,Waveform length,strong,34,0.9700534759358288,3.1014913986093376e-21,strong amplitude-coupling
+EHG10,patient_fetal_movement_minus_baseline,Average SampEn,MAV,weak,36,-0.2805662805662806,0.0974248960232991,weak coupling
+EHG10,patient_fetal_movement_minus_baseline,Average SampEn,Peak-to-peak,moderate,36,-0.7173745173745174,8.5076576060952e-07,moderate amplitude-coupling
+EHG10,patient_fetal_movement_minus_baseline,Average SampEn,RMS,weak,36,-0.4283140283140284,0.009157066994548019,weak coupling
+EHG10,patient_fetal_movement_minus_baseline,Average SampEn,Waveform length,weak,36,-0.2731016731016731,0.10705220198915735,weak coupling
+EHG10,patient_fetal_movement_minus_baseline,Fixed-r SampEn,MAV,weak,36,-0.1492921492921493,0.3848334085858238,weak coupling
+EHG10,patient_fetal_movement_minus_baseline,Fixed-r SampEn,Peak-to-peak,moderate,36,-0.5202059202059203,0.0011454507159143212,moderate amplitude-coupling
+EHG10,patient_fetal_movement_minus_baseline,Fixed-r SampEn,RMS,weak,36,-0.28416988416988415,0.09302068764173425,weak coupling
+EHG10,patient_fetal_movement_minus_baseline,Fixed-r SampEn,Waveform length,weak,36,-0.12380952380952381,0.47188490752141254,weak coupling
+EHG10,patient_fetal_movement_minus_baseline,Kurtosis SampEn,MAV,weak,36,0.32123552123552124,0.05608565473282905,weak coupling
+EHG10,patient_fetal_movement_minus_baseline,Kurtosis SampEn,Peak-to-peak,strong,36,0.766795366795367,4.9422951638415614e-08,strong amplitude-coupling
+EHG10,patient_fetal_movement_minus_baseline,Kurtosis SampEn,RMS,weak,36,0.44761904761904764,0.006192484776656397,weak coupling
+EHG10,patient_fetal_movement_minus_baseline,Kurtosis SampEn,Waveform length,weak,36,0.3253539253539254,0.05283372365496112,weak coupling
+EHG10,patient_fetal_movement_minus_baseline,Median SampEn,MAV,weak,36,-0.12947232947232948,0.4516936944475176,weak coupling
+EHG10,patient_fetal_movement_minus_baseline,Median SampEn,Peak-to-peak,moderate,36,-0.536936936936937,0.0007346591230988002,moderate amplitude-coupling
+EHG10,patient_fetal_movement_minus_baseline,Median SampEn,RMS,weak,36,-0.2501930501930502,0.1411014182151862,weak coupling
+EHG10,patient_fetal_movement_minus_baseline,Median SampEn,Waveform length,weak,36,-0.12612612612612614,0.4635679889206378,weak coupling
+EHG10,patient_fetal_movement_minus_baseline,SD SampEn,MAV,weak,36,-0.23912483912483914,0.1601440951664091,weak coupling
+EHG10,patient_fetal_movement_minus_baseline,SD SampEn,Peak-to-peak,moderate,36,-0.679021879021879,5.296723517697538e-06,moderate amplitude-coupling
+EHG10,patient_fetal_movement_minus_baseline,SD SampEn,RMS,weak,36,-0.37400257400257403,0.02463561747823158,weak coupling
+EHG10,patient_fetal_movement_minus_baseline,SD SampEn,Waveform length,weak,36,-0.22393822393822396,0.18919713997256535,weak coupling
+EHG10,patient_fetal_movement_minus_baseline,Skewness SampEn,MAV,weak,36,0.2962676962676963,0.07934459672094643,weak coupling
+EHG10,patient_fetal_movement_minus_baseline,Skewness SampEn,Peak-to-peak,moderate,36,0.7485199485199486,1.5266490945801942e-07,moderate amplitude-coupling
+EHG10,patient_fetal_movement_minus_baseline,Skewness SampEn,RMS,weak,36,0.42805662805662803,0.009203597060834663,weak coupling
+EHG10,patient_fetal_movement_minus_baseline,Skewness SampEn,Waveform length,weak,36,0.3006435006435007,0.07480220761317881,weak coupling
+EHG10,patient_fetal_movement_minus_baseline,Total SampEn,MAV,strong,36,0.9467181467181469,2.6631894276073767e-18,strong amplitude-coupling
+EHG10,patient_fetal_movement_minus_baseline,Total SampEn,Peak-to-peak,strong,36,0.7768339768339769,2.5453103933912133e-08,strong amplitude-coupling
+EHG10,patient_fetal_movement_minus_baseline,Total SampEn,RMS,strong,36,0.9003861003861005,7.718873946274746e-14,strong amplitude-coupling
+EHG10,patient_fetal_movement_minus_baseline,Total SampEn,Waveform length,strong,36,0.9752895752895753,7.046019335892637e-24,strong amplitude-coupling
+EHG10,recording_class_median,Average SampEn,MAV,weak,271,0.06626872151074452,0.27700429116458525,weak coupling
+EHG10,recording_class_median,Average SampEn,Peak-to-peak,weak,271,-0.2835666739020331,2.092707705671803e-06,weak coupling
+EHG10,recording_class_median,Average SampEn,RMS,weak,271,-0.025663241926536913,0.6740568697354425,weak coupling
+EHG10,recording_class_median,Average SampEn,Waveform length,weak,271,0.11370197525504668,0.06159710594465409,weak coupling
+EHG10,recording_class_median,Fixed-r SampEn,MAV,weak,271,-0.01980983045124569,0.7454570137788574,weak coupling
+EHG10,recording_class_median,Fixed-r SampEn,Peak-to-peak,weak,271,-0.28028965583773485,2.7708800651085447e-06,weak coupling
+EHG10,recording_class_median,Fixed-r SampEn,RMS,weak,271,-0.10406084943202373,0.08730578439414138,weak coupling
+EHG10,recording_class_median,Fixed-r SampEn,Waveform length,weak,271,0.0703615271446832,0.24834682468105668,weak coupling
+EHG10,recording_class_median,Kurtosis SampEn,MAV,weak,271,0.12367291319972022,0.0419194945385878,weak coupling
+EHG10,recording_class_median,Kurtosis SampEn,Peak-to-peak,weak,271,0.467662735450884,3.931384617141227e-16,weak coupling
+EHG10,recording_class_median,Kurtosis SampEn,RMS,weak,271,0.21559221474567686,0.000350468117071319,weak coupling
+EHG10,recording_class_median,Kurtosis SampEn,Waveform length,weak,271,0.08842763427634276,0.1465518637113266,weak coupling
+EHG10,recording_class_median,Median SampEn,MAV,weak,271,0.14201275836287774,0.019341385920782127,weak coupling
+EHG10,recording_class_median,Median SampEn,Peak-to-peak,weak,271,-0.22047669006101825,0.00025434922838171313,weak coupling
+EHG10,recording_class_median,Median SampEn,RMS,weak,271,0.05749403082266117,0.34574410828475155,weak coupling
+EHG10,recording_class_median,Median SampEn,Waveform length,weak,271,0.15244555386730338,0.011982015386620977,weak coupling
+EHG10,recording_class_median,SD SampEn,MAV,weak,271,0.11649965029062055,0.055430214168308914,weak coupling
+EHG10,recording_class_median,SD SampEn,Peak-to-peak,weak,271,-0.222108868147505,0.00022815237812431863,weak coupling
+EHG10,recording_class_median,SD SampEn,RMS,weak,271,0.02403588741769771,0.693648534049859,weak coupling
+EHG10,recording_class_median,SD SampEn,Waveform length,weak,271,0.17325929141644358,0.00422719743819449,weak coupling
+EHG10,recording_class_median,Skewness SampEn,MAV,weak,271,0.06929853122060634,0.2555834904309645,weak coupling
+EHG10,recording_class_median,Skewness SampEn,Peak-to-peak,weak,271,0.4164815618744423,8.549613389179477e-13,weak coupling
+EHG10,recording_class_median,Skewness SampEn,RMS,weak,271,0.16118768540626582,0.007846008459490654,weak coupling
+EHG10,recording_class_median,Skewness SampEn,Waveform length,weak,271,0.028162458095169186,0.6443960594086757,weak coupling
+EHG10,recording_class_median,Total SampEn,MAV,strong,271,0.9730958927236332,1.608594509875551e-173,strong amplitude-coupling
+EHG10,recording_class_median,Total SampEn,Peak-to-peak,strong,271,0.8306068060680606,2.3555423528102457e-70,strong amplitude-coupling
+EHG10,recording_class_median,Total SampEn,RMS,strong,271,0.9493699201697899,2.771953108704515e-137,strong amplitude-coupling
+EHG10,recording_class_median,Total SampEn,Waveform length,strong,271,0.9871469744109207,2.920066075775071e-216,strong amplitude-coupling
+EHG10,window_class_stratified,Average SampEn,MAV,weak,3358,0.06263375383190388,0.0002815261929130441,weak coupling
+EHG10,window_class_stratified,Average SampEn,Peak-to-peak,weak,3358,-0.38273848467842375,1.3318875464359448e-117,weak coupling
+EHG10,window_class_stratified,Average SampEn,Peak-to-peak,moderate,392,-0.5089856106738005,2.3978170141781796e-23,moderate amplitude-coupling
+EHG10,window_class_stratified,Average SampEn,RMS,weak,3358,-0.043282513281018765,0.012128352165828752,weak coupling
+EHG10,window_class_stratified,Average SampEn,Waveform length,weak,3358,0.0965424084317706,2.076805173654574e-08,weak coupling
+EHG10,window_class_stratified,Fixed-r SampEn,MAV,weak,3358,-0.12235793174751147,1.1229063948640318e-12,weak coupling
+EHG10,window_class_stratified,Fixed-r SampEn,Peak-to-peak,weak,3358,-0.3846988115076861,6.864543352692033e-119,weak coupling
+EHG10,window_class_stratified,Fixed-r SampEn,Peak-to-peak,moderate,333,-0.5197208968581886,1.9570080570592178e-24,moderate amplitude-coupling
+EHG10,window_class_stratified,Fixed-r SampEn,RMS,weak,3358,-0.20821153374352666,3.309699293833564e-34,weak coupling
+EHG10,window_class_stratified,Fixed-r SampEn,Waveform length,weak,3358,-0.013205489749805769,0.44428136577986654,weak coupling
+EHG10,window_class_stratified,Kurtosis SampEn,MAV,weak,3358,0.09431411475246446,4.3624891453045124e-08,weak coupling
+EHG10,window_class_stratified,Kurtosis SampEn,Peak-to-peak,moderate,3358,0.525479245922304,8.513840888282637e-238,moderate amplitude-coupling
+EHG10,window_class_stratified,Kurtosis SampEn,RMS,weak,3358,0.19925088935427082,2.0637323153501526e-31,weak coupling
+EHG10,window_class_stratified,Kurtosis SampEn,Waveform length,weak,3358,0.07060080120752377,4.225693922008388e-05,weak coupling
+EHG10,window_class_stratified,Median SampEn,MAV,weak,3358,0.12387387611046159,5.87461835865529e-13,weak coupling
+EHG10,window_class_stratified,Median SampEn,Peak-to-peak,weak,3358,-0.3427663692222272,3.323414903357997e-93,weak coupling
+EHG10,window_class_stratified,Median SampEn,RMS,weak,3358,0.026511020974584777,0.12454688548913098,weak coupling
+EHG10,window_class_stratified,Median SampEn,Waveform length,weak,3358,0.1076793994901538,3.9572270107638173e-10,weak coupling
+EHG10,window_class_stratified,SD SampEn,MAV,weak,3358,0.06745763408582853,9.151475661690936e-05,weak coupling
+EHG10,window_class_stratified,SD SampEn,Peak-to-peak,weak,3358,-0.3393085651483993,2.9574498993661086e-91,weak coupling
+EHG10,window_class_stratified,SD SampEn,RMS,weak,3358,-0.035054948397830896,0.042230555816644214,weak coupling
+EHG10,window_class_stratified,SD SampEn,Waveform length,weak,3358,0.12539065934048965,3.047951282381598e-13,weak coupling
+EHG10,window_class_stratified,Skewness SampEn,MAV,weak,3358,0.06093521913181409,0.0004107821620291284,weak coupling
+EHG10,window_class_stratified,Skewness SampEn,Peak-to-peak,weak,3358,0.49760601462332704,1.2924292536252148e-209,weak coupling
+EHG10,window_class_stratified,Skewness SampEn,Peak-to-peak,moderate,392,0.6062495653434258,8.471667928921885e-35,moderate amplitude-coupling
+EHG10,window_class_stratified,Skewness SampEn,RMS,weak,3358,0.16601574075379533,3.526000595477904e-22,weak coupling
+EHG10,window_class_stratified,Skewness SampEn,Waveform length,weak,3358,0.0360575739283474,0.03667399086338744,weak coupling
+EHG10,window_class_stratified,Total SampEn,MAV,strong,3358,0.9754079204250321,0.0,strong amplitude-coupling
+EHG10,window_class_stratified,Total SampEn,Peak-to-peak,moderate,392,0.6466181560576436,8.653539885622718e-48,moderate amplitude-coupling
+EHG10,window_class_stratified,Total SampEn,Peak-to-peak,strong,3358,0.8035260121436016,0.0,strong amplitude-coupling
+EHG10,window_class_stratified,Total SampEn,RMS,strong,3358,0.9520890962453794,0.0,strong amplitude-coupling
+EHG10,window_class_stratified,Total SampEn,Waveform length,strong,3358,0.9908685211384534,0.0,strong amplitude-coupling
+EHG10,window_pooled,Average SampEn,MAV,weak,4083,0.031255501093824765,0.04581958590866896,weak coupling
+EHG10,window_pooled,Average SampEn,Peak-to-peak,weak,4083,-0.4080079030206301,1.3323983495242587e-163,weak coupling
+EHG10,window_pooled,Average SampEn,RMS,weak,4083,-0.07986085228492035,3.228808294804053e-07,weak coupling
+EHG10,window_pooled,Average SampEn,Waveform length,weak,4083,0.0703821034959184,6.747345977860065e-06,weak coupling
+EHG10,window_pooled,Fixed-r SampEn,MAV,weak,4083,-0.1385652531713689,5.877976269949229e-19,weak coupling
+EHG10,window_pooled,Fixed-r SampEn,Peak-to-peak,weak,4083,-0.4086775735828111,3.4856061071881056e-164,weak coupling
+EHG10,window_pooled,Fixed-r SampEn,RMS,weak,4083,-0.2306451229527075,1.9467796608203742e-50,weak coupling
+EHG10,window_pooled,Fixed-r SampEn,Waveform length,weak,4083,-0.031584880534140165,0.04358006882837171,weak coupling
+EHG10,window_pooled,Kurtosis SampEn,MAV,weak,4083,0.1254258725170809,8.706907796245913e-16,weak coupling
+EHG10,window_pooled,Kurtosis SampEn,Peak-to-peak,moderate,4083,0.5495619412939045,5.247e-321,moderate amplitude-coupling
+EHG10,window_pooled,Kurtosis SampEn,RMS,weak,4083,0.23504831436925544,2.2901101101902995e-52,weak coupling
+EHG10,window_pooled,Kurtosis SampEn,Waveform length,weak,4083,0.09802975424206746,3.4484506285639406e-10,weak coupling
+EHG10,window_pooled,Median SampEn,MAV,weak,4083,0.09803339440752205,3.4432615726802685e-10,weak coupling
+EHG10,window_pooled,Median SampEn,Peak-to-peak,weak,4083,-0.36204575815544426,1.0672326250291718e-126,weak coupling
+EHG10,window_pooled,Median SampEn,RMS,weak,4083,-0.003097188270091763,0.8431662440751515,weak coupling
+EHG10,window_pooled,Median SampEn,Waveform length,weak,4083,0.08819254224021955,1.655328685129978e-08,weak coupling
+EHG10,window_pooled,SD SampEn,MAV,weak,4083,0.0388967667133339,0.012932632146154923,weak coupling
+EHG10,window_pooled,SD SampEn,Peak-to-peak,weak,4083,-0.36426006967318286,2.4204533872150184e-128,weak coupling
+EHG10,window_pooled,SD SampEn,RMS,weak,4083,-0.06907319957057853,9.980789234527224e-06,weak coupling
+EHG10,window_pooled,SD SampEn,Waveform length,weak,4083,0.10016440558345376,1.4126916124901946e-10,weak coupling
+EHG10,window_pooled,Skewness SampEn,MAV,weak,4083,0.09058929254618817,6.684692411527551e-09,weak coupling
+EHG10,window_pooled,Skewness SampEn,Peak-to-peak,moderate,4083,0.5207875542669768,1.0186497497721319e-282,moderate amplitude-coupling
+EHG10,window_pooled,Skewness SampEn,RMS,weak,4083,0.20051238618461997,2.672269997394751e-38,weak coupling
+EHG10,window_pooled,Skewness SampEn,Waveform length,weak,4083,0.061417285317410523,8.602293901514617e-05,weak coupling
+EHG10,window_pooled,Total SampEn,MAV,strong,4083,0.973709007432267,0.0,strong amplitude-coupling
+EHG10,window_pooled,Total SampEn,Peak-to-peak,strong,4083,0.799187735088282,0.0,strong amplitude-coupling
+EHG10,window_pooled,Total SampEn,RMS,strong,4083,0.9470966609594756,0.0,strong amplitude-coupling
+EHG10,window_pooled,Total SampEn,Waveform length,strong,4083,0.9895299446697214,0.0,strong amplitude-coupling

@@ -1,0 +1,11 @@
+python=3.13.9
+platform=macOS-26.6.2-arm64-arm-64bit-Mach-O
+numpy=2.3.5
+pandas=2.3.3
+scipy=1.16.3
+statsmodels=0.14.5
+random_seed=none
+preferred_model=statsmodels MixedLM ML; woman random intercept; physical-window variance component
+preferred_optimizers=lbfgs,bfgs
+fallback_and_sensitivity=OLS woman-cluster covariance; CR1; df correction; use_t=True
+global_multiplicity=Benjamini-Hochberg within seven predefined features

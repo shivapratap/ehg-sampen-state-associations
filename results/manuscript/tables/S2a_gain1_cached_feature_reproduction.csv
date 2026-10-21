@@ -1,0 +1,2 @@
+gate,status,n_windows,n_features,n_rows,max_abs_diff,n_fail,source
+gain-1 cached-feature reproduction,PASS,60,34,2040,1.7763568394002505e-15,0,D/gain1_gate_summary.json

@@ -1,0 +1,17 @@
+python=3.13.9
+platform=macOS-26.6.2-arm64-arm-64bit-Mach-O
+numpy=2.3.5
+pandas=2.3.3
+scipy=1.16.3
+matplotlib=3.10.6
+statsmodels=0.14.5
+wfdb=4.3.1
+random_seed=None
+sampen_embedding_dimension=2
+sampen_profile_distance_decimals=3
+sampen_profile_epsilon=1e-12
+fixed_r_fraction=0.2
+numerical_invariance_atol=1e-10
+numerical_invariance_rtol=1e-08
+reproduction_atol=1e-12
+reproduction_rtol=1e-10

@@ -1,0 +1,1 @@
+Corrected GI Total and profile-SD UC–IN coefficients across four simultaneous channels from the same windows and women. Intervals are model-based Wald 95% CIs; q-values use the declared 16-test BH family chosen after development.

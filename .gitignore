@@ -1,0 +1,14 @@
+# raw recordings are never committed (see data/README.md)
+data/raw/*
+!data/raw/.gitkeep
+*.dat
+*.hea
+*.atr
+# regenerated intermediates
+work/
+# python
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+.DS_Store

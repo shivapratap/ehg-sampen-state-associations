@@ -1,0 +1,31 @@
+{
+  "sources": [
+    {
+      "path": "results/primary/mixed_model_results_60s_fwh_EHG9.csv",
+      "sha256": "dcfc060c1b0311b72eed8f81adc6c0a57312787566368a2449d9562df7ad8638"
+    },
+    {
+      "path": "results/manuscript/corrected_family/corrected_cross_channel_all_16.csv",
+      "sha256": "c91aa0edeafb203402d04fb17ec8a4ddf72d010d362751643b4e76ace7998d5b"
+    },
+    {
+      "path": "results/manuscript/audits/D/gain_audit_window_results.csv",
+      "sha256": "f2f80a3416cd96b938cd0741f5e3b45e2e0f27c64057624b514be50ab85f2639"
+    },
+    {
+      "path": "results/manuscript/audits/C3/independent_grid_agreement.csv",
+      "sha256": "7f2bbb13b906025f3da189f2f5bda1be1a7f3d915d46bbe5081a74d824a157d9"
+    },
+    {
+      "path": "results/manuscript/cohort_reconciliation.csv",
+      "sha256": "abcb9d7d9d82b121d9346d2417762b32c2f971e1055e01479c3262fc1fe0ab03"
+    }
+  ],
+  "transformations": [
+    "row filters are explicit in build_adapters.py",
+    "feature labels/group labels are display mappings only",
+    "no estimates, intervals, q-values or denominators recalculated",
+    "gain adapter selects original Total and GI Total only",
+    "agreement adapter selects GI grid AUC and retains tolerance/mask fields"
+  ]
+}

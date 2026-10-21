@@ -1,0 +1,2 @@
+path,sha256,reason
+NOT COMPUTABLE,,"The saved annotation manifest is available, but the required frozen model-gate wrapper and complete annotation timing table are not available as an executable input package; no refit was claimed."

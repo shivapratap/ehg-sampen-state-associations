@@ -1,0 +1,15 @@
+Python: 3.13.9 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 19:11:29) [Clang 20.1.8 ]
+Platform: macOS-26.6.2-arm64-arm-64bit-Mach-O
+numpy: 2.3.5
+pandas: 2.3.3
+scipy: 1.16.3
+statsmodels: 0.14.5
+matplotlib: 3.10.6
+matplotlib imported version: 3.10.6
+Bootstrap resamples: 5000
+Random number generator: numpy.random.default_rng (PCG64)
+Random seed: 20260914
+Bootstrap statistic: median of resampled woman-level UC-minus-IN differences
+Bootstrap interval: percentile 2.5% and 97.5%, NumPy method=linear
+Wilcoxon: scipy.stats.wilcoxon, two-sided, zero_method=wilcox, correction=False, method=auto
+Multiplicity: statsmodels.stats.multitest.multipletests(method=fdr_bh)

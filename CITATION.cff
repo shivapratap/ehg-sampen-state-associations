@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "If you use this code or its outputs, please cite the paper (provisional entry below) and the PhysioNet database."
+type: software
+title: "ehg-sampen-state-associations: reproducible pipeline for sample-entropy gain sensitivity and state associations in electrohysterography (EHG9)"
+abstract: >-
+  Code and derived tables for a study of uterine-contraction (UC), fetal-movement (FM) and
+  inactivity (IN) windows in the Icelandic 16-electrode EHG database: a 34-feature FWH-band
+  mixed-model analysis, robustness and cross-channel checks, the gain sensitivity of finite-resolution
+  sample-entropy profile summaries, and the gain-invariant (GI) alternative.
+license: MIT
+repository-code: "TODO: add repository URL before release"
+authors:
+  - family-names: Gopakumar
+    given-names: Shivapratap
+# TODO before release: add co-authors in the agreed order, a release version/date and, if deposited, a Zenodo DOI.
+preferred-citation:
+  type: article
+  title: "TODO: manuscript title (in preparation for Results in Engineering)"
+  status: in-preparation
+  authors:
+    - family-names: Gopakumar
+      given-names: Shivapratap
+  year: 2026
+references:
+  - type: data
+    title: "Icelandic 16-electrode Electrohysterogram Database"
+    url: "https://physionet.org/content/ehgdb/"
+    doi: "10.13026/c2159j"

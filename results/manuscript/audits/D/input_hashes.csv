@@ -1,0 +1,2 @@
+path,sha256,reason
+NOT COMPUTABLE,,The protocol marks this as waveform-dependent and no waveform `.npz` is present.

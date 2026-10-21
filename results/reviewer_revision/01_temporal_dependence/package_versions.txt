@@ -1,0 +1,12 @@
+Python: 3.13.9 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 19:11:29) [Clang 20.1.8 ]
+Platform: macOS-26.6.2-arm64-arm-64bit-Mach-O
+numpy: 2.3.5
+pandas: 2.3.3
+scipy: 1.16.3
+statsmodels: 0.14.5
+patsy: 1.0.1
+statsmodels imported version: 0.14.5
+Randomness: none used
+Random seed: not applicable
+Cluster covariance: statsmodels cov_type=cluster, use_correction=True, df_correction=True, use_t=True
+Multiplicity: statsmodels.stats.multitest.multipletests(method=fdr_bh)

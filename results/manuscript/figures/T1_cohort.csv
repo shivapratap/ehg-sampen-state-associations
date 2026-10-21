@@ -1,0 +1,7 @@
+population,n_women,n_recordings,n_windows,definition
+Database inventory,45,123.0,,local database inventory
+Annotated/contributing,42,112.0,4283.0,manifest candidate windows before mixed/possible exclusion
+Analysed 60-s windows,42,112.0,4083.0,3358 IN + 333 UC + 392 FM; excludes 132 mixed and 68 possible_contraction
+Paired UC-IN women,34,,3340.0,paired woman subset
+Paired FM-IN women,36,,3308.0,paired woman subset
+Paired UC-FM women,32,,645.0,paired woman subset

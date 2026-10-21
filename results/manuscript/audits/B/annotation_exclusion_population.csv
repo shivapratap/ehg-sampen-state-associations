@@ -1,0 +1,6 @@
+window_id,patient_id,recording_id,window_class,nearest_annotation_type,distance_to_nearest_annotation_s
+ice008_p_3of4|W60|14411-26411,ice008,ice008_p_3of4,contraction,equipment_manipulation,20.040000000000006
+ice012_p_3of4|W60|30665-42665,ice012,ice012_p_3of4,contraction,equipment_manipulation,9.784999999999997
+ice013_p_3of3|W60|46634-58634,ice013,ice013_p_3of3,fetal_movement,participant_movement,24.455000000000013
+ice037_p_2of2|W60|6094-18094,ice037,ice037_p_2of2,contraction,equipment_manipulation,4.575000000000003
+ice042_p_2of2|W60|308005-320005,ice042,ice042_p_2of2,fetal_movement,participant_movement,14.995000000000118

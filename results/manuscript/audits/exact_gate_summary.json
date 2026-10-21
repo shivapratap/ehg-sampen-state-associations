@@ -1,0 +1,11 @@
+{
+  "fwh_features": 34,
+  "fwh_rows": 102,
+  "fwh_max_estimate_abs_diff": 9.540979117872439e-17,
+  "fwh_max_p_abs_diff": 9.952975943416931e-17,
+  "gi_rows": 4,
+  "gi_max_estimate_abs_diff": 8.326672684688674e-17,
+  "gi_max_p_abs_diff": 5.984795992119984e-17,
+  "pass": true,
+  "wall_seconds": 5.976090908050537
+}

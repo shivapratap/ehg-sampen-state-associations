@@ -1,0 +1,9 @@
+label,group,estimate,ci_low,ci_high,contrast,scale,interval_method,family_id,family_size,n_women,n_windows
+GI Total,EHG9,-0.1130548160197681,-0.203395889161399,-0.0227137428781373,contraction_vs_baseline,model-standardised units,model-based Wald 95% CI,corrected_cross_channel_16_after_development,16,42,4083
+GI profile SD,EHG9,-0.1398387006926741,-0.2349936278087999,-0.0446837735765484,contraction_vs_baseline,model-standardised units,model-based Wald 95% CI,corrected_cross_channel_16_after_development,16,42,4083
+GI Total,EHG10,-0.0896362131843895,-0.1790062809033565,-0.0002661454654225,contraction_vs_baseline,model-standardised units,model-based Wald 95% CI,corrected_cross_channel_16_after_development,16,42,4083
+GI profile SD,EHG10,-0.129660992662278,-0.2247964619240541,-0.0345255234005018,contraction_vs_baseline,model-standardised units,model-based Wald 95% CI,corrected_cross_channel_16_after_development,16,42,4083
+GI Total,EHG11,-0.04660641894973,-0.1394583967925393,0.0462455588930791,contraction_vs_baseline,model-standardised units,model-based Wald 95% CI,corrected_cross_channel_16_after_development,16,42,4083
+GI profile SD,EHG11,-0.062137018987163,-0.1608302832788287,0.0365562453045026,contraction_vs_baseline,model-standardised units,model-based Wald 95% CI,corrected_cross_channel_16_after_development,16,42,4083
+GI Total,EHG12,-0.0438757329020862,-0.1374036966876682,0.0496522308834958,contraction_vs_baseline,model-standardised units,model-based Wald 95% CI,corrected_cross_channel_16_after_development,16,42,4083
+GI profile SD,EHG12,-0.0538233189384797,-0.1537891066069672,0.0461424687300077,contraction_vs_baseline,model-standardised units,model-based Wald 95% CI,corrected_cross_channel_16_after_development,16,42,4083

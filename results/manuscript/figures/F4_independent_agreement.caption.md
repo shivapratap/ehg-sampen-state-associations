@@ -1,0 +1,1 @@
+Independent explicit pairwise GI-grid AUC versus the reference implementation on 12 audited windows. Validity masks matched and the maximum absolute difference was zero after template-alignment correction.

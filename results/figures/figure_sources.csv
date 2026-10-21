@@ -1,0 +1,4 @@
+figure_file,source_result_file,analysis,notes
+figure_2_primary_EHG9.pdf,results/primary/mixed_model_results_60s_fwh_EHG9.csv,primary EHG9,
+figure_4_cross_channel.pdf,results/cross_channel/corrected_model_results.csv,cross-channel,
+figure_5_sampen_scale.pdf,results/entropy/scale_sensitivity_summary.csv,entropy scale,

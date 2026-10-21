@@ -1,0 +1,1 @@
+Descriptive per-window gain trajectories for the original Total and GI Total summaries across 60 audited windows. Lines show medians and ribbons show interquartile ranges of change from unit gain; these are not confidence intervals.

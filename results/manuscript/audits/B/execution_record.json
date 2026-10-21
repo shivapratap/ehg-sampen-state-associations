@@ -1,0 +1,9 @@
+{
+  "status": "complete",
+  "attempted": 120,
+  "successful": 120,
+  "raw_fits": 24,
+  "log_fits": 16,
+  "wall_seconds": 5.063365697860718,
+  "seed": 20261019
+}

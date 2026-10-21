@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "windows": 60,
+  "features": 34,
+  "rows": 2040,
+  "max_abs_diff": 1.7763568394002505e-15,
+  "n_fail": 0,
+  "wall_seconds": 12.327621221542358
+}
