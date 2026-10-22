@@ -12,7 +12,7 @@ computed after sd-normalisation, should not.
 
 Stdlib only, so it runs in any environment that can read the CSVs.
 Writes results/amplitude_collinearity.csv and
-results/amplitude_collinearity_report.md. Reads only; never writes to Paper1.
+results/amplitude_collinearity_report.md. Reads only; never writes to the standard pipeline.
 """
 import csv, math, os, datetime
 

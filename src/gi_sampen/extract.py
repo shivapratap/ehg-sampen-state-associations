@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Stage A2 -- compute the Paper 2 feature block over the frozen analysis set.
+"""Stage A2 -- compute the GI feature block over the frozen analysis set.
 
 Runs over the 4,083 EHG9/FWH analysis units. Two modes matter:
 

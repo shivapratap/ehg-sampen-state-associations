@@ -1,7 +1,7 @@
 """Stage 07 -- SampEn/amplitude dependence audit, per channel.
 
 Standalone port of pipeline/module3_5/sampen_amplitude_audit.py into this
-project's numbered-stage layout, extended across all four Paper 1 channels
+project's numbered-stage layout, extended across all four the standard pipeline channels
 (EHG9, EHG10, EHG11, EHG12). Logic (correlation pairs, aggregation scopes,
 coupling-strength thresholds) is unchanged from the frozen module3_5
 design; see that module's docstring for the original single-channel
@@ -170,7 +170,7 @@ The pooled window-level results are descriptive only because windows are nested 
 ## Interpretation and limitations
 Total SampEn should be described as an amplitude-coupled nonlinear/entropy-derived summary when strong coupling is observed, not as an amplitude-independent complexity marker. Average SampEn is retained as an exploratory comparator; any weaker or inconsistent association should not be interpreted as validation of a replacement feature. Correlation is not causation, and repeated-window precision is not independent evidence.
 
-## Recommended Paper 1 wording (channel {channel})
+## Recommended the standard pipeline wording (channel {channel})
 "Post-hoc analyses indicated that SampEn-derived measures, particularly Total SampEn, showed [substantial/moderate/weak -- see summary table] association with amplitude-domain measures on channel {channel}. We therefore interpret Total SampEn conservatively as an amplitude-coupled nonlinear entropy summary rather than an amplitude-independent complexity biomarker. Average SampEn was examined as an exploratory comparator and was not used to revise the prespecified feature set."
 
 ## Stage 06 status

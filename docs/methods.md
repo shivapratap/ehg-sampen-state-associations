@@ -43,7 +43,7 @@ signal-unit grid gives roughly 1e2 bins, whereas a 0.001-sd grid gives
 roughly 1e3-1e4. The GI features are therefore not merely "the standard
 features made invariant" -- they are computed on a finer profile. This is a
 feature-definition change, not a bug fix, and the manuscript states it as
-such (see `docs/paper/facts_pack.md` design note 2(A)).
+such (see the design notes
 
 **Gain-invariance is not cross-window comparability.** The GI *rounded*
 variant still runs out to each window's own maximum distance, so its support

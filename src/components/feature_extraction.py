@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""Paper 1 reproducible pipeline -- Stage 04: Feature Extraction.
+"""EHG sample-entropy pipeline -- Stage 04: Feature Extraction.
 
 Standalone port of pipeline/module2/{run_module2,features}.py's logic
-(frozen reference; not imported at runtime -- see Paper1/MIGRATION_PLAN.md).
+(frozen reference; not imported at runtime.
 Extracts feature registry (time/frequency/entropy/complexity, FWH + Broad bands,
 plus shared band-power ratios) for every window in the Stage 02 manifest, across all
-four Paper 1 channels (EHG9, EHG10, EHG11, EHG12).
+four the standard pipeline channels (EHG9, EHG10, EHG11, EHG12).
 
 Updated to include extended Sample Entropy Profile statistics:
   - MedianSampEn

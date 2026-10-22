@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
-"""Paper 1 reproducible pipeline -- Stage 02: Windowing / Segmentation.
+"""EHG sample-entropy pipeline -- Stage 02: Windowing / Segmentation.
 
 Standalone port of pipeline/module1/*'s logic (frozen reference; not
-imported at runtime -- see Paper1/MIGRATION_PLAN.md). Builds the 60-second
+imported at runtime. Builds the 60-second
 window manifest: event windows (contraction / possible_contraction /
 fetal_movement -centered, purity/overlap classified) and baseline windows
 (guard-interval-tiled quiet intervals).
 
 **Scope note**: the old pipeline builds manifests for four window sizes
-(40/60/80/100s). Per the fixed Paper 1 protocol (60s windows only), this
-stage builds the 60s manifest exclusively -- see Paper1/MIGRATION_PLAN.md
+(40/60/80/100s). Per the fixed the standard pipeline protocol (60s windows only), this
+stage builds the 60s manifest exclusively
 Section 9, open decision 2. The 40/80/100s sensitivity sizes remain
 available in the old (frozen) pipeline/module1/outputs/ if needed later.
 
@@ -511,7 +511,7 @@ def run(window_size_s: int = project_config.WINDOW_SIZE_S,
 def _write_cohort_summary(results_dir: Path, suffix: str, manifest_df: pd.DataFrame,
                             active: pd.DataFrame, n_skipped: int, unknown_classes: list) -> None:
     lines = [
-        "# Paper 1 Reproducible Pipeline -- Stage 02 Cohort Summary",
+        "# EHG Sample-Entropy Pipeline -- Stage 02 Cohort Summary",
         "",
         f"Recordings active: {len(active)} (skipped by Stage 00 QC: {n_skipped}).",
         f"Recordings with no annotation file, excluded from baseline generation "
@@ -541,7 +541,7 @@ def _write_cohort_summary(results_dir: Path, suffix: str, manifest_df: pd.DataFr
         "This stage's window_manifest_60s.csv is validated against the frozen "
         "pipeline/module1/outputs/window_manifest_60s.csv by the "
         "reproducibility gate before Stage 03 onward is trusted. See "
-        "results/paper1/validation/.",
+        "results/validation/.",
     ]
     (results_dir / f"cohort_summary_{suffix}.md").write_text("\n".join(lines) + "\n")
 
@@ -571,7 +571,7 @@ def _write_run_metadata(results_dir: Path, suffix: str, window_size_s: int,
             "edge_trim_s": project_config.EDGE_TRIM_S,
             "tight_clearance_threshold_s": project_config.TIGHT_CLEARANCE_THRESHOLD_S,
             "boundary_overlap_threshold_s": project_config.BOUNDARY_OVERLAP_THRESHOLD_S,
-            "scope_note": "60s only, per fixed Paper 1 protocol -- see MIGRATION_PLAN.md",
+            "scope_note": "60s only, per fixed the standard pipeline protocol -- see MIGRATION_PLAN.md",
         },
         "code_version": {"git_commit": _get_git_commit(project_config.PROJECT_ROOT)},
         "execution_timestamp_utc": datetime.now(timezone.utc).isoformat(),

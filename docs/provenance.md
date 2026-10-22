@@ -1,6 +1,6 @@
 # Provenance
 
-> **Note on references.** Mentions of `docs/paper/facts_pack.md` and `Paper1`/`Paper2` come from the authors' working notes and the earlier two-folder layout; the facts pack is not distributed. In this repository the standard pipeline and the GI stages share one tree (see README.md), and GI outputs live under `results/gi/`.
+> **Note on references.** Some comments and file names use the labels "standard pipeline" (the 34-feature analysis) and "GI stages" (the gain-invariant analysis). Both share one tree in this repository (see README.md); GI outputs live under `results/gi/`. References to design notes point to working notes that are not distributed.
 
 
 This document maps every manuscript claim to the script, input files and
@@ -54,7 +54,7 @@ no rounding step. This project's own earlier Python port
 same documentation-versus-implementation divergence: its docstring promises
 unrounded r-values while its code rounds to three decimals. Both facts
 support treating the rounding as a deliberate, method-specific implementation
-choice, not an incidental slip -- see `docs/paper/facts_pack.md` section 3 for
+choice, not an incidental slip -- see the design notes for
 the manuscript's use of this.
 
 ## 2. What each implementation in this repository computes
@@ -100,7 +100,7 @@ the prior study's own cached files -- and are documented here instead. Read
 
 ## 4. What is NOT claimed
 
-Carried over verbatim from the facts pack (`docs/paper/facts_pack.md`,
+Carried over verbatim from the facts pack (the design notes,
 section 12) because these boundaries are binding on this document too:
 
 - Not a claim of priority for gain-invariant / amplitude-robust entropy

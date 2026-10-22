@@ -1,12 +1,12 @@
-"""Shared configuration for the Paper 1 reproducible pipeline.
+"""Shared configuration for the EHG sample-entropy pipeline.
 
 Standalone project: does not import anything from ../../pipeline/ at
 runtime. The FROZEN_* paths below point at the old pipeline's already
 -computed outputs and are used ONLY by the reproducibility-gate validation
-checks (results/paper1/validation/), never by the numbered pipeline stages
+checks (results/validation/), never by the numbered pipeline stages
 themselves while they compute their own results.
 
-Fixed protocol (see Paper1/MIGRATION_PLAN.md):
+Fixed protocol:
     channels    EHG9 (primary), EHG10, EHG11, EHG12
     window size 60 seconds
     band        FWH (0.3-1.0 Hz) primary; Broad (0.1-3.0 Hz) retained as
@@ -88,14 +88,14 @@ GUARD_ANNOTATION_TYPES = (
 PRIMARY_EVENT_TYPES = ("contraction", "possible_contraction", "fetal_movement")
 SKIP_RECOMMENDED_ACTIONS = ("quarantine",)
 
-# --- Paper 1 fixed protocol -------------------------------------------------
+# --- the standard pipeline fixed protocol -------------------------------------------------
 CHANNELS = ("EHG9", "EHG10", "EHG11", "EHG12")
 PRIMARY_CHANNEL = "EHG9"
 WINDOW_SIZE_S = 60
 PRIMARY_BAND = "fwh"
 SECONDARY_BAND = "broad"
 
-# window_class (Module 1 vocabulary) -> Paper 1 protocol class_label.
+# window_class (Module 1 vocabulary) -> the standard pipeline protocol class_label.
 # Anything not in this map is out of the primary UC/FM/IN protocol -- see
 # EXCLUDED_WINDOW_CLASSES and src/01_label_ontology.py for the reasoning.
 CLASS_MAP = {

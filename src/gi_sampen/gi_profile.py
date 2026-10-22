@@ -1,18 +1,18 @@
 #!/usr/bin/env python3
-"""Gain-invariant sample-entropy profiling -- Paper 2 core numerics.
+"""Gain-invariant sample-entropy profiling -- the GI stages core numerics.
 
 Design notes
 ------------
-1.  The frozen Paper 1 algorithm is RE-IMPLEMENTED here rather than imported.
+1.  The original-definition algorithm is RE-IMPLEMENTED here rather than imported.
     That is deliberate. It lets `parity_check` assert, numerically, that this
     file reproduces the frozen Stage 04 `fwh_entropy_*sampen` columns before
-    anything new is interpreted. It also keeps Paper 1 untouched.
+    anything new is interpreted. It also keeps the standard pipeline untouched.
 
 2.  Two gain-invariant variants are provided, and they answer different
     questions.
 
     (A) `gi_summaries_rounded` -- the FROZEN algorithm applied to
-        z = x / sd(x).  Structurally identical to Paper 1: same Chebyshev
+        z = x / sd(x).  Structurally identical to the standard pipeline: same Chebyshev
         distances, same 3-decimal rounding, same retention rule, same six
         summaries.  The ONLY change is that distances are expressed in units
         of the window's own standard deviation.  These are the features the
@@ -39,8 +39,7 @@ Design notes
     to floating point.  `invariance_check.py` asserts this empirically; it is
     a correctness test on this file, not a scientific result.
 
-Author: drafted for the ICASSP go/no-go gate. Not part of the frozen Paper 1
-pipeline.
+Part of the gain-invariance checks.
 """
 from __future__ import annotations
 
@@ -48,13 +47,13 @@ import numpy as np
 from scipy.spatial import cKDTree
 from scipy.stats import kurtosis, skew
 
-# --- Frozen Paper 1 constants (src/config.py). Do not change. --------------
+# --- Original-definition constants (src/config.py). Do not change. --------------
 EMBEDDING_DIMENSION = 2
 R_FRACTION = 0.2
 PROFILE_DISTANCE_DECIMALS = 3
 PROFILE_EPSILON = 1e-12
 
-# --- Paper 2 additions -----------------------------------------------------
+# --- the GI stages additions -----------------------------------------------------
 # Rounding resolution for the GI rounded variant, in units of sd. Kept at 3 to
 # mirror the frozen algorithm exactly; see design note 2(A).
 GI_DISTANCE_DECIMALS = 3
@@ -62,7 +61,7 @@ GI_DISTANCE_DECIMALS = 3
 SUMMARY_NAMES = ("total", "average", "median", "sd", "kurtosis", "skewness")
 
 # numpy renamed trapz -> trapezoid in 2.0; support both so the script runs
-# under whatever numpy the Paper 1 conda environment pins.
+# under whatever numpy the standard pipeline conda environment pins.
 _trapezoid = getattr(np, "trapezoid", None) or np.trapz
 
 
@@ -78,12 +77,12 @@ def _validate(signal) -> np.ndarray:
 
 
 def _aligned_templates(data: np.ndarray, dimension: int, count: int) -> np.ndarray:
-    """Frozen Paper 1 template construction (feature_extraction._aligned_templates)."""
+    """Original-definition template construction (feature_extraction._aligned_templates)."""
     return np.column_stack([data[offset:count + offset] for offset in range(dimension)])
 
 
 def _rounded_shell_counts(templates: np.ndarray, maximum_bin: int, *, decimals: int) -> np.ndarray:
-    """Frozen Paper 1 shell counting, including the half-even rounding boundaries.
+    """Original-definition shell counting, including the half-even rounding boundaries.
 
     Reproduces feature_extraction._rounded_distance_shell_counts exactly.
     """
@@ -112,7 +111,7 @@ def _nan_summaries(prefix: str) -> dict:
 
 def _summarise(values: np.ndarray, prefix: str, max_rounded: float) -> dict:
     """Frozen summary set: sum, mean, median, population sd, Fisher excess
-    kurtosis (bias=True), skewness (bias=True) -- scipy defaults, as Paper 1."""
+    kurtosis (bias=True), skewness (bias=True) -- scipy defaults, as the standard pipeline."""
     return {
         f"{prefix}_total": float(np.sum(values)),
         f"{prefix}_average": float(np.mean(values)),
@@ -159,7 +158,7 @@ def _rounded_profile_values(data: np.ndarray, *, order: int, decimals: int,
 def frozen_summaries(signal, *, order: int = EMBEDDING_DIMENSION,
                      decimals: int = PROFILE_DISTANCE_DECIMALS,
                      epsilon: float = PROFILE_EPSILON) -> dict:
-    """Reimplementation of Paper 1 `sample_entropy_profile_summaries`.
+    """Reimplementation of the standard pipeline `sample_entropy_profile_summaries`.
 
     Must reproduce the cached `fwh_entropy_{total,average,median,sd,kurtosis,
     skewness}sampen` columns. Used only by the parity check.
@@ -306,7 +305,7 @@ def gi_summaries_grid(signal, taus: np.ndarray, *,
 
 def fixed_r_sampen(signal, *, m: int = EMBEDDING_DIMENSION,
                    r_fraction: float = R_FRACTION) -> float:
-    """Richman-Moorman SampEn, r = 0.2 sd. Frozen Paper 1 comparator.
+    """Richman-Moorman SampEn, r = 0.2 sd. Original-definition comparator.
 
     Already exactly gain-invariant; carried through as the reference point
     against which the profile representations must justify themselves.
@@ -349,7 +348,7 @@ def rms(signal) -> float:
 # ===========================================================================
 
 def all_features(signal, taus: np.ndarray, *, include_frozen: bool = False) -> dict:
-    """Compute the Paper 2 feature block for a single window."""
+    """Compute the GI feature block for a single window."""
     out: dict = {}
     if include_frozen:
         out.update(frozen_summaries(signal))

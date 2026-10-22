@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Paper 1 reproducible pipeline -- Stage 00: Data & Annotation Audit.
+"""EHG sample-entropy pipeline -- Stage 00: Data & Annotation Audit.
 
 Standalone port of pipeline/module0/*'s logic (frozen reference; not
-imported at runtime -- see Paper1/MIGRATION_PLAN.md). Validates raw
+imported at runtime. Validates raw
 PhysioNet recordings against their own RECORDS/SHA256SUMS manifests, parses
 headers/annotations/clinical text, builds the raw-position -> canonical
 -channel mapping, and aggregates per-recording QC severity into a single
@@ -15,7 +15,7 @@ headers,annotations,channel_mapping,checksums,qc,toco,file_inventory,
 provenance}.py. This script's EHG9-relevant outputs (recording_inventory.csv,
 channel_mapping.csv, annotation_events.csv) are validated against that
 module's frozen outputs by the reproducibility gate before any of the later
-Paper 1 stages are trusted -- see results/paper1/validation/.
+the standard pipeline stages are trusted -- see results/validation/.
 
 Two-level failure policy (unchanged from the old pipeline):
   * Dataset-level fatal errors (RECORDS unparseable, SHA256SUMS unparseable,
@@ -625,7 +625,7 @@ def build_run_metadata(raw_dir: Path, project_root: Path, counts: dict) -> dict:
     return {
         "dataset_name": "Icelandic 16-electrode Electrohysterogram Database (ice16ehgdb)",
         "dataset_source": "https://physionet.org/content/ehgdb/1.0.0/",
-        "pipeline": "paper1_reproducible_pipeline (standalone; see Paper1/MIGRATION_PLAN.md)",
+        "pipeline": "ehg_sampen_pipeline (standalone;",
         "content_hashes": {
             "records_file_sha256": sha256_of_file(project_config.RECORDS_FILE) if project_config.RECORDS_FILE.is_file() else None,
             "sha256sums_file_sha256": sha256_of_file(project_config.SHA256SUMS_FILE) if project_config.SHA256SUMS_FILE.is_file() else None,
@@ -852,7 +852,7 @@ def fi_reconcile_or_raise(raw_dir: Path) -> ReconciliationResult:
 def _write_cohort_summary(path: Path, summary: dict, reconciliation) -> None:
     r = summary["reconciliation"]
     lines = [
-        "# Paper 1 Reproducible Pipeline -- Stage 00 Cohort Summary",
+        "# EHG Sample-Entropy Pipeline -- Stage 00 Cohort Summary",
         "",
         "All counts below are computed from the raw dataset by this run -- "
         "none are hardcoded.",
@@ -904,7 +904,7 @@ def _write_cohort_summary(path: Path, summary: dict, reconciliation) -> None:
         "channel_mapping.csv, annotation_events.csv) are validated against "
         "the frozen pipeline/module0/outputs/ files by the reproducibility "
         "gate before Stage 01 onward is trusted. See "
-        "results/paper1/validation/.",
+        "results/validation/.",
     ]
     path.write_text("\n".join(lines) + "\n")
 

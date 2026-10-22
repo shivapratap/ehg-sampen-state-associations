@@ -8,7 +8,7 @@ Code, derived tables and saved results for a study of uterine-contraction (UC), 
 
 Raw recordings are **not** in this repository: get them from PhysioNet (<https://physionet.org/content/ehgdb/>, see [data/README.md](data/README.md)). A 40 MB zip of derived tables is included, so everything downstream of feature extraction can be rerun without them.
 
-Nothing here was invented for this repository: it is the cleaned-up, single-tree version of the earlier "Paper 1" pipeline (standard 34-feature analysis), the GI-SampEn repository, and the manuscript-stage scripts. [docs/known_issues.md](docs/known_issues.md) says exactly what has and has not been re-run since the clean-up. Please read it.
+This repository combines the standard 34-feature analysis, the gain-invariant (GI) sample-entropy stages and the manuscript-stage scripts in one tree. A glossary note: "frozen" in file and column names (for example `frozen_total`) denotes the original (fixed-grid rounding) definition used as the comparator in the paper. [docs/known_issues.md](docs/known_issues.md) says exactly what has and has not been re-run since the clean-up. Please read it.
 
 ---
 

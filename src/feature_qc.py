@@ -22,7 +22,7 @@ It also builds the canonical long-format table used by later stages
 (one row per woman x recording x event x window x channel): this is the
 union of the four per-channel wide CSVs with a `channel` column added,
 stacked long-wise. Not explicitly named in the migration plan as a
-separate artifact, but required by the original Paper 1 design brief
+separate artifact, but required by the original the standard pipeline design brief
 ("one canonical long-format feature table ... one row per woman x
 recording x event x window x channel"). Written as
 results/paper1/05_feature_qc/window_features_60s_long.csv.
@@ -198,7 +198,7 @@ def _write_qc_report(
     parity: pd.DataFrame, integrity_findings: list, drift_findings: list,
     long_df: pd.DataFrame, channels: tuple,
 ) -> str:
-    lines = ["# Paper 1 Reproducible Pipeline -- Stage 05 Feature QC Report", ""]
+    lines = ["# EHG Sample-Entropy Pipeline -- Stage 05 Feature QC Report", ""]
     lines.append(f"Channels checked: {', '.join(channels)}")
     lines.append(f"Canonical long-format table: {len(long_df)} rows "
                  f"({long_df['recording_id'].nunique()} recordings x {len(channels)} channels).")

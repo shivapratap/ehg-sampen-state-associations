@@ -11,7 +11,7 @@ frozen_summaries or gi_summaries_rounded (gi_profile.py is untouched). The
 only machinery reused from gi_profile.py is _validate/_aligned_templates
 (pure helpers, no rounding inside them) and the module-level constants
 (embedding order, epsilon). Pair counting uses the same cKDTree
-count_neighbors approach as the rest of Paper 2, but at the window's own
+count_neighbors approach as the rest of the GI stages, but at the window's own
 UNIQUE RAW (unrounded, float64) pairwise Chebyshev distances as the
 tolerance axis -- i.e. what core/sampleEntropy_Gayathri.py's own docstring
 describes ("r_range: unique sorted r-values derived from the data") before

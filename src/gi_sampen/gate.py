@@ -63,7 +63,7 @@ def main() -> int:
     uc = results.loc[results["contrast"] == "contraction_vs_baseline"]
 
     print("=" * 76)
-    print("ICASSP GO/NO-GO GATE -- EHG9 / FWH / 60 s")
+    print("GAIN-INVARIANCE GATE -- EHG9 / FWH / 60 s")
     print("=" * 76)
     print(f"invariance precondition : "
           f"{'PASS' if invariance_ok else 'FAIL'}  ({invariance_note})")
@@ -118,8 +118,7 @@ def main() -> int:
     print(f"DECISION: {decision}")
     if decision == "NO-GO" and invariance_ok:
         print("  The FM entropy signature does not survive gain normalisation.")
-        print("  Stop the ICASSP submission. This belongs in the Access")
-        print("  supplement as a limitation -- it is a real finding.")
+        print("  Report this as a limitation of the entropy association -- it is a real finding.")
     elif decision == "NO-GO":
         print("  Blocked by the invariance precondition: fix the bug, re-run.")
     else:

@@ -9,7 +9,7 @@ and should not be run.
 
 This is a SEPARATE script from resolution_ablation_report.py (Stage E2),
 deliberately -- Stage E2's output (results/resolution_ablation_summary.csv)
-is already referenced elsewhere (facts_pack.md, README.md) and is left
+is already referenced elsewhere (the design notes, README.md) and is left
 untouched. This script reuses the exact same model specification and reuses
 work/resolution_ablation_features.csv, which ALREADY CONTAINS the average
 columns at every resolution (gi_d1_average, gi_d2_average, frozen_d4_average,
@@ -17,7 +17,7 @@ frozen_d5_average were computed by the existing resolution_ablation.py --
 frozen_summaries/gi_summaries_rounded return all six summaries, average
 included, so no new feature extraction is needed here, only new model
 fitting). gi_d3 average and frozen_d3 average are already fit and cached
-(results/gi_model_results.csv's gi_average rows; Paper1's frozen
+(results/gi_model_results.csv's gi_average rows; the original-definition
 mixed_model_results_60s_fwh_EHG9.csv's fwh_entropy_averagesampen rows) and
 are pulled in the same way Stage E2 pulls its d3 baselines.
 

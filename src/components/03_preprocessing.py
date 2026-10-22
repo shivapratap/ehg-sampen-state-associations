@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Paper 1 reproducible pipeline -- Stage 03: Preprocessing.
+"""EHG sample-entropy pipeline -- Stage 03: Preprocessing.
 
 Standalone port of the filtering half of pipeline/module2/features.py's
 logic (frozen reference; not imported at runtime -- see
-Paper1/MIGRATION_PLAN.md). The old pipeline folds filtering into its
+the design notes). The old pipeline folds filtering into its
 feature-extraction run; this project separates it into its own stage for
 clarity, but keeps the identical algorithm: a full-recording, zero-phase
 Butterworth SOS bandpass filter (order 4) for the FWH (0.3-1.0 Hz) and
@@ -17,7 +17,7 @@ transient-free context and does not acquire its own per-window edge
 effects. This is also why Stage 02's 15s edge-trim margin exists.
 
 This is a **function library**, not a script with its own persisted
-output (see Paper1/MIGRATION_PLAN.md Section 7, open decision 1): Stage 04
+output: Stage 04
 imports `filter_recording` and `filtered_window` directly and calls them
 once per (recording, channel), exactly mirroring the old pipeline's
 approach and avoiding an unnecessary large intermediate artifact (filtered

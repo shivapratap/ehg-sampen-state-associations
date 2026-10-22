@@ -10,7 +10,7 @@ the gate and the whole paper turn on.
 This ablation's BH-FDR family is its own family: 4 conditions x 4 summaries
 = 16 fits, q-values computed within that set. The frozen_d3 and gi_d3 rows
 shown alongside it are pulled in from their own already-computed families
-(Paper1's frozen model and Stage C's GI model) for the side-by-side and are
+(the original-definition model and Stage C's GI model) for the side-by-side and are
 NOT re-included in this family's FDR correction.
 """
 from __future__ import annotations

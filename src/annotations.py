@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Paper 1 reproducible pipeline -- Stage 01: Label Ontology Consolidation.
+"""EHG sample-entropy pipeline -- Stage 01: Label Ontology Consolidation.
 
 NEW script -- no direct 1:1 predecessor in the old pipeline. Makes the
 wfdb-annotation-symbol -> class_label mapping used throughout this project
@@ -8,7 +8,7 @@ pipeline/module0/config.py's ANNOTATION_LABELS dict and the class-assignment
 branches inside pipeline/module1/windows.py (window_class = event_type, or
 "mixed" if overlap_status == "mixed").
 
-Fixed Paper 1 protocol classes:
+Fixed the standard pipeline protocol classes:
     UC  uterine contraction   (wfdb symbol "C")
     FM  fetal movement        (wfdb symbol "fm")
     IN  inactivity / baseline (unannotated, guard-cleared windows)
@@ -16,7 +16,7 @@ Fixed Paper 1 protocol classes:
 `possible_contraction` ("(c)"), the movement/equipment/position markers
 (pm/em/pos), and "mixed" event windows are explicitly excluded from the
 primary UC/FM/IN protocol here, with the reason recorded -- not silently
-dropped downstream. See Paper1/MIGRATION_PLAN.md Section 9, open decision 3.
+dropped downstream. See the design notes.
 
 Input:  data/annotations/annotation_events.csv (Stage 00 output)
 Output: data/annotations/label_ontology.csv
@@ -50,7 +50,7 @@ import config as project_config  # noqa: E402
 
 def build_ontology_table() -> pd.DataFrame:
     """One row per wfdb annotation symbol (plus a synthetic 'baseline' row
-    for unannotated, guard-cleared windows), mapping to the fixed Paper 1
+    for unannotated, guard-cleared windows), mapping to the fixed the standard pipeline
     protocol class label, or explicitly documenting exclusion.
     """
     rows = [
@@ -198,12 +198,12 @@ def apply_ontology(events_df: pd.DataFrame, ontology_df: pd.DataFrame) -> pd.Dat
 def _write_report(path: Path, ontology_df: pd.DataFrame, events_df: pd.DataFrame,
                    unmapped_symbols: list, class_counts: pd.Series) -> None:
     lines = [
-        "# Paper 1 Reproducible Pipeline -- Stage 01 Label Ontology Report",
+        "# EHG Sample-Entropy Pipeline -- Stage 01 Label Ontology Report",
         "",
         "This table is the single source of truth for wfdb-annotation-symbol "
-        "to Paper 1 protocol class (UC/FM/IN) mapping. It is new relative to "
+        "to the standard pipeline protocol class (UC/FM/IN) mapping. It is new relative to "
         "the old pipeline, which left this mapping implicit -- see "
-        "Paper1/MIGRATION_PLAN.md Section 5.",
+        "the design notes.",
         "",
         "## Ontology table",
         "",

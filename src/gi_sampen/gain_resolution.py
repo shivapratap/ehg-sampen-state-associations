@@ -13,11 +13,11 @@ Reuses, with no new SampEn implementation:
     default GI_DISTANCE_DECIMALS], frozen_d3=3 [the default
     PROFILE_DISTANCE_DECIMALS], frozen_d4=4, frozen_d5=5) -- these are the
     exact settings that produced the ~60/~600/~5,000 and ~80/~800/~7,000 bin
-    counts already reported in Paper2/README.md's Stage E table and in
+    counts already reported in README.md's Stage E table and in
     resolution_ablation.py's own docstring. No new resolution settings are
     invented here.
 
-What is new here (not present anywhere else in Paper2): looping the SAME
+What is new here (not present anywhere else in the GI stages): looping the SAME
 six resolution conditions over the SAME six non-unit gain factors used by
 Stage B (0.25, 0.5, 1.3, 2, 4, 7.1), for Total/Average/SD SampEn only
 (Kurtosis and Skewness already failed the resolution ablation in Stage E and

@@ -6,10 +6,10 @@ are invariant by construction; if they are not invariant here, there is a bug
 (most likely sd computed at the wrong point) and nothing downstream should be
 read.
 
-It reuses Paper 1's exact 60-window selection (20 UC / 20 FM / 20 IN, same
+It reuses the standard pipeline's exact 60-window selection (20 UC / 20 FM / 20 IN, same
 deterministic rule as _sampen_scale_impl.select_windows) and the same five
 scale factors, so the output table is directly comparable to manuscript
-Table S16 and can be dropped into the ICASSP paper as the side-by-side.
+Table S16 and serves as the side-by-side.
 
 Note on the scale factors: 0.25, 0.5, 2 and 4 are exact in binary floating
 point, so the GI features should agree to the last bit. --extra-scales adds
@@ -35,7 +35,7 @@ INVARIANCE_RTOL = 1e-8
 
 
 def select_windows(frame: pd.DataFrame) -> pd.DataFrame:
-    """Reproduces Paper 1 `_sampen_scale_impl.select_windows` exactly."""
+    """Reproduces the standard pipeline `_sampen_scale_impl.select_windows` exactly."""
     eligible = frame.loc[frame["window_class"].isin(CLASS_MAP)].copy()
     eligible["class_label"] = eligible["window_class"].map(CLASS_MAP)
     selected = []

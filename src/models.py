@@ -1,7 +1,7 @@
 """Stage 06 -- Mixed-effects models, UC/FM vs IN, per channel.
 
 Standalone port of pipeline/module2_5/{prepare_analysis.py, run_models.py}
-into this project's numbered-stage layout, extended across all four Paper 1
+into this project's numbered-stage layout, extended across all four the standard pipeline
 channels (EHG9, EHG10, EHG11, EHG12). Logic is ported, not imported: the
 feature-exclusion registry, event-unit selection, model formula, optimizer
 fallback hierarchy, standardization, and FDR-correction-per-contrast-family
@@ -38,7 +38,7 @@ extra recording sites are a separate signal-acquisition condition, so
 correcting across channels as one pooled family would conflate four
 different physical measurements into one hypothesis-testing family).
 `validated` (q < 0.05) is computed symmetrically for ALL THREE contrasts
-using this same per-family FDR procedure -- see Paper1_Additional_Analysis_Plan.md
+using this same per-family FDR procedure --
 Step 1. `primary_validated` remains a narrower, backward-compatible column
 (True only for contraction_vs_baseline AND validated), since it is read by
 name elsewhere (the 06-A reproducibility gate check, Stage 08's
@@ -414,7 +414,7 @@ def _apply_fdr(result_df: pd.DataFrame) -> pd.DataFrame:
 
     `validated` (q < 0.05) is now computed symmetrically for ALL THREE
     contrasts, using the identical per-family BH-FDR procedure -- this is
-    Paper1_Additional_Analysis_Plan.md Step 1, resolved as the "extend flat
+    the standard pipeline_Additional_Analysis_Plan.md Step 1, resolved as the "extend flat
     FDR symmetrically" option rather than adding a domain-level omnibus
     tier: the existing per-contrast-family flat FDR (already validated
     against the frozen EHG9 reference) is retained unchanged, just applied

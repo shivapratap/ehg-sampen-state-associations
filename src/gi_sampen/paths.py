@@ -2,7 +2,7 @@
 """Path resolution and the validated window-loading path.
 
 This module is the single choke point for every path the analysis touches. It
-was migrated from ``Paper2/src/_common.py``; the loading sequence, the filter
+was migrated from ``src/gi_sampen/paths.py``; the loading sequence, the filter
 call order and the frozen column names are unchanged, because the parity check
 in ``tests/test_standard_parity.py`` depends on them being identical.
 
@@ -56,7 +56,7 @@ import pandas as pd
 REPO_ROOT = Path(__file__).resolve().parents[2]
 
 # Historical names kept so older call sites keep working. In this repository the
-# standard pipeline (formerly "Paper1") and the GI stages (formerly "Paper2")
+# standard pipeline (formerly "the standard pipeline") and the GI stages (formerly "the GI stages")
 # share one tree, so all of these are the repository root.
 PAPER1_ROOT = REPO_ROOT
 PAPER2_ROOT = REPO_ROOT

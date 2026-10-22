@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Stage C -- patient-aware mixed models on the GI features.
 
-The model specification is copied from Paper 1 `src/models.py::_fit_one` and
+The model specification is copied from the standard pipeline `src/models.py::_fit_one` and
 must not drift from it, because the whole point of the gate is a like-for-like
 comparison against the frozen estimates:
 
@@ -14,7 +14,7 @@ comparison against the frozen estimates:
     boundary/singularity warnings recorded, not silently swallowed
 
 BH-FDR is applied WITHIN THE GI FAMILY and within each contrast. The GI family
-is its own family and is deliberately NOT merged into Paper 1's frozen 34, for
+is its own family and is deliberately NOT merged into the original-definition 34, for
 two reasons: these are new features, and merging would retrospectively change
 the frozen q-values.
 """
@@ -32,7 +32,7 @@ from statsmodels.stats.multitest import multipletests
 
 from . import paths as _common
 
-# --- Frozen Paper 1 model constants ----------------------------------------
+# --- Original-definition model constants ----------------------------------------
 OPTIMIZER_METHODS = ("lbfgs", "bfgs")
 VARIANCE_BOUNDARY_THRESHOLD = 1e-8
 MIN_BASELINE_N = 5

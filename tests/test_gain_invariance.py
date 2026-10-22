@@ -16,7 +16,7 @@ from gi_sampen import gi_profile
 GAINS = (0.25, 0.5, 1.3, 2.0, 4.0, 7.1)
 
 # The manuscript's own invariance check uses < 1e-8 relative tolerance
-# (facts_pack.md section 5.2: "every GI feature was invariant to < 1e-8
+# (the design notes: "every GI feature was invariant to < 1e-8
 # relative tolerance at every scale"). Matched here, not loosened.
 RELATIVE_TOLERANCE = 1e-8
 

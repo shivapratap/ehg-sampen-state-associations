@@ -1,44 +1,44 @@
 item,value,unit,source,derivation_or_rule,status,consequence
-database_participants_local,45,women,EHG-Complexity-Pipeline/Paper1/paper1_reproducible_pipeline/results/paper1/00_data_audit/recording_inventory.csv,unique patient_id in local inventory,INFO,
-audited_recordings_local,123,recordings,EHG-Complexity-Pipeline/Paper1/paper1_reproducible_pipeline/results/paper1/00_data_audit/recording_inventory.csv,rows in recording_inventory.csv,INFO,
-audited_recordings_pregnancy,113,recordings,EHG-Complexity-Pipeline/Paper1/paper1_reproducible_pipeline/results/paper1/00_data_audit/recording_inventory.csv,record_type != labour,INFO,
-audited_recordings_labour,10,recordings,EHG-Complexity-Pipeline/Paper1/paper1_reproducible_pipeline/results/paper1/00_data_audit/recording_inventory.csv,record_type == labour,INFO,
-recordings_with_atr,112,recordings,EHG-Complexity-Pipeline/Paper1/paper1_reproducible_pipeline/results/paper1/00_data_audit/recording_inventory.csv,has_atr True,INFO,
-recordings_without_atr,11,recordings,EHG-Complexity-Pipeline/Paper1/paper1_reproducible_pipeline/results/paper1/00_data_audit/recording_inventory.csv,has_atr False; no annotation => no event windows,INFO,Cannot generate event-anchored windows.
-recordings_without_atr_by_type,labour=6; pregnancy=5,recordings,EHG-Complexity-Pipeline/Paper1/paper1_reproducible_pipeline/results/paper1/00_data_audit/recording_inventory.csv,has_atr False split by record_type,INFO,
-women_absent_from_window_manifest,ice001;ice019;ice020,women,EHG-Complexity-Pipeline/Paper1/paper1_reproducible_pipeline/data/windows/window_manifest_60s.csv,database women with no manifest window,PASS,Absent women are exactly the women with no .atr file.
-published_text_recording_count,122 audited (111 annotated) per manuscript v2 text '112 of the 122'; local inventory 123 (112 annotated),recordings,EHG-Complexity-Pipeline/manuscript/IEEE Access/IEEE_ACCESS_journal_1_Gopika/page_limit_draft/access_revised_v2.tex,text vs inventory,FLAG,One-recording difference between published figure/manuscript text and local inventory is not explained by any file inspected; do not assert a cause. Manuscript must state one number and its source.
-manifest_women,42,women,EHG-Complexity-Pipeline/Paper1/paper1_reproducible_pipeline/data/windows/window_manifest_60s.csv,unique patient_id in manifest,INFO,
-manifest_recordings,112,recordings,EHG-Complexity-Pipeline/Paper1/paper1_reproducible_pipeline/data/windows/window_manifest_60s.csv,unique recording_id in manifest,INFO,
-candidate_physical_windows,4283,windows,EHG-Complexity-Pipeline/Paper1/paper1_reproducible_pipeline/data/windows/window_manifest_60s.csv,rows in manifest,INFO,
-manifest_class_counts,"{""baseline"": 3358, ""fetal_movement"": 392, ""contraction"": 333, ""mixed"": 132, ""possible_contraction"": 68}",windows,EHG-Complexity-Pipeline/Paper1/paper1_reproducible_pipeline/data/windows/window_manifest_60s.csv,window_class tally,INFO,
-retained_analysis_physical_windows,4083,windows,EHG-Complexity-Pipeline/Paper1/paper1_reproducible_pipeline/work/primary/event_unit_analysis_60s_EHG9.csv,UC+FM+IN rows,INFO,
-excluded_4283_to_4083,200,windows,EHG-Complexity-Pipeline/Paper1/paper1_reproducible_pipeline/data/windows/window_manifest_60s.csv,"manifest rows absent from analysis table; classes: {""mixed"": 132, ""possible_contraction"": 68}",PASS,Label-based exclusion of ambiguous classes; not QC or channel attrition.
-retained_women,42,women,EHG-Complexity-Pipeline/Paper1/paper1_reproducible_pipeline/work/primary/event_unit_analysis_60s_EHG9.csv,unique patient_id,INFO,
-retained_recordings,112,recordings,EHG-Complexity-Pipeline/Paper1/paper1_reproducible_pipeline/work/primary/event_unit_analysis_60s_EHG9.csv,unique recording_id,INFO,
-retained_windows_in_labour_recordings,114,windows,EHG-Complexity-Pipeline/Paper1/paper1_reproducible_pipeline/work/primary/event_unit_analysis_60s_EHG9.csv,record_type == labour,INFO,
-UC_physical_windows,333,windows,EHG-Complexity-Pipeline/Paper1/paper1_reproducible_pipeline/work/primary/event_unit_analysis_60s_EHG9.csv,window_class == contraction,INFO,
-UC_contributing_women,35,women,EHG-Complexity-Pipeline/Paper1/paper1_reproducible_pipeline/work/primary/event_unit_analysis_60s_EHG9.csv,unique patient_id,INFO,
-UC_contributing_recordings,85,recordings,EHG-Complexity-Pipeline/Paper1/paper1_reproducible_pipeline/work/primary/event_unit_analysis_60s_EHG9.csv,unique recording_id,INFO,
-FM_physical_windows,392,windows,EHG-Complexity-Pipeline/Paper1/paper1_reproducible_pipeline/work/primary/event_unit_analysis_60s_EHG9.csv,window_class == fetal_movement,INFO,
-FM_contributing_women,37,women,EHG-Complexity-Pipeline/Paper1/paper1_reproducible_pipeline/work/primary/event_unit_analysis_60s_EHG9.csv,unique patient_id,INFO,
-FM_contributing_recordings,75,recordings,EHG-Complexity-Pipeline/Paper1/paper1_reproducible_pipeline/work/primary/event_unit_analysis_60s_EHG9.csv,unique recording_id,INFO,
-IN_physical_windows,3358,windows,EHG-Complexity-Pipeline/Paper1/paper1_reproducible_pipeline/work/primary/event_unit_analysis_60s_EHG9.csv,window_class == baseline,INFO,
-IN_contributing_women,41,women,EHG-Complexity-Pipeline/Paper1/paper1_reproducible_pipeline/work/primary/event_unit_analysis_60s_EHG9.csv,unique patient_id,INFO,
-IN_contributing_recordings,111,recordings,EHG-Complexity-Pipeline/Paper1/paper1_reproducible_pipeline/work/primary/event_unit_analysis_60s_EHG9.csv,unique recording_id,INFO,
-UC-IN_paired_women,34,women,EHG-Complexity-Pipeline/Paper1/paper1_reproducible_pipeline/work/primary/event_unit_analysis_60s_EHG9.csv,women with both contraction and baseline,INFO,Women in the mixed-model fit (all women contributing either class) can exceed this paired count.
-UC-IN_windows_in_paired_women,"3340 ({'baseline': 3014, 'contraction': 326})",windows,EHG-Complexity-Pipeline/Paper1/paper1_reproducible_pipeline/work/primary/event_unit_analysis_60s_EHG9.csv,windows of the two classes among paired women only,INFO,
-UC-IN_women_in_any_window_of_pair,42,women,EHG-Complexity-Pipeline/Paper1/paper1_reproducible_pipeline/work/primary/event_unit_analysis_60s_EHG9.csv,women contributing at least one window to either class,INFO,
-FM-IN_paired_women,36,women,EHG-Complexity-Pipeline/Paper1/paper1_reproducible_pipeline/work/primary/event_unit_analysis_60s_EHG9.csv,women with both fetal_movement and baseline,INFO,Women in the mixed-model fit (all women contributing either class) can exceed this paired count.
-FM-IN_windows_in_paired_women,"3308 ({'baseline': 2918, 'fetal_movement': 390})",windows,EHG-Complexity-Pipeline/Paper1/paper1_reproducible_pipeline/work/primary/event_unit_analysis_60s_EHG9.csv,windows of the two classes among paired women only,INFO,
-FM-IN_women_in_any_window_of_pair,42,women,EHG-Complexity-Pipeline/Paper1/paper1_reproducible_pipeline/work/primary/event_unit_analysis_60s_EHG9.csv,women contributing at least one window to either class,INFO,
-UC-FM_paired_women,32,women,EHG-Complexity-Pipeline/Paper1/paper1_reproducible_pipeline/work/primary/event_unit_analysis_60s_EHG9.csv,women with both contraction and fetal_movement,INFO,Women in the mixed-model fit (all women contributing either class) can exceed this paired count.
-UC-FM_windows_in_paired_women,"645 ({'fetal_movement': 337, 'contraction': 308})",windows,EHG-Complexity-Pipeline/Paper1/paper1_reproducible_pipeline/work/primary/event_unit_analysis_60s_EHG9.csv,windows of the two classes among paired women only,INFO,
-UC-FM_women_in_any_window_of_pair,40,women,EHG-Complexity-Pipeline/Paper1/paper1_reproducible_pipeline/work/primary/event_unit_analysis_60s_EHG9.csv,women contributing at least one window to either class,INFO,
-UC_only_women_without_IN,ice024,women,EHG-Complexity-Pipeline/Paper1/paper1_reproducible_pipeline/work/primary/event_unit_analysis_60s_EHG9.csv,UC women lacking IN windows,INFO,
-UC_IN_physical_windows,3691,windows,EHG-Complexity-Pipeline/Paper1/paper1_reproducible_pipeline/work/primary/event_unit_analysis_60s_EHG9.csv,UC + IN,INFO,
-UC_IN_window_channel_rows_4ch,14764,rows,EHG-Complexity-Pipeline/Paper1/paper1_reproducible_pipeline/work/primary/event_unit_analysis_60s_EHG9.csv,physical windows x 4 simultaneous channels,INFO,Stacked channel rows are not independent windows; any pooled-channel model needs physical-window clustering.
-candidate_window_channel_rows,17132,rows,EHG-Complexity-Pipeline/Paper1/paper1_reproducible_pipeline/data/windows/window_manifest_60s.csv,"4,283 x 4",INFO,
-analysis_window_channel_rows,16332,rows,EHG-Complexity-Pipeline/Paper1/paper1_reproducible_pipeline/work/primary/event_unit_analysis_60s_EHG9.csv,"4,083 x 4",INFO,
-artifact_flag_retained_windows,"5 ({'contraction': 3, 'fetal_movement': 2}); ids: ice008_p_3of4|W60|14411-26411;ice012_p_3of4|W60|30665-42665;ice013_p_3of3|W60|46634-58634;ice037_p_2of2|W60|6094-18094;ice042_p_2of2|W60|308005-320005",windows,EHG-Complexity-Pipeline/Paper1/paper1_reproducible_pipeline/work/primary/event_unit_analysis_60s_EHG9.csv,movement_artifact_present == True (windowing.py: a participant_movement/equipment_manipulation/position_change annotation lies within half a window of the anchor),INFO,Existing clean-UC/clean-FM sensitivity does not remove these (see overlap_definition_audit.md).
-pipeline_identity_conclusion,windows/channels/labels identical by window_id (EHG9-12); preprocessing module and sample indices shared; GI rms and fixed-r equal Paper1 exactly,-,see verification_checks.csv id_* and gi_* rows,identifier-level comparison,PASS,Settings identity inferred from shared module + exact numerical equality of two derived columns; Paper1 filter settings are in src/config.py.
+database_participants_local,45,women,results/paper1/00_data_audit/recording_inventory.csv,unique patient_id in local inventory,INFO,
+audited_recordings_local,123,recordings,results/paper1/00_data_audit/recording_inventory.csv,rows in recording_inventory.csv,INFO,
+audited_recordings_pregnancy,113,recordings,results/paper1/00_data_audit/recording_inventory.csv,record_type != labour,INFO,
+audited_recordings_labour,10,recordings,results/paper1/00_data_audit/recording_inventory.csv,record_type == labour,INFO,
+recordings_with_atr,112,recordings,results/paper1/00_data_audit/recording_inventory.csv,has_atr True,INFO,
+recordings_without_atr,11,recordings,results/paper1/00_data_audit/recording_inventory.csv,has_atr False; no annotation => no event windows,INFO,Cannot generate event-anchored windows.
+recordings_without_atr_by_type,labour=6; pregnancy=5,recordings,results/paper1/00_data_audit/recording_inventory.csv,has_atr False split by record_type,INFO,
+women_absent_from_window_manifest,ice001;ice019;ice020,women,data/windows/window_manifest_60s.csv,database women with no manifest window,PASS,Absent women are exactly the women with no .atr file.
+recording_count_note,"122 listed on PhysioNet; local inventory 123 (record 6 of ice039 stored as two files, 6a and 6b); 112 annotated",recordings,recording inventory,listing vs local inventory,INFO,The manuscript states both numbers and the cause.
+manifest_women,42,women,data/windows/window_manifest_60s.csv,unique patient_id in manifest,INFO,
+manifest_recordings,112,recordings,data/windows/window_manifest_60s.csv,unique recording_id in manifest,INFO,
+candidate_physical_windows,4283,windows,data/windows/window_manifest_60s.csv,rows in manifest,INFO,
+manifest_class_counts,"{""baseline"": 3358, ""fetal_movement"": 392, ""contraction"": 333, ""mixed"": 132, ""possible_contraction"": 68}",windows,data/windows/window_manifest_60s.csv,window_class tally,INFO,
+retained_analysis_physical_windows,4083,windows,work/primary/event_unit_analysis_60s_EHG9.csv,UC+FM+IN rows,INFO,
+excluded_4283_to_4083,200,windows,data/windows/window_manifest_60s.csv,"manifest rows absent from analysis table; classes: {""mixed"": 132, ""possible_contraction"": 68}",PASS,Label-based exclusion of ambiguous classes; not QC or channel attrition.
+retained_women,42,women,work/primary/event_unit_analysis_60s_EHG9.csv,unique patient_id,INFO,
+retained_recordings,112,recordings,work/primary/event_unit_analysis_60s_EHG9.csv,unique recording_id,INFO,
+retained_windows_in_labour_recordings,114,windows,work/primary/event_unit_analysis_60s_EHG9.csv,record_type == labour,INFO,
+UC_physical_windows,333,windows,work/primary/event_unit_analysis_60s_EHG9.csv,window_class == contraction,INFO,
+UC_contributing_women,35,women,work/primary/event_unit_analysis_60s_EHG9.csv,unique patient_id,INFO,
+UC_contributing_recordings,85,recordings,work/primary/event_unit_analysis_60s_EHG9.csv,unique recording_id,INFO,
+FM_physical_windows,392,windows,work/primary/event_unit_analysis_60s_EHG9.csv,window_class == fetal_movement,INFO,
+FM_contributing_women,37,women,work/primary/event_unit_analysis_60s_EHG9.csv,unique patient_id,INFO,
+FM_contributing_recordings,75,recordings,work/primary/event_unit_analysis_60s_EHG9.csv,unique recording_id,INFO,
+IN_physical_windows,3358,windows,work/primary/event_unit_analysis_60s_EHG9.csv,window_class == baseline,INFO,
+IN_contributing_women,41,women,work/primary/event_unit_analysis_60s_EHG9.csv,unique patient_id,INFO,
+IN_contributing_recordings,111,recordings,work/primary/event_unit_analysis_60s_EHG9.csv,unique recording_id,INFO,
+UC-IN_paired_women,34,women,work/primary/event_unit_analysis_60s_EHG9.csv,women with both contraction and baseline,INFO,Women in the mixed-model fit (all women contributing either class) can exceed this paired count.
+UC-IN_windows_in_paired_women,"3340 ({'baseline': 3014, 'contraction': 326})",windows,work/primary/event_unit_analysis_60s_EHG9.csv,windows of the two classes among paired women only,INFO,
+UC-IN_women_in_any_window_of_pair,42,women,work/primary/event_unit_analysis_60s_EHG9.csv,women contributing at least one window to either class,INFO,
+FM-IN_paired_women,36,women,work/primary/event_unit_analysis_60s_EHG9.csv,women with both fetal_movement and baseline,INFO,Women in the mixed-model fit (all women contributing either class) can exceed this paired count.
+FM-IN_windows_in_paired_women,"3308 ({'baseline': 2918, 'fetal_movement': 390})",windows,work/primary/event_unit_analysis_60s_EHG9.csv,windows of the two classes among paired women only,INFO,
+FM-IN_women_in_any_window_of_pair,42,women,work/primary/event_unit_analysis_60s_EHG9.csv,women contributing at least one window to either class,INFO,
+UC-FM_paired_women,32,women,work/primary/event_unit_analysis_60s_EHG9.csv,women with both contraction and fetal_movement,INFO,Women in the mixed-model fit (all women contributing either class) can exceed this paired count.
+UC-FM_windows_in_paired_women,"645 ({'fetal_movement': 337, 'contraction': 308})",windows,work/primary/event_unit_analysis_60s_EHG9.csv,windows of the two classes among paired women only,INFO,
+UC-FM_women_in_any_window_of_pair,40,women,work/primary/event_unit_analysis_60s_EHG9.csv,women contributing at least one window to either class,INFO,
+UC_only_women_without_IN,ice024,women,work/primary/event_unit_analysis_60s_EHG9.csv,UC women lacking IN windows,INFO,
+UC_IN_physical_windows,3691,windows,work/primary/event_unit_analysis_60s_EHG9.csv,UC + IN,INFO,
+UC_IN_window_channel_rows_4ch,14764,rows,work/primary/event_unit_analysis_60s_EHG9.csv,physical windows x 4 simultaneous channels,INFO,Stacked channel rows are not independent windows; any pooled-channel model needs physical-window clustering.
+candidate_window_channel_rows,17132,rows,data/windows/window_manifest_60s.csv,"4,283 x 4",INFO,
+analysis_window_channel_rows,16332,rows,work/primary/event_unit_analysis_60s_EHG9.csv,"4,083 x 4",INFO,
+artifact_flag_retained_windows,"5 ({'contraction': 3, 'fetal_movement': 2}); ids: ice008_p_3of4|W60|14411-26411;ice012_p_3of4|W60|30665-42665;ice013_p_3of3|W60|46634-58634;ice037_p_2of2|W60|6094-18094;ice042_p_2of2|W60|308005-320005",windows,work/primary/event_unit_analysis_60s_EHG9.csv,movement_artifact_present == True (windowing.py: a participant_movement/equipment_manipulation/position_change annotation lies within half a window of the anchor),INFO,Existing clean-UC/clean-FM sensitivity does not remove these (see overlap_definition_audit.md).
+pipeline_identity_conclusion,windows/channels/labels identical by window_id (EHG9-12); preprocessing module and sample indices shared; GI rms and fixed-r equal the standard pipeline exactly,-,see verification_checks.csv id_* and gi_* rows,identifier-level comparison,PASS,Settings identity inferred from shared module + exact numerical equality of two derived columns; the standard pipeline filter settings are in src/config.py.

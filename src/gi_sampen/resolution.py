@@ -14,7 +14,7 @@ Method
 ------
 Hold each property fixed in turn and vary the other:
 
-    frozen_d3   (Paper1 baseline, already cached)   ~80 bins     NOT invariant
+    frozen_d3   (the standard pipeline baseline, already cached)   ~80 bins     NOT invariant
     frozen_d4   (new, this stage)                    ~800 bins    NOT invariant
     frozen_d5   (new, this stage)                    ~8,000 bins  NOT invariant
     gi_d1       (new, this stage)                     ~60 bins     invariant
@@ -78,7 +78,7 @@ def reference_bin_counts() -> None:
         at_1x = scale.loc[scale["scale_factor"] == 1.0, "n_retained_profile_values"]
         if len(at_1x):
             print(f"  frozen_d3    median n_retained = {at_1x.median():.0f}  "
-                  f"(60-window scale-sensitivity subset, Paper1)")
+                  f"(60-window scale-sensitivity subset, the standard pipeline)")
 
 
 def main() -> int:

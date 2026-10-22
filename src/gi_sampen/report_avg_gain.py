@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Section 5 (ICASSP reviewer-objection prompt) -- AvgSampEn gain-sensitivity
+"""Section 5 -- AvgSampEn gain-sensitivity
 audit, derived entirely from Stage B's existing output.
 
 Reuses, with no new SampEn computation whatsoever:
-  * the same 60-window gain-stress subset (Paper 1's frozen 20 UC / 20 FM /
+  * the same 60-window gain-stress subset (the original-definition 20 UC / 20 FM /
     20 IN selection, reproduced by invariance_check.select_windows);
   * the same six frozen/GI SampEn summaries (frozen_total/average/sd,
     gi_total/average/sd), already computed by gi_profile.py and already
@@ -20,7 +20,7 @@ required here (0.25, 0.5, 1.3, 2, 4, 7.1), not just the five dyadic ones.
     python invariance_check.py --extra-scales
 
 This script only reshapes/derives; it does not read raw EHG data and does
-not touch the frozen Paper 1 pipeline or any cached Paper 1 value.
+not touch the original-definition pipeline or any cached the standard pipeline value.
 """
 from __future__ import annotations
 

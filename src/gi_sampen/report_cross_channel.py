@@ -9,7 +9,7 @@ For each feature (GI-SD, GI-Total), FM-versus-IN contrast:
   FDR q < 0.05 in at least 3 of 4 channels          -- "replicated"
   otherwise                                          -- "direction only" or "not replicated"
 
-This mirrors Paper 1's own cross-channel bar (README: "seven highlighted
+This mirrors the standard pipeline's own cross-channel bar (README: "seven highlighted
 features retained the same UC-versus-IN direction across EHG9-EHG12 ...
 five ... FDR-supported"): same-direction across channels is the baseline
 claim, FDR support in most channels is the stronger one.

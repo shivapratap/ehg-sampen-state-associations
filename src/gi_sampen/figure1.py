@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Figure 1 for the ICASSP 2027 manuscript -- mechanism and consequence.
+"""Figure 1 -- mechanism and consequence.
 
 (a) Amplitude collinearity: standard Total SampEn and GI-Total SampEn against
     time-domain mean absolute value (MAV), across the matched EHG9 windows.
@@ -22,11 +22,11 @@ Two layouts, both reproducible from existing outputs:
 
 Run from anywhere:
 
-    python Paper2/src/make_figure1.py
-    python Paper2/src/make_figure1.py --layout mechanism
-    python Paper2/src/make_figure1.py --display zlinear   # the literal
+    python src/gi_sampen/figure1.py
+    python src/gi_sampen/figure1.py --layout mechanism
+    python src/gi_sampen/figure1.py --display zlinear   # the literal
                                                           # z-scored spec
-    python Paper2/src/make_figure1.py --ci                # add 95% CIs to (b)
+    python src/gi_sampen/figure1.py --ci                # add 95% CIs to (b)
 
 Display modes for panel (a)
 ---------------------------
@@ -63,8 +63,8 @@ from matplotlib.lines import Line2D
 from matplotlib.patches import Patch
 
 # --------------------------------------------------------------------------
-# Paths -- mirrors Paper2/src/_common.py so this script stays in step with the
-# rest of the pipeline, without importing it (that module pulls in Paper 1's
+# Paths -- mirrors src/gi_sampen/paths.py so this script stays in step with the
+# rest of the pipeline, without importing it (that module pulls in the standard pipeline's
 # preprocessing and requires EHG_RAW_DIR, which a figure does not need).
 # --------------------------------------------------------------------------
 from . import paths as _common

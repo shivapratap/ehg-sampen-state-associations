@@ -16,11 +16,11 @@ within atol=1e-08, rtol=1e-06. This test file reproduces that finding,
 including its terminology.
 
 Read together with test_gain_invariance.py, this is the paper's central
-mechanism-isolating result (facts_pack.md, section 5.5): removing the
+mechanism-isolating result (the design notes, section 5.5): removing the
 fixed-decimal ROUNDING is what restores invariance, standardisation is a
 separate, additional feature-definition change made by the GI variants. This
 is "the single strongest answer to the 'this is just a bug in one
-implementation' objection" (facts_pack.md), so this test is written to fail
+implementation' objection" (the design notes), so this test is written to fail
 loudly, not silently degrade, if that stops holding.
 
 Needs no external data.
@@ -66,7 +66,7 @@ def test_full_precision_summaries_are_gain_invariant(name, signal, gain):
             f"{name} gain={gain}: {key} base={base_value!r} "
             f"scaled={scaled_value!r} -- full-precision summaries are "
             "expected to be exactly gain-invariant even with no "
-            "standardisation; see facts_pack.md section 5.5"
+            "standardisation; see the design notes"
         )
     assert scaled["fp_n_retained"] == base["fp_n_retained"]
 
@@ -76,7 +76,7 @@ def test_rounding_is_the_mechanism_not_amplitude_itself():
     (rounded) implementation is gain-SENSITIVE, but removing only the
     rounding -- with no standardisation at all -- makes the profile
     invariant again. So rounding, not SampEn profiling itself, is what
-    breaks invariance under gain. See facts_pack.md section 5.5, and the
+    breaks invariance under gain. See the design notes, and the
     module docstring in gi_profile.py."""
     rng = np.random.default_rng(4)
     signal = np.cumsum(rng.standard_normal(1200)) * 1e-2

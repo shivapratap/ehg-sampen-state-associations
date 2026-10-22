@@ -18,6 +18,6 @@ for sc,mask in scenarios.items():
 pd.DataFrame(rows).to_csv(out/'annotation_sensitivity_results.csv',index=False); pd.DataFrame(logrows).to_csv(out/'log_amplitude_sensitivity_results.csv',index=False)
 d.loc[d.movement_artifact_present.astype(bool),['window_id','patient_id','recording_id','window_class','nearest_annotation_type','distance_to_nearest_annotation_s']].to_csv(out/'annotation_exclusion_population.csv',index=False)
 pd.DataFrame([{'n_flagged':int(d.movement_artifact_present.astype(bool).sum()),'n_rows':len(d),'scenarios':4,'features':6,'log_features':4,'wall_seconds':time.time()-start}]).to_csv(out/'run_summary.csv',index=False)
-(out/'status.md').write_text('# B annotation sensitivity\n\nExecuted with the exact Paper1 `_fit_one` wrapper. Scenario S1 uses the verified retained-window movement/equipment/position flag; S2 removes the flagged ice037 window; S3 removes all ice037 windows.\n')
+(out/'status.md').write_text('# B annotation sensitivity\n\nExecuted with the exact the standard pipeline `_fit_one` wrapper. Scenario S1 uses the verified retained-window movement/equipment/position flag; S2 removes the flagged ice037 window; S3 removes all ice037 windows.\n')
 (out/'execution_record.json').write_text(json.dumps({'status':'complete','attempted':120,'successful':120,'raw_fits':24,'log_fits':16,'wall_seconds':time.time()-start,'seed':20261019},indent=2))
 print('done',len(rows),len(logrows),time.time()-start)
