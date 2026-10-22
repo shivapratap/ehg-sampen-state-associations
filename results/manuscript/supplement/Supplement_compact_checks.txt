@@ -1,0 +1,18 @@
+PASS  S2: 34 features in each estimator panel  34,68,34
+PASS  S2: feature names align across panels  
+PASS  S2: 11 primary features present  
+PASS  S3B: group sizes 5/6/2/23  5,6,2,23
+PASS  S3B: all non-profile original features pass 420/420  
+PASS  S3B: profile summaries pass 60/420  
+PASS  S3B: GI summaries pass 420/420 with zero error  
+PASS  S3A: gain-1 reproduction has zero failures  
+PASS  S3C: all full-precision rows zero  
+PASS  S3E: seven summaries/masks with zero difference and mask agreement  
+PASS  S6A: 11 features, 5 recordings  
+PASS  S6A: 25 of 55 flagged, max 0.560  25, 0.56
+PASS  S6A: n flagged column agrees with entries  
+PASS  S6C: excess kurtosis 3,653-4,010 for the five amplitude-related models  3653.19-4010.0
+PASS  S7C: all-window rows reproduce 0.409/0.020/-0.113/0.275 and log-RMS 0.529/-0.567  
+PASS  S7C: extreme-window rows 0.692/0.203/-0.099/0.280  
+PASS  S7B note: pooled conditional residual rho -0.70  $-$0.70
+PASS  S7B note: woman-level RMS rho 0.916-0.955  

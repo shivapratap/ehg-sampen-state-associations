@@ -1,0 +1,462 @@
+\documentclass[10pt]{article}
+\usepackage[a4paper,margin=18mm]{geometry}
+\usepackage{booktabs,longtable,graphicx,pdflscape,array,natbib,hyperref,xcolor}
+\hypersetup{colorlinks=true,linkcolor=black,citecolor=black,urlcolor=blue}
+\setlength{\LTleft}{0pt}\setlength{\LTright}{0pt}
+\begin{document}
+\begin{center}{\Large Supplementary Material}\par\medskip{\normalsize Gain dependence in sample entropy profiling of electrohysterography and its effect on uterine-state associations}\end{center}
+This supplement provides feature definitions, numerical controls, complete gain-invariant (GI) associations and named sensitivity analyses supporting the Results. Values are read from saved analysis outputs; no feature extraction, model fitting, $p$-value or false discovery rate calculation was performed to produce this document.
+
+\noindent\textbf{Abbreviations.} BH, Benjamini--Hochberg; CI, confidence interval; CR1, cluster-robust covariance with small-sample scaling; EHG, electrohysterography; FDR, false discovery rate; FM, fetal movement; FWH, fast-wave high-frequency; GI, gain-invariant; IN, guard-cleared inactivity; OLS, ordinary least squares; PSD, power spectral density; REML, restricted maximum likelihood; RMS, root mean square; SampEn, sample entropy; SD, standard deviation; UC, uterine contraction.
+
+\clearpage
+\begin{landscape}
+\section*{Table S1. Feature definitions and implementation parameters}\label{tab:s1_features}
+The 34 original features of the fast-wave high-frequency (FWH) band are grouped by family below. The primary band was 0.3--1.0 Hz; signals were sampled at 200 Hz, filtered and decimated to 20 Hz, with 60-s windows. Welch settings were 10-s Hann segments, 5-s overlap, constant detrending and density scaling. Parameters not listed are fixed by the feature definition.
+\begin{longtable}{p{3.4cm}p{6.2cm}p{2.0cm}p{4.7cm}p{3.2cm}}
+\toprule
+\textbf{Feature} & \textbf{Concise definition / formula} & \textbf{Units} & \textbf{Essential parameters} & \textbf{Citation} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Feature} & \textbf{Concise definition / formula} & \textbf{Units} & \textbf{Essential parameters} & \textbf{Citation} \\
+\midrule
+\endhead
+Time: median & sample median of x & signal units & none &  \\
+Time: kurtosis & Fisher excess kurtosis of x & dimensionless & bias=True &  \\
+Time: skewness & standardised third central moment & dimensionless & bias=True &  \\
+Time: mean absolute value & mean absolute value & signal units & none &  \\
+Time: RMS & square root of mean squared signal & signal units & none & \citep{Hudgins1993NewStrategy} \\
+Time: peak-to-peak & maximum minus minimum & signal units & none &  \\
+Time: waveform length & sum of absolute successive differences & signal units & sample differences & \citep{Hudgins1993NewStrategy} \\
+Time: zero-crossing count & number of sign crossings & count & implementation default &  \\
+Time: slope sign-change count & number of slope sign changes & count & implementation default &  \\
+Frequency: peak frequency & frequency at maximum Welch PSD & Hz & Welch PSD & \citep{Welch1967PSD} \\
+Frequency: mean frequency & power-weighted mean frequency & Hz & Welch PSD & \citep{Welch1967PSD} \\
+Frequency: median frequency & frequency at cumulative half power & Hz & Welch PSD & \citep{Welch1967PSD} \\
+Frequency: spectral edge (95\%) & frequency at cumulative 95\% power & Hz & Welch PSD & \citep{Welch1967PSD} \\
+Frequency: spectral entropy & normalised Shannon entropy of PSD probabilities & dimensionless & Welch PSD & \citep{Inouye1991EEGSpectralEntropy} \\
+Frequency: spectral spread & power-weighted frequency spread & Hz & Welch PSD & \citep{Welch1967PSD} \\
+Entropy: approximate entropy & ApEn: phi(m)-phi(m+1) & dimensionless & m=2; r=0.2 population SD; Chebyshev; self matches included & \citep{Pincus1991ApproximateEntropy} \\
+Entropy: permutation entropy & ordinal-pattern entropy & dimensionless & $m=3$, $\tau=1$ & \citep{Bandt2002PermutationEntropy} \\
+Entropy: fuzzy entropy & log ratio of centred-template similarities & dimensionless & m=2; delay=1; r=0.2 population SD; exponent=2 & \citep{Chen2007FuzzyEntropy} \\
+Entropy: distribution entropy & entropy of nearest-neighbour distance distribution & dimensionless & m=2; delay=1; 500 bins; normalised & \citep{Li2015DistributionEntropy} \\
+Entropy: SVD entropy & entropy of singular-value distribution & dimensionless & $m=3$, $\tau=1$ & \citep{Roberts1999SVDEntropy} \\
+Entropy: fixed-r SampEn & negative log ratio of m+1 to m matches & dimensionless & m=2; r=0.2 population SD; Chebyshev; self matches excluded & \citep{Richman2000SampleEntropy} \\
+Entropy: Total SampEn & sum of retained SampEn-profile values & dimensionless & profile: m=2; aligned m/m+1 templates; distance rounded to 3 decimals; epsilon=$1\times10^{-12}$ & \citep{Udhayakumar2018SampEnProfile},\citep{udhayakumar2020entropycodes} \\
+Entropy: average SampEn & mean of retained SampEn-profile values & dimensionless & same profile settings as Total SampEn & \citep{Udhayakumar2018SampEnProfile},\citep{udhayakumar2020entropycodes} \\
+Entropy: median SampEn & median of retained SampEn-profile values & dimensionless & same profile settings as Total SampEn & \citep{Udhayakumar2018SampEnProfile},\citep{udhayakumar2020entropycodes} \\
+Entropy: profile SD & population SD of retained SampEn-profile values & dimensionless & ddof=0; same profile settings as Total SampEn & \citep{Udhayakumar2018SampEnProfile},\citep{udhayakumar2020entropycodes} \\
+Entropy: kurtosis SampEn & Fisher excess kurtosis of retained profile values & dimensionless & bias=True; same profile settings as Total SampEn & \citep{Udhayakumar2018SampEnProfile},\citep{udhayakumar2020entropycodes} \\
+Entropy: skewness SampEn & skewness of retained profile values & dimensionless & bias=True; same profile settings as Total SampEn & \citep{Udhayakumar2018SampEnProfile},\citep{udhayakumar2020entropycodes} \\
+Complexity: Lempel--Ziv & Lempel--Ziv sequence complexity & dimensionless & median binarisation; LZ76 phrase count; normalised by $\log_2(n)/n$ & \citep{Lempel1976Complexity} \\
+Complexity: Hjorth mobility & sqrt(variance of first derivative / variance of x) & dimensionless & none (closed form) & \citep{Hjorth1970Parameters} \\
+Complexity: Hjorth complexity & Hjorth complexity parameter & dimensionless & none (closed form) & \citep{Hjorth1970Parameters} \\
+Complexity: Fisher information & Fisher information of the signal representation & dimensionless & library defaults &  \\
+Complexity: Katz fractal dimension & Katz fractal dimension & dimensionless & none (closed form) & \citep{Katz1988FractalWaveforms} \\
+Complexity: Higuchi fractal dimension & Higuchi fractal dimension & dimensionless & k\_max=10 & \citep{Higuchi1988FractalDimension} \\
+Complexity: detrended fluctuation analysis & DFA scaling exponent & dimensionless & first-order detrending; scales from 4 samples to one tenth of the window length, ratio 1.2 & \citep{Peng1994DFA} \\
+\bottomrule
+\end{longtable}
+\par\smallskip\noindent\footnotesize SampEn fixed-r uses m=2, Chebyshev distance, tolerance 0.2 times the population SD (ddof=0), aligned m/m+1 templates and self-match exclusion. The SampEn profile uses the same m and proportional tolerance construction, but forms a distance profile after fixed three-decimal rounding of pairwise distances; values are retained only when the shell is observed and both cumulative probabilities exceed $10^{-12}$. Total and average are the sum and mean of retained values; median, SD, kurtosis and skewness use the implementation's population-SD / SciPy bias-default summaries. The rounded GI representation applies the same profile after division by the uncentred population SD. The fixed-grid representation instead evaluates the dimensionless GI profile at a common grid without distance rounding.
+\end{landscape}
+
+\clearpage
+\begin{landscape}
+\section*{Table S2. Original EHG9 UC--IN results and model dependence}\label{tab:s2_model_dependence}
+The population is 42 women, 112 contributing recordings and 4,083 analysed windows. UC--IN denotes contraction minus guard-cleared inactivity (IN). Primary, pooled and cluster rows are model-standardised coefficients; intervals are model-based Wald 95\% CIs except the CR1 rows, which use robust Wald intervals. A 34-feature Benjamini--Hochberg (BH) family is used for the window-level estimands. Paired woman summaries are raw-unit median differences with paired bootstrap percentile intervals and use a separate paired woman-summary family. Pooled OLS and CR1 share coefficients but differ in covariance/interval calculation. These paired intervals are not a whole-woman bootstrap refit of the window-level estimator.
+\paragraph{A. Primary mixed model}
+Constant across rows of this panel: women 42; windows 4,083; scale and interval standardised; model-based Wald 95\% CI; family 34-feature.
+\begin{longtable}{p{4.4cm}p{3.6cm}p{2.0cm}p{3.6cm}p{2.0cm}p{2.0cm}}
+\toprule
+\textbf{Feature} & \textbf{Estimand} & \textbf{Estimate} & \textbf{95\% CI} & \textbf{p} & \textbf{q} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Feature} & \textbf{Estimand} & \textbf{Estimate} & \textbf{95\% CI} & \textbf{p} & \textbf{q} \\
+\midrule
+\endhead
+Time: median & primary mixed & $-$0.2193 & [$-$0.3289, $-$0.1097] & $8.83\times10^{-5}$ & 0.0005 \\
+Time: kurtosis & primary mixed & 0.0076 & [$-$0.1066, 0.1218] & 0.8959 & 0.8959 \\
+Time: skewness & primary mixed & 0.1881 & [0.0749, 0.3014] & 0.0011 & 0.0055 \\
+Time: mean absolute value & primary mixed & 0.3099 & [0.1975, 0.4224] & $6.57\times10^{-8}$ & $1.12\times10^{-6}$ \\
+Time: RMS & primary mixed & 0.2691 & [0.1566, 0.3817] & $2.77\times10^{-6}$ & $2.35\times10^{-5}$ \\
+Time: peak-to-peak & primary mixed & 0.2478 & [0.1352, 0.3603] & $1.61\times10^{-5}$ & 0.000109 \\
+Time: waveform length & primary mixed & 0.3019 & [0.1896, 0.4141] & $1.37\times10^{-7}$ & $1.55\times10^{-6}$ \\
+Time: zero-crossing count & primary mixed & $-$0.0514 & [$-$0.1293, 0.0264] & 0.1956 & 0.2806 \\
+Time: slope sign-change count & primary mixed & $-$0.0236 & [$-$0.099, 0.0518] & 0.5396 & 0.6552 \\
+Frequency: peak frequency & primary mixed & $-$0.0218 & [$-$0.1124, 0.0688] & 0.6373 & 0.732 \\
+Frequency: mean frequency & primary mixed & $-$0.0846 & [$-$0.1662, $-$0.0029] & 0.0423 & 0.0899 \\
+Frequency: median frequency & primary mixed & $-$0.0852 & [$-$0.1694, $-$0.00098] & 0.0474 & 0.0948 \\
+Frequency: spectral edge (95\%) & primary mixed & $-$0.1166 & [$-$0.2027, $-$0.0305] & 0.0079 & 0.0269 \\
+Frequency: spectral entropy & primary mixed & $-$0.0901 & [$-$0.1933, 0.0132] & 0.0872 & 0.1648 \\
+Frequency: spectral spread & primary mixed & $-$0.1263 & [$-$0.2076, $-$0.045] & 0.0023 & 0.0099 \\
+Entropy: approximate entropy & primary mixed & $-$0.0092 & [$-$0.1162, 0.0978] & 0.8663 & 0.8926 \\
+Entropy: permutation entropy & primary mixed & $-$0.0153 & [$-$0.0929, 0.0622] & 0.6989 & 0.7457 \\
+Entropy: fuzzy entropy & primary mixed & $-$0.0572 & [$-$0.1444, 0.0299] & 0.1981 & 0.2806 \\
+Entropy: distribution entropy & primary mixed & $-$0.0217 & [$-$0.1328, 0.0894] & 0.7019 & 0.7457 \\
+Entropy: SVD entropy & primary mixed & $-$0.0964 & [$-$0.1766, $-$0.0161] & 0.0187 & 0.0528 \\
+Entropy: fixed-r SampEn & primary mixed & $-$0.1154 & [$-$0.2148, $-$0.016] & 0.0229 & 0.0558 \\
+Entropy: Total SampEn & primary mixed & 0.4092 & [0.2959, 0.5225] & $1.48\times10^{-12}$ & $5.02\times10^{-11}$ \\
+Entropy: average SampEn & primary mixed & $-$0.0602 & [$-$0.1611, 0.0408] & 0.2428 & 0.3302 \\
+Entropy: median SampEn & primary mixed & $-$0.0735 & [$-$0.1832, 0.0362] & 0.1893 & 0.2806 \\
+Entropy: profile SD & primary mixed & $-$0.0412 & [$-$0.1375, 0.0551] & 0.4019 & 0.5061 \\
+Entropy: kurtosis SampEn & primary mixed & 0.0831 & [$-$0.0303, 0.1965] & 0.1508 & 0.2649 \\
+Entropy: skewness SampEn & primary mixed & 0.0772 & [$-$0.0327, 0.1871] & 0.1683 & 0.2725 \\
+Complexity: Lempel--Ziv & primary mixed & 0.0215 & [$-$0.0702, 0.1132] & 0.6459 & 0.732 \\
+Complexity: Hjorth mobility & primary mixed & $-$0.0915 & [$-$0.1703, $-$0.0126] & 0.023 & 0.0558 \\
+Complexity: Hjorth complexity & primary mixed & $-$0.1435 & [$-$0.2413, $-$0.0458] & 0.004 & 0.0151 \\
+Complexity: Fisher information & primary mixed & 0.0896 & [0.0099, 0.1693] & 0.0275 & 0.0624 \\
+Complexity: Katz fractal dimension & primary mixed & $-$0.055 & [$-$0.1603, 0.0502] & 0.3054 & 0.3993 \\
+Complexity: Higuchi fractal dimension & primary mixed & $-$0.09 & [$-$0.1585, $-$0.0215] & 0.01 & 0.0308 \\
+Complexity: detrended fluctuation analysis & primary mixed & 0.0618 & [$-$0.0236, 0.1472] & 0.1558 & 0.2649 \\
+\bottomrule
+\end{longtable}
+\medskip
+\paragraph{B. Pooled OLS and woman-cluster CR1}
+Constant across rows of this panel: women 42; windows 4,083; family 34-feature.
+\begin{longtable}{p{4.0cm}p{3.4cm}p{2.0cm}p{3.4cm}p{1.9cm}p{1.9cm}p{5.2cm}}
+\toprule
+\textbf{Feature} & \textbf{Estimand} & \textbf{Estimate} & \textbf{95\% CI} & \textbf{p} & \textbf{q} & \textbf{Scale / interval} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Feature} & \textbf{Estimand} & \textbf{Estimate} & \textbf{95\% CI} & \textbf{p} & \textbf{q} & \textbf{Scale / interval} \\
+\midrule
+\endhead
+Time: median & pooled OLS & $-$0.1456 & [$-$0.2578, $-$0.0334] & 0.011 & 0.0201 & standardised; model-based Wald 95\% CI \\
+Time: median & woman-cluster CR1 & $-$0.1456 & [$-$0.2953, 0.0041] & 0.0563 & 0.3193 & standardised; robust Wald 95\% CI \\
+Time: kurtosis & pooled OLS & 0.0928 & [$-$0.0184, 0.204] & 0.102 & 0.1334 & standardised; model-based Wald 95\% CI \\
+Time: kurtosis & woman-cluster CR1 & 0.0928 & [$-$0.0721, 0.2576] & 0.2623 & 0.5533 & standardised; robust Wald 95\% CI \\
+Time: skewness & pooled OLS & 0.1811 & [0.069, 0.2931] & 0.0015 & 0.0058 & standardised; model-based Wald 95\% CI \\
+Time: skewness & woman-cluster CR1 & 0.1811 & [0.0762, 0.2859] & 0.0012 & 0.0402 & standardised; robust Wald 95\% CI \\
+Time: mean absolute value & pooled OLS & 0.2962 & [0.1782, 0.4142] & $8.97\times10^{-7}$ & $1.02\times10^{-5}$ & standardised; model-based Wald 95\% CI \\
+Time: mean absolute value & woman-cluster CR1 & 0.2962 & [$-$0.0901, 0.6825] & 0.1292 & 0.4882 & standardised; robust Wald 95\% CI \\
+Time: RMS & pooled OLS & 0.2559 & [0.1378, 0.3741] & $2.23\times10^{-5}$ & 0.000189 & standardised; model-based Wald 95\% CI \\
+Time: RMS & woman-cluster CR1 & 0.2559 & [$-$0.1318, 0.6436] & 0.1899 & 0.5147 & standardised; robust Wald 95\% CI \\
+Time: peak-to-peak & pooled OLS & 0.2353 & [0.1171, 0.3535] & $9.67\times10^{-5}$ & 0.000657 & standardised; model-based Wald 95\% CI \\
+Time: peak-to-peak & woman-cluster CR1 & 0.2353 & [$-$0.1522, 0.6229] & 0.2271 & 0.5147 & standardised; robust Wald 95\% CI \\
+Time: waveform length & pooled OLS & 0.2977 & [0.1797, 0.4157] & $7.93\times10^{-7}$ & $1.02\times10^{-5}$ & standardised; model-based Wald 95\% CI \\
+Time: waveform length & woman-cluster CR1 & 0.2977 & [$-$0.0876, 0.683] & 0.1264 & 0.4882 & standardised; robust Wald 95\% CI \\
+Time: zero-crossing count & pooled OLS & 0.1627 & [0.0521, 0.2732] & 0.0039 & 0.0122 & standardised; model-based Wald 95\% CI \\
+Time: zero-crossing count & woman-cluster CR1 & 0.1627 & [$-$0.1353, 0.4606] & 0.2766 & 0.5533 & standardised; robust Wald 95\% CI \\
+Time: slope sign-change count & pooled OLS & 0.1572 & [0.0456, 0.2688] & 0.0058 & 0.0131 & standardised; model-based Wald 95\% CI \\
+Time: slope sign-change count & woman-cluster CR1 & 0.1572 & [$-$0.1889, 0.5032] & 0.3643 & 0.563 & standardised; robust Wald 95\% CI \\
+Frequency: peak frequency & pooled OLS & 0.1883 & [0.0795, 0.2972] & 0.000701 & 0.0034 & standardised; model-based Wald 95\% CI \\
+Frequency: peak frequency & woman-cluster CR1 & 0.1883 & [$-$0.0245, 0.4011] & 0.0813 & 0.3947 & standardised; robust Wald 95\% CI \\
+Frequency: mean frequency & pooled OLS & 0.1432 & [0.0325, 0.2538] & 0.0112 & 0.0201 & standardised; model-based Wald 95\% CI \\
+Frequency: mean frequency & woman-cluster CR1 & 0.1432 & [$-$0.1522, 0.4385] & 0.3333 & 0.563 & standardised; robust Wald 95\% CI \\
+Frequency: median frequency & pooled OLS & 0.1515 & [0.0419, 0.2611] & 0.0067 & 0.0143 & standardised; model-based Wald 95\% CI \\
+Frequency: median frequency & woman-cluster CR1 & 0.1515 & [$-$0.0887, 0.3917] & 0.2099 & 0.5147 & standardised; robust Wald 95\% CI \\
+Frequency: spectral edge (95\%) & pooled OLS & 0.0288 & [$-$0.0835, 0.1411] & 0.6149 & 0.6745 & standardised; model-based Wald 95\% CI \\
+Frequency: spectral edge (95\%) & woman-cluster CR1 & 0.0288 & [$-$0.2749, 0.3325] & 0.849 & 0.8795 & standardised; robust Wald 95\% CI \\
+Frequency: spectral entropy & pooled OLS & $-$0.0398 & [$-$0.1522, 0.0725] & 0.487 & 0.552 & standardised; model-based Wald 95\% CI \\
+Frequency: spectral entropy & woman-cluster CR1 & $-$0.0398 & [$-$0.3113, 0.2316] & 0.7684 & 0.8709 & standardised; robust Wald 95\% CI \\
+Frequency: spectral spread & pooled OLS & 0.014 & [$-$0.0976, 0.1255] & 0.8061 & 0.8061 & standardised; model-based Wald 95\% CI \\
+Frequency: spectral spread & woman-cluster CR1 & 0.014 & [$-$0.3261, 0.354] & 0.9343 & 0.9343 & standardised; robust Wald 95\% CI \\
+Entropy: approximate entropy & pooled OLS & $-$0.0984 & [$-$0.207, 0.0103] & 0.0759 & 0.1033 & standardised; model-based Wald 95\% CI \\
+Entropy: approximate entropy & woman-cluster CR1 & $-$0.0984 & [$-$0.2995, 0.1028] & 0.3291 & 0.563 & standardised; robust Wald 95\% CI \\
+Entropy: permutation entropy & pooled OLS & 0.1582 & [0.0465, 0.2699] & 0.0055 & 0.0131 & standardised; model-based Wald 95\% CI \\
+Entropy: permutation entropy & woman-cluster CR1 & 0.1582 & [$-$0.179, 0.4954] & 0.3489 & 0.563 & standardised; robust Wald 95\% CI \\
+Entropy: fuzzy entropy & pooled OLS & 0.0254 & [$-$0.0843, 0.1351] & 0.6503 & 0.691 & standardised; model-based Wald 95\% CI \\
+Entropy: fuzzy entropy & woman-cluster CR1 & 0.0254 & [$-$0.2506, 0.3013] & 0.8537 & 0.8795 & standardised; robust Wald 95\% CI \\
+Entropy: distribution entropy & pooled OLS & $-$0.1024 & [$-$0.2132, 0.0084] & 0.0701 & 0.0993 & standardised; model-based Wald 95\% CI \\
+Entropy: distribution entropy & woman-cluster CR1 & $-$0.1024 & [$-$0.2514, 0.0467] & 0.1728 & 0.5147 & standardised; robust Wald 95\% CI \\
+Entropy: SVD entropy & pooled OLS & 0.1117 & [0.000687, 0.2228] & 0.0486 & 0.0751 & standardised; model-based Wald 95\% CI \\
+Entropy: SVD entropy & woman-cluster CR1 & 0.1117 & [$-$0.2062, 0.4297] & 0.4818 & 0.6553 & standardised; robust Wald 95\% CI \\
+Entropy: fixed-r SampEn & pooled OLS & $-$0.1773 & [$-$0.2849, $-$0.0698] & 0.0012 & 0.0053 & standardised; model-based Wald 95\% CI \\
+Entropy: fixed-r SampEn & woman-cluster CR1 & $-$0.1773 & [$-$0.4406, 0.0859] & 0.1811 & 0.5147 & standardised; robust Wald 95\% CI \\
+Entropy: Total SampEn & pooled OLS & 0.4122 & [0.2949, 0.5295] & $6.49\times10^{-12}$ & $2.21\times10^{-10}$ & standardised; model-based Wald 95\% CI \\
+Entropy: Total SampEn & woman-cluster CR1 & 0.4122 & [0.0366, 0.7879] & 0.0323 & 0.2745 & standardised; robust Wald 95\% CI \\
+Entropy: average SampEn & pooled OLS & $-$0.0546 & [$-$0.1648, 0.0556] & 0.3314 & 0.4173 & standardised; model-based Wald 95\% CI \\
+Entropy: average SampEn & woman-cluster CR1 & $-$0.0546 & [$-$0.2735, 0.1643] & 0.6171 & 0.7494 & standardised; robust Wald 95\% CI \\
+Entropy: median SampEn & pooled OLS & $-$0.0443 & [$-$0.1567, 0.0681] & 0.4398 & 0.5156 & standardised; model-based Wald 95\% CI \\
+Entropy: median SampEn & woman-cluster CR1 & $-$0.0443 & [$-$0.1873, 0.0987] & 0.5349 & 0.6736 & standardised; robust Wald 95\% CI \\
+Entropy: profile SD & pooled OLS & $-$0.0481 & [$-$0.1574, 0.0612] & 0.3881 & 0.4713 & standardised; model-based Wald 95\% CI \\
+Entropy: profile SD & woman-cluster CR1 & $-$0.0481 & [$-$0.3007, 0.2045] & 0.7024 & 0.8235 & standardised; robust Wald 95\% CI \\
+Entropy: kurtosis SampEn & pooled OLS & 0.157 & [0.0463, 0.2677] & 0.0055 & 0.0131 & standardised; model-based Wald 95\% CI \\
+Entropy: kurtosis SampEn & woman-cluster CR1 & 0.157 & [0.027, 0.2869] & 0.0191 & 0.2166 & standardised; robust Wald 95\% CI \\
+Entropy: skewness SampEn & pooled OLS & 0.1566 & [0.0477, 0.2656] & 0.0048 & 0.0131 & standardised; model-based Wald 95\% CI \\
+Entropy: skewness SampEn & woman-cluster CR1 & 0.1566 & [0.000771, 0.3125] & 0.0489 & 0.3193 & standardised; robust Wald 95\% CI \\
+Complexity: Lempel--Ziv & pooled OLS & 0.1653 & [0.053, 0.2776] & 0.0039 & 0.0122 & standardised; model-based Wald 95\% CI \\
+Complexity: Lempel--Ziv & woman-cluster CR1 & 0.1653 & [$-$0.1051, 0.4357] & 0.2241 & 0.5147 & standardised; robust Wald 95\% CI \\
+Complexity: Hjorth mobility & pooled OLS & 0.1335 & [0.0229, 0.2441] & 0.018 & 0.0306 & standardised; model-based Wald 95\% CI \\
+Complexity: Hjorth mobility & woman-cluster CR1 & 0.1335 & [$-$0.178, 0.445] & 0.3917 & 0.5633 & standardised; robust Wald 95\% CI \\
+Complexity: Hjorth complexity & pooled OLS & $-$0.2031 & [$-$0.3167, $-$0.0895] & 0.000462 & 0.0026 & standardised; model-based Wald 95\% CI \\
+Complexity: Hjorth complexity & woman-cluster CR1 & $-$0.2031 & [$-$0.3693, $-$0.0368] & 0.0179 & 0.2166 & standardised; robust Wald 95\% CI \\
+Complexity: Fisher information & pooled OLS & $-$0.1317 & [$-$0.2424, $-$0.021] & 0.0198 & 0.032 & standardised; model-based Wald 95\% CI \\
+Complexity: Fisher information & woman-cluster CR1 & $-$0.1317 & [$-$0.4428, 0.1794] & 0.3976 & 0.5633 & standardised; robust Wald 95\% CI \\
+Complexity: Katz fractal dimension & pooled OLS & 0.0213 & [$-$0.0903, 0.1328] & 0.7085 & 0.7299 & standardised; model-based Wald 95\% CI \\
+Complexity: Katz fractal dimension & woman-cluster CR1 & 0.0213 & [$-$0.1987, 0.2412] & 0.8461 & 0.8795 & standardised; robust Wald 95\% CI \\
+Complexity: Higuchi fractal dimension & pooled OLS & 0.1101 & [$-$0.000844, 0.2211] & 0.0518 & 0.0765 & standardised; model-based Wald 95\% CI \\
+Complexity: Higuchi fractal dimension & woman-cluster CR1 & 0.1101 & [$-$0.2335, 0.4537] & 0.521 & 0.6736 & standardised; robust Wald 95\% CI \\
+Complexity: detrended fluctuation analysis & pooled OLS & $-$0.1453 & [$-$0.2564, $-$0.0342] & 0.0104 & 0.0201 & standardised; model-based Wald 95\% CI \\
+Complexity: detrended fluctuation analysis & woman-cluster CR1 & $-$0.1453 & [$-$0.4379, 0.1474] & 0.3219 & 0.563 & standardised; robust Wald 95\% CI \\
+\bottomrule
+\end{longtable}
+\medskip
+\paragraph{C. Paired woman-summary statistic}
+Constant across rows of this panel: women 34; windows paired women; scale and interval raw units; paired bootstrap percentile CI; family paired woman-summary.
+\begin{longtable}{p{4.4cm}p{3.6cm}p{2.0cm}p{3.6cm}p{2.0cm}p{2.0cm}}
+\toprule
+\textbf{Feature} & \textbf{Estimand} & \textbf{Estimate} & \textbf{95\% CI} & \textbf{p} & \textbf{q} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Feature} & \textbf{Estimand} & \textbf{Estimate} & \textbf{95\% CI} & \textbf{p} & \textbf{q} \\
+\midrule
+\endhead
+Time: median & paired woman summary & $-$$7.6\times10^{-5}$ & [$-$0.000219, $2.2\times10^{-5}$] & 0.0187 & 0.1058 \\
+Time: kurtosis & paired woman summary & 0.1397 & [$-$0.0075, 0.314] & 0.0445 & 0.1512 \\
+Time: skewness & paired woman summary & 0.032 & [$-$0.0015, 0.058] & 0.0643 & 0.1988 \\
+Time: mean absolute value & paired woman summary & 0.0027 & [0.0019, 0.0035] & $1.91\times10^{-5}$ & 0.000176 \\
+Time: RMS & paired woman summary & 0.0039 & [0.0021, 0.0049] & $9.05\times10^{-6}$ & 0.000154 \\
+Time: peak-to-peak & paired woman summary & 0.0221 & [0.0107, 0.0297] & $5.14\times10^{-6}$ & 0.000154 \\
+Time: waveform length & paired woman summary & 0.5114 & [0.3152, 0.6865] & $2.12\times10^{-5}$ & 0.000176 \\
+Time: zero-crossing count & paired woman summary & $-$0.75 & [$-$1.5, 0.5] & 0.5994 & 0.6793 \\
+Time: slope sign-change count & paired woman summary & 0 & [$-$2.5, 1.5] & 0.6728 & 0.7148 \\
+Frequency: peak frequency & paired woman summary & 0 & [0, 0] & 0.1797 & 0.3307 \\
+Frequency: mean frequency & paired woman summary & $-$0.000388 & [$-$0.0122, 0.0086] & 0.3605 & 0.5329 \\
+Frequency: median frequency & paired woman summary & 0.000622 & [$-$0.0076, 0.008] & 0.5542 & 0.6498 \\
+Frequency: spectral edge (95\%) & paired woman summary & $-$0.0123 & [$-$0.0265, $-$0.0015] & 0.1629 & 0.3307 \\
+Frequency: spectral entropy & paired woman summary & $-$0.0047 & [$-$0.0115, 0.003] & 0.1012 & 0.2294 \\
+Frequency: spectral spread & paired woman summary & $-$0.0038 & [$-$0.0103, 0.0014] & 0.0874 & 0.2286 \\
+Entropy: approximate entropy & paired woman summary & $9.74\times10^{-6}$ & [$-$0.0055, 0.0044] & 0.6363 & 0.6979 \\
+Entropy: permutation entropy & paired woman summary & $7.03\times10^{-5}$ & [$-$0.0066, 0.0044] & 0.7742 & 0.7976 \\
+Entropy: fuzzy entropy & paired woman summary & $-$0.0018 & [$-$0.0079, 0.004] & 0.407 & 0.5535 \\
+Entropy: distribution entropy & paired woman summary & 0.000122 & [$-$0.0067, 0.004] & 0.4265 & 0.5577 \\
+Entropy: SVD entropy & paired woman summary & $-$0.000991 & [$-$0.0058, 0.0036] & 0.3174 & 0.5034 \\
+Entropy: fixed-r SampEn & paired woman summary & $-$0.0021 & [$-$0.0191, 0.0064] & 0.1736 & 0.3307 \\
+Entropy: Total SampEn & paired woman summary & 0.9821 & [0.7865, 1.5475] & $2.59\times10^{-5}$ & 0.000176 \\
+Entropy: average SampEn & paired woman summary & $-$0.0013 & [$-$0.0037, 0.000186] & 0.0374 & 0.1414 \\
+Entropy: median SampEn & paired woman summary & $9.74\times10^{-5}$ & [$-$0.000367, 0.000535] & 0.9462 & 0.9462 \\
+Entropy: profile SD & paired woman summary & $-$0.0022 & [$-$0.0044, 0.000143] & 0.0941 & 0.2286 \\
+Entropy: kurtosis SampEn & paired woman summary & 0.8248 & [$-$0.0383, 1.9182] & 0.0286 & 0.1332 \\
+Entropy: skewness SampEn & paired woman summary & 0.1061 & [$-$0.0172, 0.2013] & 0.0313 & 0.1332 \\
+Complexity: Lempel--Ziv & paired woman summary & $-$0.0021 & [$-$0.0085, 0.0064] & 0.5236 & 0.6457 \\
+Complexity: Hjorth mobility & paired woman summary & $-$0.000406 & [$-$0.0033, 0.0029] & 0.3174 & 0.5034 \\
+Complexity: Hjorth complexity & paired woman summary & $-$0.0077 & [$-$0.0132, $-$0.00066] & 0.0907 & 0.2286 \\
+Complexity: Fisher information & paired woman summary & 0.00046 & [$-$0.0036, 0.0041] & 0.3258 & 0.5034 \\
+Complexity: Katz fractal dimension & paired woman summary & $-$0.002 & [$-$0.0414, 0.0204] & 0.5318 & 0.6457 \\
+Complexity: Higuchi fractal dimension & paired woman summary & $-$0.0012 & [$-$0.0044, 0.000332] & 0.1848 & 0.3307 \\
+Complexity: detrended fluctuation analysis & paired woman summary & 0.0011 & [$-$0.013, 0.0149] & 0.388 & 0.5496 \\
+\bottomrule
+\end{longtable}
+\end{landscape}
+
+\clearpage
+\begin{landscape}
+\section*{Table S3. Numerical validation controls}\label{tab:s3_validation}
+\paragraph{A. Independent gain-1 cached-feature reproduction}\begin{longtable}{p{4.0cm}p{1.6cm}p{1.7cm}p{1.7cm}p{1.3cm}p{2.5cm}p{1.7cm}}
+\toprule
+\textbf{Gate} & \textbf{Status} & \textbf{Windows} & \textbf{Features} & \textbf{Rows} & \textbf{Max abs. difference} & \textbf{Failures} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Gate} & \textbf{Status} & \textbf{Windows} & \textbf{Features} & \textbf{Rows} & \textbf{Max abs. difference} & \textbf{Failures} \\
+\midrule
+\endhead
+gain-1 cached-feature reproduction & PASS & 60 & 34 & 2,040 & $1.78\times10^{-15}$ & 0 \\
+\bottomrule
+\end{longtable}
+\paragraph{B. Across-gain responses against expected feature laws}\begin{longtable}{p{3.6cm}p{2.0cm}p{2.4cm}p{1.2cm}p{2.1cm}p{2.4cm}}
+\toprule
+\textbf{Feature} & \textbf{Expected law} & \textbf{Comparisons} & \textbf{Pass} & \textbf{Pass fraction} & \textbf{Max abs. error} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Feature} & \textbf{Expected law} & \textbf{Comparisons} & \textbf{Pass} & \textbf{Pass fraction} & \textbf{Max abs. error} \\
+\midrule
+\endhead
+Time: median & degree 1 & 420 & 420 & 1 & $8.67\times10^{-19}$ \\
+Time: kurtosis & degree 0 & 420 & 420 & 1 & $1.07\times10^{-14}$ \\
+Time: skewness & degree 0 & 420 & 420 & 1 & $5.55\times10^{-16}$ \\
+Time: mean absolute value & degree 1 & 420 & 420 & 1 & $5.55\times10^{-17}$ \\
+Time: RMS & degree 1 & 420 & 420 & 1 & $5.55\times10^{-17}$ \\
+Time: peak-to-peak & degree 1 & 420 & 420 & 1 & $4.44\times10^{-16}$ \\
+Time: waveform length & degree 1 & 420 & 420 & 1 & $7.11\times10^{-15}$ \\
+Time: zero-crossing count & degree 0 & 420 & 420 & 1 & 0 \\
+Time: slope sign-change count & degree 0 & 420 & 420 & 1 & 0 \\
+Frequency: peak frequency & degree 0 & 420 & 420 & 1 & 0 \\
+Frequency: mean frequency & degree 0 & 420 & 420 & 1 & $4.44\times10^{-16}$ \\
+Frequency: median frequency & degree 0 & 420 & 420 & 1 & $4.44\times10^{-16}$ \\
+Frequency: spectral edge (95\%) & degree 0 & 420 & 420 & 1 & $3.89\times10^{-15}$ \\
+Frequency: spectral entropy & degree 0 & 420 & 420 & 1 & $1.67\times10^{-16}$ \\
+Frequency: spectral spread & degree 0 & 420 & 420 & 1 & $5.55\times10^{-17}$ \\
+Entropy: approximate entropy & degree 0 & 420 & 420 & 1 & 0 \\
+Entropy: permutation entropy & degree 0 & 420 & 420 & 1 & 0 \\
+Entropy: fuzzy entropy & degree 0 & 420 & 420 & 1 & $6.11\times10^{-16}$ \\
+Entropy: distribution entropy & degree 0 & 420 & 420 & 1 & 0 \\
+Entropy: SVD entropy & degree 0 & 420 & 420 & 1 & $4.44\times10^{-16}$ \\
+Entropy: fixed-r SampEn & degree 0 & 420 & 420 & 1 & 0 \\
+Entropy: Total SampEn & degree 0 & 420 & 60 & 0.142857 & 72.7249 \\
+Entropy: average SampEn & degree 0 & 420 & 60 & 0.142857 & 0.01 \\
+Entropy: median SampEn & degree 0 & 420 & 60 & 0.142857 & 0.0033 \\
+Entropy: profile SD & degree 0 & 420 & 60 & 0.142857 & 0.0686 \\
+Entropy: kurtosis SampEn & degree 0 & 420 & 60 & 0.142857 & 132.4608 \\
+Entropy: skewness SampEn & degree 0 & 420 & 60 & 0.142857 & 6.5729 \\
+Complexity: Lempel--Ziv & degree 0 & 420 & 420 & 1 & 0 \\
+Complexity: Hjorth mobility & degree 0 & 420 & 420 & 1 & $5.55\times10^{-17}$ \\
+Complexity: Hjorth complexity & degree 0 & 420 & 420 & 1 & $6.66\times10^{-16}$ \\
+Complexity: Fisher information & degree 0 & 420 & 420 & 1 & $4.44\times10^{-16}$ \\
+Complexity: Katz fractal dimension & degree 0 & 420 & 420 & 1 & $4.44\times10^{-16}$ \\
+Complexity: Higuchi fractal dimension & degree 0 & 420 & 420 & 1 & $4.44\times10^{-16}$ \\
+Complexity: detrended fluctuation analysis & degree 0 & 420 & 420 & 1 & $6.66\times10^{-16}$ \\
+GI Total & degree 0 & 420 & 420 & 1 & 0 \\
+GI profile SD & degree 0 & 420 & 420 & 1 & 0 \\
+\bottomrule
+\end{longtable}
+\paragraph{C. Full-precision controls}\begin{longtable}{p{3cm}p{1.5cm}p{4cm}p{3cm}}
+\toprule
+\textbf{Quantity} & \textbf{Windows} & \textbf{Max difference across gains} & \textbf{Zero-difference windows} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Quantity} & \textbf{Windows} & \textbf{Max difference across gains} & \textbf{Zero-difference windows} \\
+\midrule
+\endhead
+Full-precision Total & 12 & 0 & 12 \\
+Full-precision average & 12 & 0 & 12 \\
+Full-precision profile SD & 12 & 0 & 12 \\
+Full-precision retained support & 12 & 0 & 12 \\
+\bottomrule
+\end{longtable}
+\paragraph{D. Decimal-resolution ablation}\begin{longtable}{p{2cm}p{1.5cm}p{2cm}p{2.5cm}p{3cm}p{3cm}p{2cm}}
+\toprule
+\textbf{Resolution} & \textbf{Mode} & \textbf{Documented bins} & \textbf{Measured median bins} & \textbf{Worst median difference (\%)} & \textbf{Worst maximum difference (\%)} & \textbf{Pass proportion} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Resolution} & \textbf{Mode} & \textbf{Documented bins} & \textbf{Measured median bins} & \textbf{Worst median difference (\%)} & \textbf{Worst maximum difference (\%)} & \textbf{Pass proportion} \\
+\midrule
+\endhead
+Original, 3 decimals & Original & 80 & 84.0 & 630.6386 & 673.1571 & 0.0 \\
+Original, 4 decimals & Original & 800 & 793.0 & 604.1487 & 629.0289 & 0.0 \\
+Original, 5 decimals & Original & 7,000 & 6902.5 & 604.2731 & 610.6597 & 0.0 \\
+GI, 1 decimal & GI & 60 & 60.5 & 0 & 0 & 1.0 \\
+GI, 2 decimals & GI & 600 & 588.0 & 0 & 0 & 1.0 \\
+GI, 3 decimals & GI & 5,000 & 5258.0 & 0 & 0 & 1.0 \\
+\bottomrule
+\end{longtable}
+\paragraph{E. Independent implementation agreement}\begin{longtable}{p{2.5cm}p{1.5cm}p{2.5cm}p{2cm}p{5cm}}
+\toprule
+\textbf{Summary / mask} & \textbf{Windows} & \textbf{Max abs. difference} & \textbf{Mask agreement} & \textbf{Check} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Summary / mask} & \textbf{Windows} & \textbf{Max abs. difference} & \textbf{Mask agreement} & \textbf{Check} \\
+\midrule
+\endhead
+AUC & 12 & 0 & yes & explicit pairwise vs reference implementation \\
+Slope & 12 & 0 & yes & explicit pairwise vs reference implementation \\
+Centroid & 12 & 0 & yes & explicit pairwise vs reference implementation \\
+Profile SD & 12 & 0 & yes & explicit pairwise vs reference implementation \\
+Kurtosis & 12 & 0 & yes & explicit pairwise vs reference implementation \\
+Skewness & 12 & 0 & yes & explicit pairwise vs reference implementation \\
+Valid fraction & 12 & 0 & yes & explicit pairwise vs reference implementation \\
+\bottomrule
+\end{longtable}
+\par\smallskip\noindent\footnotesize The gain settings were 0.25, 0.5, 1, 1.3, 2, 4 and 7.1, with 60 windows per setting. The time-domain median scales linearly with gain (degree 1); every other listed feature has the degree shown. The fixed-grid check is construction metadata: 200 selected grid points over $\tau=0.01$--4.00 with minimum coverage 1.0 on IN windows. It does not establish agreement of cohort state associations with the rounded GI representation.
+\end{landscape}
+
+\clearpage
+\begin{landscape}
+\section*{Table S4. Complete gain-invariant state associations}\label{tab:s4_gi_associations}
+The common population is 42 women, 112 contributing recordings and 4,083 analysed windows. Coefficients are model-standardised window-level woman/recording mixed-model estimates with model-based Wald 95\% CIs. The final declared 16-test Benjamini--Hochberg family spans four channels, two GI summaries and two contrasts and was selected after development. Values from the earlier 13-feature development family are described in Table S6.
+\begin{longtable}{p{1.5cm}p{2.5cm}p{2.4cm}p{1.4cm}p{3.2cm}p{1.8cm}p{2.0cm}}
+\toprule
+\textbf{Channel} & \textbf{Summary} & \textbf{Contrast} & \textbf{Estimate} & \textbf{95\% CI} & \textbf{Raw p} & \textbf{Final q (16-test)} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Channel} & \textbf{Summary} & \textbf{Contrast} & \textbf{Estimate} & \textbf{95\% CI} & \textbf{Raw p} & \textbf{Final q (16-test)} \\
+\midrule
+\endhead
+EHG9 & GI Total & FM--IN & $-$0.2003 & [$-$0.2878, $-$0.1129] & $7.16\times10^{-6}$ & $1.43\times10^{-5}$ \\
+EHG9 & GI Total & UC--IN & $-$0.1131 & [$-$0.2034, $-$0.0227] & 0.0142 & 0.0206 \\
+EHG9 & GI profile SD & FM--IN & $-$0.246 & [$-$0.3381, $-$0.1539] & $1.65\times10^{-7}$ & $3.77\times10^{-7}$ \\
+EHG9 & GI profile SD & UC--IN & $-$0.1398 & [$-$0.235, $-$0.0447] & 0.004 & 0.0071 \\
+EHG10 & GI Total & FM--IN & $-$0.2736 & [$-$0.3601, $-$0.187] & $5.85\times10^{-10}$ & $2.34\times10^{-9}$ \\
+EHG10 & GI Total & UC--IN & $-$0.0896 & [$-$0.179, $-$0.000266] & 0.0493 & 0.0658 \\
+EHG10 & GI profile SD & FM--IN & $-$0.3452 & [$-$0.4373, $-$0.2531] & $2.04\times10^{-13}$ & $3.26\times10^{-12}$ \\
+EHG10 & GI profile SD & UC--IN & $-$0.1297 & [$-$0.2248, $-$0.0345] & 0.0076 & 0.0121 \\
+EHG11 & GI Total & FM--IN & $-$0.2937 & [$-$0.3836, $-$0.2038] & $1.51\times10^{-10}$ & $8.06\times10^{-10}$ \\
+EHG11 & GI Total & UC--IN & $-$0.0466 & [$-$0.1395, 0.0462] & 0.3252 & 0.3469 \\
+EHG11 & GI profile SD & FM--IN & $-$0.3323 & [$-$0.4278, $-$0.2368] & $8.99\times10^{-12}$ & $7.19\times10^{-11}$ \\
+EHG11 & GI profile SD & UC--IN & $-$0.0621 & [$-$0.1608, 0.0366] & 0.2172 & 0.2673 \\
+EHG12 & GI Total & FM--IN & $-$0.2545 & [$-$0.345, $-$0.164] & $3.57\times10^{-8}$ & $9.52\times10^{-8}$ \\
+EHG12 & GI Total & UC--IN & $-$0.0439 & [$-$0.1374, 0.0497] & 0.3579 & 0.3579 \\
+EHG12 & GI profile SD & FM--IN & $-$0.2787 & [$-$0.3753, $-$0.1821] & $1.57\times10^{-8}$ & $5.04\times10^{-8}$ \\
+EHG12 & GI profile SD & UC--IN & $-$0.0538 & [$-$0.1538, 0.0461] & 0.2913 & 0.3329 \\
+\bottomrule
+\end{longtable}
+\end{landscape}
+
+\clearpage
+\begin{landscape}
+\section*{Table S5. Annotation and whole-woman influence sensitivity}\label{tab:s5_sensitivity}
+E0 is the full analysed dataset. E1 removes the five retained windows carrying movement, equipment-manipulation or position-change flags. E2 removes only the flagged ice037 window. E3 removes all ice037 windows. Each scenario reports the saved model structure/status and the scenario-specific feature SD used for standardisation. Coefficients are not comparable as raw physiological magnitudes across scenarios because the denominators change; interval exclusion is not treated as FDR-supported robustness.
+\begin{longtable}{p{3.3cm}p{1.5cm}p{1.2cm}p{1.4cm}p{1.5cm}p{3.0cm}p{1.5cm}p{4.0cm}}
+\toprule
+\textbf{Feature} & \textbf{Scenario} & \textbf{Women} & \textbf{Windows} & \textbf{Estimate} & \textbf{95\% CI} & \textbf{Feature SD} & \textbf{Model / status} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Feature} & \textbf{Scenario} & \textbf{Women} & \textbf{Windows} & \textbf{Estimate} & \textbf{95\% CI} & \textbf{Feature SD} & \textbf{Model / status} \\
+\midrule
+\endhead
+Time: RMS & E0 & 42 & 4,083 & 0.2691 & [0.1566, 0.3817] & 0.086 & woman-only; woman-only boundary \\
+GI Total & E0 & 42 & 4,083 & $-$0.1131 & [$-$0.2034, $-$0.0227] & 51.1195 & woman/recording nested; nested clean \\
+GI profile SD & E0 & 42 & 4,083 & $-$0.1398 & [$-$0.235, $-$0.0447] & 0.0218 & woman/recording nested; nested clean \\
+Time: RMS & E1 & 42 & 4,078 & 0.6734 & [0.5813, 0.7656] & 0.0075 & woman/recording nested; nested clean \\
+GI Total & E1 & 42 & 4,078 & $-$0.1039 & [$-$0.1944, $-$0.0134] & 50.9838 & woman/recording nested; nested clean \\
+GI profile SD & E1 & 42 & 4,078 & $-$0.1289 & [$-$0.2242, $-$0.0335] & 0.0218 & woman/recording nested; nested clean \\
+Time: RMS & E2 & 42 & 4,082 & 0.6742 & [0.5823, 0.766] & 0.0076 & woman/recording nested; nested clean \\
+GI Total & E2 & 42 & 4,082 & $-$0.0993 & [$-$0.1897, $-$0.009] & 50.97 & woman/recording nested; nested clean \\
+GI profile SD & E2 & 42 & 4,082 & $-$0.1236 & [$-$0.2188, $-$0.0284] & 0.0218 & woman/recording nested; nested clean \\
+Time: RMS & E3 & 41 & 3,992 & 0.7015 & [0.6096, 0.7934] & 0.0075 & woman/recording nested; nested clean \\
+GI Total & E3 & 41 & 3,992 & $-$0.1069 & [$-$0.1978, $-$0.016] & 50.9594 & woman/recording nested; nested clean \\
+GI profile SD & E3 & 41 & 3,992 & $-$0.1301 & [$-$0.226, $-$0.0342] & 0.0218 & woman/recording nested; nested clean \\
+\bottomrule
+\end{longtable}
+\end{landscape}
+
+\clearpage
+\begin{landscape}
+\section*{Table S6. Analysis and multiplicity map}\label{tab:s6_multiplicity_map}
+This map records the reporting role and selection timing for analyses discussed in the manuscript. Post-development choices are not described as prespecified.
+\begin{longtable}{p{3.0cm}p{2.7cm}p{2.2cm}p{3.3cm}p{2.7cm}p{1.5cm}p{3.2cm}p{3.3cm}}
+\toprule
+\textbf{Analysis} & \textbf{Population / channel} & \textbf{Contrast} & \textbf{Estimator} & \textbf{Feature family} & \textbf{Adj. size} & \textbf{Role} & \textbf{Timing} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Analysis} & \textbf{Population / channel} & \textbf{Contrast} & \textbf{Estimator} & \textbf{Feature family} & \textbf{Adj. size} & \textbf{Role} & \textbf{Timing} \\
+\midrule
+\endhead
+Original EHG9 features & EHG9 & UC--IN & woman/recording mixed model & 34-feature & 34 & headline original effects & defined before final modelling; not preregistered \\
+Model dependence & EHG9 & UC--IN & pooled OLS; woman-cluster CR1; paired woman summary & 34-feature / paired summary & 34 per family & estimand comparison & secondary; not one covariance correction \\
+Gain-law audit & 60 windows & positive gains 0.25-$-$7.1 & descriptive per-window trajectories & none & none & numerical mechanism & after development \\
+Two-summary GI & EHG9 & UC--IN and FM--IN & woman/recording mixed model & secondary two-summary & 2 per contrast & secondary GI family & after development \\
+Cross-channel GI & EHG9--EHG12 & UC--IN and FM--IN & woman/recording mixed model & final cross-channel BH & 16 & headline GI inference & selected after development \\
+GI development family & EHG9 & UC--IN and FM--IN & woman/recording mixed model & 13-feature GI development family & 13 per contrast & screening; GI Total and GI profile SD carried forward & development \\
+Conditional analyses & EHG9 & UC--IN and FM--IN & mixed models with log RMS or shape covariates; leave-one-woman-out refits & none & none & exploratory conditioning, outside the declared family & after the primary analysis \\
+Annotation/influence sensitivity & EHG9 & UC--IN & scenario-specific mixed-model fits & descriptive & none & interpretation boundary & named scenarios \\
+\bottomrule
+\end{longtable}
+\end{landscape}
+
+\input{Supplement_S7_S8}
+
+\clearpage
+\section*{Figure S1. Independent implementation agreement}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.78\textwidth]{figures/figS01_independent_agreement.pdf}
+\caption{AUC-only identity scatter for the explicit pairwise GI-grid implementation versus the reference implementation on 12 audited windows. The other five summaries and validity-mask agreement are reported in Table S3. This is an internal implementation agreement check, not an independent cohort replication.}
+\label{fig:s1_independent_agreement}
+\end{figure}
+
+\bibliographystyle{plainnat}
+\bibliography{RINENG_References}
+\end{document}

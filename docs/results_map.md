@@ -5,7 +5,7 @@ Display items of the Results in Engineering manuscript, the script that produces
 
 | Manuscript element | Produced by | Look at |
 |---|---|---|
-| Fig. 1 study design and feature pipeline | `scripts/make_figure_study_design.py` (schematic; no data read; the two occupied-bin counts are those of Supplementary Table S3D) | `results/manuscript/figures/F1_study_design.pdf` |
+| Fig. 1 study design and feature pipeline | `scripts/make_figure_study_design.py` (schematic; no data read; the two occupied-bin counts are those of Supplementary Table S3, Panel D) | `results/manuscript/figures/F1_study_design.pdf` |
 | Table 1 cohort / population (4,283 candidate → 4,083 analysed) | `build_figure_inputs.py` → `make_manuscript_figures.py` (T1) ; counts from `src/windowing.py` (raw) | `results/manuscript/figures/T1_cohort.tex`, `results/manuscript/cohort_reconciliation.csv`, `work/windowing/cohort_summary_60s.md` |
 | Fig. 2 all 34 EHG9 UC–IN coefficients | `src/models.py` (derived) → `make_manuscript_figures.py` (F2) | `results/primary/mixed_model_results_60s_fwh_EHG9.csv`, `results/manuscript/figures/F2_*.pdf` |
 | Table 2 robustness (temporal dependence, woman-level, balanced IN, window length, overlap, residuals) | `src/robustness.py` (derived; `--include-heavy` for balanced IN and 40/80 s) | `results/robustness/{dependence,patient_level,overlap,residuals,window_length}/`; frozen snapshot `results/reviewer_revision/` |
@@ -21,7 +21,8 @@ Display items of the Results in Engineering manuscript, the script that produces
 | Supp. Table S3 validation controls | as Table 5 | `results/manuscript/tables/S2*.csv`, `S3*.csv` |
 | Supp. Table S4 complete corrected associations | `run_corrected_family.py` | `results/manuscript/corrected_family/` |
 | Supp. Table S6 analysis and multiplicity map | `build_manuscript_tables.py` | `results/manuscript/tables/S5_GI_family_roles.csv` |
-| Supp. Tables S7 (robustness panels A–D, lag-1) and S8 (RMS adjustment, conditional) | `scripts/build_supplement_tables.py`; lag-1 from `run_lag1_diagnostic.py` | `results/manuscript/supplement/Supplement_S7_S8.tex` and `…_checks.txt` (36 checks) |
+| Compact Supplement (Tables S1–S7, as submitted); complete listings with old numbering are in `results/manuscript/supplement/full/` | `scripts/build_compact_supplement.py` (18 checks) | `results/manuscript/supplement/Supplement_compact.tex`, `Supplement_compact.pdf`, `Supplement_compact_checks.txt` |
+| Complete listings: Supp. Tables S7 (robustness panels A–D, lag-1) and S8 (RMS adjustment, conditional) | `scripts/build_supplement_tables.py`; lag-1 from `run_lag1_diagnostic.py` | `results/manuscript/supplement/Supplement_S7_S8.tex` and `…_checks.txt` (36 checks) |
 | Supp. Fig. S1 independent grid agreement | `run_C3_grid.py` → `make_manuscript_figures.py` (F4) | `results/manuscript/audits/C3/independent_grid_agreement.csv`, `F4_*.pdf` |
 | Statistical-software cross-check (Methods) | `scripts/verify_statsmodels.py` | `results/conditional/statsmodels_verification.{csv,md}` |
 

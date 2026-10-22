@@ -77,14 +77,14 @@ scripts/
   reproduce_paper.py         the GI pipeline end to end (wrapped by run_all 'gi_pipeline')
   run_*.py report_*.py make_figure1.py   individual GI stages
   run_corrected_family.py    16-test BH family for the GI cross-channel result
-  run_lag1_diagnostic.py     residual lag-1 autocorrelation (Supplement S7A)
-  run_conditional_amplitude.py   log-RMS, within-recording, shape, leave-one-woman-out (Supplement S8)
+  run_lag1_diagnostic.py     residual lag-1 autocorrelation (Supplement S6A)
+  run_conditional_amplitude.py   log-RMS, within-recording, shape, leave-one-woman-out (Supplement S7)
   verify_statsmodels.py      statsmodels cross-check of the custom REML fitter
   manuscript_audits/         waveform-based audits: gain audit, gain-1 gate, grid check,
                              exact-model gate, annotation sensitivity, waveform packaging
   build_figure_inputs.py  build_manuscript_tables.py  make_manuscript_figures.py
                              manuscript display items from saved CSVs (fit nothing)
-  build_supplement_tables.py Supplement S7/S8 LaTeX and its 36-number check list
+  build_supplement_tables.py full-listing Supplement S7/S8 LaTeX and its 36-number check list (complete listings in results/manuscript/supplement/full/)
 tests/                       gain invariance, unrounded equivariance, parity, result fingerprints
 docs/                        methods.md, provenance.md, results_map.md, known_issues.md
 work/                        (git-ignored) intermediate tables; restored from data/derived
@@ -93,7 +93,7 @@ results/                     saved outputs, committed
   gi/{tables,audits,figures}/   GI-SampEn outputs
   conditional/               log-RMS / shape / leave-one-woman-out outputs
   manuscript/                corrected family, audits, adapters, tables, figures, supplement
-  reviewer_revision/         frozen robustness outputs behind Supplement S7/S8
+  reviewer_revision/         frozen robustness outputs behind Supplement S6/S7
 ```
 
 ## 4. Stages
@@ -143,6 +143,7 @@ Fixed checkpoints (all verified by `scripts/check_checkpoints.py`):
 | Lag-1 residual autocorrelation, original-11 features | 25 of 55 with \|r\| ≥ 0.30, max 0.560 |
 | Custom REML vs statsmodels | coefficients ≤ 2.7e-6, SEs ≤ 2.8e-3 |
 | Supplement S7/S8 number checks | 36 of 36 PASS |
+| Compact Supplement (S1–S7) checks | 18 of 18 PASS (`scripts/build_compact_supplement.py`) |
 
 `tests/test_reproducibility.py` also fingerprints the GI result files in `results/gi/`.
 
