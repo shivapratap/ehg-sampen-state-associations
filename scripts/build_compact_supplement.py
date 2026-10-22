@@ -269,6 +269,41 @@ for key, n in (("S6B", 16), ("S7B", 18), ("S7C", 16), ("S7D", 10)):
     doc = doc.replace("\\Needspace{8\\baselineskip}\\subsection*{" + key, "\\Needspace{%d\\baselineskip}\\subsection*{" % n + key)
 assert "landscape,margin" in doc
 out = SUP / "Supplement_compact.tex"
+
+# ---- wording and definition corrections (review round 2) ----
+def RS(a, b, cnt=1):
+    global doc
+    assert doc.count(a) == cnt, (doc.count(a), a[:80])
+    doc = doc.replace(a, b)
+RS(" Values are read from saved analysis outputs; no feature extraction, model fitting, $p$-value or false discovery rate calculation was performed to produce this document.", "")
+RS("FDR, false discovery rate;", "FD, fractal dimension; FDR, false discovery rate;")
+RS("SD, standard deviation;", "SD, standard deviation; SVD, singular-value decomposition; $\\tau$, embedding delay;")
+RS("Time: zero-crossing count & number of sign crossings & count & implementation default &", "Time: zero-crossing count & number of sign changes between consecutive non-zero samples & count & exactly-zero samples removed first &")
+RS("Time: slope sign-change count & number of slope sign changes & count & implementation default &", "Time: slope sign-change count & number of interior points where adjacent slopes have opposite signs (product $<0$) & count & slope threshold 0 &")
+RS("Entropy: fuzzy entropy & log ratio of centred-template similarities &", "Entropy: fuzzy entropy & $\\ln\\phi(m)-\\ln\\phi(m+1)$, where $\\phi$ is the mean over distinct template pairs of $\\exp[-\\ln 2\\,(d/r)^2]$ and $d$ is the Chebyshev distance between mean-centred templates &")
+RS("Entropy: distribution entropy & entropy of nearest-neighbour distance distribution &", "Entropy: distribution entropy & normalised Shannon entropy of the histogram of all pairwise Chebyshev distances between templates &")
+RS("m=2; delay=1; 500 bins; normalised &", "m=2; delay=1; 500 equal-width bins from the smallest nearest-neighbour distance to the largest template range; divided by $\\ln 500$ &")
+RS("Complexity: Fisher information & Fisher information of the signal representation & dimensionless & library defaults &", "Complexity: Fisher information & $\\sum_i (p_{i+1}-p_i)^2/p_i$ over the descending normalised singular values $p$ of the mean-centred delay embedding & dimensionless & order 2, delay 1 (feature-engine defaults) &")
+RS("The SampEn profile uses the same m and proportional tolerance construction, but forms a distance profile after fixed three-decimal rounding of pairwise distances;", "The SampEn profile uses $m=2$ and aligned templates but does not use a single proportional tolerance: its tolerance support is the set of occupied values of the pairwise Chebyshev distances after fixed three-decimal rounding;")
+RS("division by the uncentred population SD", "division of the uncentred input by its population SD")
+RS("Parameters not listed are fixed by the feature definition.", "Parameters not listed are fixed by the feature definition. Features were computed with the feature-engine package vendored in the repository (version 0.2.0.dev0; NumPy 2.3.5, SciPy 1.16.3). $\\tau$ denotes the embedding delay.")
+RS("The population is 42 women, 112 contributing recordings and 4,083 analysed windows.", "The mixed models use 42 women, 112 contributing recordings and 4,083 analysed windows (UC, IN and FM). Pooled OLS and woman-cluster CR1 use the 3,691 UC and IN windows (333 UC, 3,358 IN), standardised with the three-state mean and SD of the mixed model. The paired analysis uses the 34 women contributing both states.")
+RS("every other listed feature has expected degree 0.", "every other listed feature has expected degree 0. A comparison passed when $|\\mathrm{computed}-\\mathrm{expected}|\\le10^{-10}+10^{-8}|\\mathrm{expected}|$; the same rule defined gain-1 reproduction and the terms ``invariant'' and ``non-decreasing'' in Table S7A.")
+RS("\\Needspace{6\\baselineskip}\\paragraph{C. Decimal-resolution ablation}", "\\Needspace{16\\baselineskip}\\paragraph{C. Decimal-resolution ablation}\nSame 60 windows and six non-unit gains (0.25, 0.5, 1.3, 2, 4, 7.1); Total, average and SD SampEn. Differences are relative to the unit-gain value of the same summary. ``Worst median difference'' is the largest absolute median relative difference over windows, and ``worst maximum difference'' the largest absolute maximum, each taken over gains and summaries. ``Pass proportion'' is the fraction of window--gain--summary comparisons meeting the tolerance above. ``Approx. expected bins'' is the approximate number of occupied rounding bins expected for that resolution.")
+RS("\\textbf{Documented bins}", "\\textbf{Approx. expected bins}", 2)
+RS("and a minimum coverage fraction of 1.0 across 300 IN windows.", "The required valid-point fraction was 0.90; the observed minimum across 300 IN windows was 1.0.")
+RS("Values from the earlier 13-feature development family are described in Table S5.", "The 13-feature development family is identified in Table S5B.")
+RS("headline original effects", "primary original-feature analysis")
+RS("headline GI inference", "exploratory GI inference")
+RS("Clean UC: 21 UC windows containing a competing FM annotation removed (312 UC windows).", "Clean UC: 21 retained UC windows overlapping an FM-centred window removed (312 UC windows).")
+RS("is the number of the 60 trajectories that were non-decreasing with scale;", "is the number of the 60 trajectories that were non-decreasing across scales but not invariant (the two categories are exclusive);")
+RS(" (saved as statsmodels\\_verification.csv in the refit folder)", "")
+RS("checked against the cached unadjusted coefficients", "checked against the reference unadjusted coefficients")
+RS("Gain-1 reproduction of cached values", "Gain-1 reproduction of stored reference values")
+RS("reports the saved model structure/status", "reports the model structure/status")
+RS("\\usepackage{booktabs,longtable,graphicx,pdflscape,array,natbib,hyperref,xcolor}", "\\usepackage{booktabs,longtable,graphicx,pdflscape,array,hyperref,xcolor}\\usepackage[authoryear,round]{natbib}")
+RS("\\bibliographystyle{plainnat}", "\\bibliographystyle{cas-model2-names}")
+
 out.write_text(doc, encoding="utf-8")
 (SUP / "Supplement_compact_checks.txt").write_text("\n".join(checks) + "\n", encoding="utf-8")
 print("\n".join(checks))

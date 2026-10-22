@@ -1,17 +1,17 @@
 \documentclass[10pt]{article}
 \usepackage[a4paper,landscape,margin=15mm]{geometry}\usepackage{needspace,etoolbox}\AtBeginEnvironment{longtable}{\footnotesize}
-\usepackage{booktabs,longtable,graphicx,pdflscape,array,natbib,hyperref,xcolor}
+\usepackage{booktabs,longtable,graphicx,pdflscape,array,hyperref,xcolor}\usepackage[authoryear,round]{natbib}
 \hypersetup{colorlinks=true,linkcolor=black,citecolor=black,urlcolor=blue}
 \setlength{\LTleft}{0pt}\setlength{\LTright}{0pt}
 \begin{document}
 \begin{center}{\Large Supplementary Material}\par\medskip{\normalsize Gain dependence in sample entropy profiling of electrohysterography and its effect on uterine-state associations}\end{center}
-This supplement gives the feature definitions, the numerical controls, the complete gain-invariant (GI) associations and the robustness, amplitude and sensitivity analyses that support the Results. Values are read from saved analysis outputs; no feature extraction, model fitting, $p$-value or false discovery rate calculation was performed to produce this document. Exhaustive listings behind these tables are in the code repository (see Data and code availability in the main text).
+This supplement gives the feature definitions, the numerical controls, the complete gain-invariant (GI) associations and the robustness, amplitude and sensitivity analyses that support the Results. Exhaustive listings behind these tables are in the code repository (see Data and code availability in the main text).
 
-\noindent\textbf{Abbreviations.} BH, Benjamini--Hochberg; CI, confidence interval; CR1, cluster-robust covariance with small-sample scaling; EHG, electrohysterography; FDR, false discovery rate; FM, fetal movement; FWH, fast-wave high-frequency; GI, gain-invariant; IN, guard-cleared inactivity; OLS, ordinary least squares; PSD, power spectral density; REML, restricted maximum likelihood; RMS, root mean square; SampEn, sample entropy; SD, standard deviation; UC, uterine contraction.
+\noindent\textbf{Abbreviations.} BH, Benjamini--Hochberg; CI, confidence interval; CR1, cluster-robust covariance with small-sample scaling; EHG, electrohysterography; FD, fractal dimension; FDR, false discovery rate; FM, fetal movement; FWH, fast-wave high-frequency; GI, gain-invariant; IN, guard-cleared inactivity; OLS, ordinary least squares; PSD, power spectral density; REML, restricted maximum likelihood; RMS, root mean square; SampEn, sample entropy; SD, standard deviation; SVD, singular-value decomposition; $\tau$, embedding delay; UC, uterine contraction.
 
 
 \Needspace{12\baselineskip}\section*{Table S1. Feature definitions and implementation parameters}\label{tab:s1_features}
-The 34 original features of the fast-wave high-frequency (FWH) band are grouped by family below. The primary band was 0.3--1.0 Hz; signals were sampled at 200 Hz, filtered and decimated to 20 Hz, with 60-s windows. Welch settings were 10-s Hann segments, 5-s overlap, constant detrending and density scaling. Parameters not listed are fixed by the feature definition.
+The 34 original features of the fast-wave high-frequency (FWH) band are grouped by family below. The primary band was 0.3--1.0 Hz; signals were sampled at 200 Hz, filtered and decimated to 20 Hz, with 60-s windows. Welch settings were 10-s Hann segments, 5-s overlap, constant detrending and density scaling. Parameters not listed are fixed by the feature definition. Features were computed with the feature-engine package vendored in the repository (version 0.2.0.dev0; NumPy 2.3.5, SciPy 1.16.3). $\tau$ denotes the embedding delay.
 \begin{longtable}{p{3.4cm}p{6.2cm}p{2.0cm}p{4.7cm}p{3.2cm}}
 \toprule
 \textbf{Feature} & \textbf{Concise definition / formula} & \textbf{Units} & \textbf{Essential parameters} & \textbf{Citation} \\
@@ -28,8 +28,8 @@ Time: mean absolute value & mean absolute value & signal units & none &  \\
 Time: RMS & square root of mean squared signal & signal units & none & \citep{Hudgins1993NewStrategy} \\
 Time: peak-to-peak & maximum minus minimum & signal units & none &  \\
 Time: waveform length & sum of absolute successive differences & signal units & sample differences & \citep{Hudgins1993NewStrategy} \\
-Time: zero-crossing count & number of sign crossings & count & implementation default &  \\
-Time: slope sign-change count & number of slope sign changes & count & implementation default &  \\
+Time: zero-crossing count & number of sign changes between consecutive non-zero samples & count & exactly-zero samples removed first &  \\
+Time: slope sign-change count & number of interior points where adjacent slopes have opposite signs (product $<0$) & count & slope threshold 0 &  \\
 Frequency: peak frequency & frequency at maximum Welch PSD & Hz & Welch PSD & \citep{Welch1967PSD} \\
 Frequency: mean frequency & power-weighted mean frequency & Hz & Welch PSD & \citep{Welch1967PSD} \\
 Frequency: median frequency & frequency at cumulative half power & Hz & Welch PSD & \citep{Welch1967PSD} \\
@@ -38,8 +38,8 @@ Frequency: spectral entropy & normalised Shannon entropy of PSD probabilities & 
 Frequency: spectral spread & power-weighted frequency spread & Hz & Welch PSD & \citep{Welch1967PSD} \\
 Entropy: approximate entropy & ApEn: phi(m)-phi(m+1) & dimensionless & m=2; r=0.2 population SD; Chebyshev; self matches included & \citep{Pincus1991ApproximateEntropy} \\
 Entropy: permutation entropy & ordinal-pattern entropy & dimensionless & $m=3$, $\tau=1$ & \citep{Bandt2002PermutationEntropy} \\
-Entropy: fuzzy entropy & log ratio of centred-template similarities & dimensionless & m=2; delay=1; r=0.2 population SD; exponent=2 & \citep{Chen2007FuzzyEntropy} \\
-Entropy: distribution entropy & entropy of nearest-neighbour distance distribution & dimensionless & m=2; delay=1; 500 bins; normalised & \citep{Li2015DistributionEntropy} \\
+Entropy: fuzzy entropy & $\ln\phi(m)-\ln\phi(m+1)$, where $\phi$ is the mean over distinct template pairs of $\exp[-\ln 2\,(d/r)^2]$ and $d$ is the Chebyshev distance between mean-centred templates & dimensionless & m=2; delay=1; r=0.2 population SD; exponent=2 & \citep{Chen2007FuzzyEntropy} \\
+Entropy: distribution entropy & normalised Shannon entropy of the histogram of all pairwise Chebyshev distances between templates & dimensionless & m=2; delay=1; 500 equal-width bins from the smallest nearest-neighbour distance to the largest template range; divided by $\ln 500$ & \citep{Li2015DistributionEntropy} \\
 Entropy: SVD entropy & entropy of singular-value distribution & dimensionless & $m=3$, $\tau=1$ & \citep{Roberts1999SVDEntropy} \\
 Entropy: fixed-r SampEn & negative log ratio of m+1 to m matches & dimensionless & m=2; r=0.2 population SD; Chebyshev; self matches excluded & \citep{Richman2000SampleEntropy} \\
 Entropy: Total SampEn & sum of retained SampEn-profile values & dimensionless & profile: m=2; aligned m/m+1 templates; distance rounded to 3 decimals; epsilon=$1\times10^{-12}$ & \citep{Udhayakumar2018SampEnProfile},\citep{udhayakumar2020entropycodes} \\
@@ -51,17 +51,17 @@ Entropy: skewness SampEn & skewness of retained profile values & dimensionless &
 Complexity: Lempel--Ziv & Lempel--Ziv sequence complexity & dimensionless & median binarisation; LZ76 phrase count; normalised by $\log_2(n)/n$ & \citep{Lempel1976Complexity} \\
 Complexity: Hjorth mobility & sqrt(variance of first derivative / variance of x) & dimensionless & none (closed form) & \citep{Hjorth1970Parameters} \\
 Complexity: Hjorth complexity & Hjorth complexity parameter & dimensionless & none (closed form) & \citep{Hjorth1970Parameters} \\
-Complexity: Fisher information & Fisher information of the signal representation & dimensionless & library defaults &  \\
+Complexity: Fisher information & $\sum_i (p_{i+1}-p_i)^2/p_i$ over the descending normalised singular values $p$ of the mean-centred delay embedding & dimensionless & order 2, delay 1 (feature-engine defaults) &  \\
 Complexity: Katz fractal dimension & Katz fractal dimension & dimensionless & none (closed form) & \citep{Katz1988FractalWaveforms} \\
 Complexity: Higuchi fractal dimension & Higuchi fractal dimension & dimensionless & k\_max=10 & \citep{Higuchi1988FractalDimension} \\
 Complexity: detrended fluctuation analysis & DFA scaling exponent & dimensionless & first-order detrending; scales from 4 samples to one tenth of the window length, ratio 1.2 & \citep{Peng1994DFA} \\
 \bottomrule
 \end{longtable}
-\par\smallskip\noindent\footnotesize SampEn fixed-r uses m=2, Chebyshev distance, tolerance 0.2 times the population SD (ddof=0), aligned m/m+1 templates and self-match exclusion. The SampEn profile uses the same m and proportional tolerance construction, but forms a distance profile after fixed three-decimal rounding of pairwise distances; values are retained only when the shell is observed and both cumulative probabilities exceed $10^{-12}$. Total and average are the sum and mean of retained values; median, SD, kurtosis and skewness use the implementation's population-SD / SciPy bias-default summaries. The rounded GI representation applies the same profile after division by the uncentred population SD. The fixed-grid representation instead evaluates the dimensionless GI profile at a common grid without distance rounding.
+\par\smallskip\noindent\footnotesize SampEn fixed-r uses m=2, Chebyshev distance, tolerance 0.2 times the population SD (ddof=0), aligned m/m+1 templates and self-match exclusion. The SampEn profile uses $m=2$ and aligned templates but does not use a single proportional tolerance: its tolerance support is the set of occupied values of the pairwise Chebyshev distances after fixed three-decimal rounding; values are retained only when the shell is observed and both cumulative probabilities exceed $10^{-12}$. Total and average are the sum and mean of retained values; median, SD, kurtosis and skewness use the implementation's population-SD / SciPy bias-default summaries. The rounded GI representation applies the same profile after division of the uncentred input by its population SD. The fixed-grid representation instead evaluates the dimensionless GI profile at a common grid without distance rounding.
 
 
 \Needspace{12\baselineskip}\section*{Table S2. Original EHG9 UC--IN associations and estimator dependence}\label{tab:s2_model_dependence}
-The population is 42 women, 112 contributing recordings and 4,083 analysed windows. UC--IN denotes contraction minus guard-cleared inactivity (IN). Panel A gives the primary mixed-model coefficient (standardised; model-based Wald 95\% CI) and the Benjamini--Hochberg (BH) q-value of each estimator within its own 34-feature family. Pooled OLS and woman-cluster CR1 share one coefficient and differ only in covariance. The paired woman-summary q-value belongs to a separate family. Panel B gives the intervals behind the main-text comparisons for the 11 features supported by the primary model; paired values are raw-unit median differences with percentile intervals from 5,000 resamples of women (not a whole-woman refit of the window-level model).
+The mixed models use 42 women, 112 contributing recordings and 4,083 analysed windows (UC, IN and FM). Pooled OLS and woman-cluster CR1 use the 3,691 UC and IN windows (333 UC, 3,358 IN), standardised with the three-state mean and SD of the mixed model. The paired analysis uses the 34 women contributing both states. UC--IN denotes contraction minus guard-cleared inactivity (IN). Panel A gives the primary mixed-model coefficient (standardised; model-based Wald 95\% CI) and the Benjamini--Hochberg (BH) q-value of each estimator within its own 34-feature family. Pooled OLS and woman-cluster CR1 share one coefficient and differ only in covariance. The paired woman-summary q-value belongs to a separate family. Panel B gives the intervals behind the main-text comparisons for the 11 features supported by the primary model; paired values are raw-unit median differences with percentile intervals from 5,000 resamples of women (not a whole-woman refit of the window-level model).
 \Needspace{6\baselineskip}\paragraph{A. All 34 features}
 \begin{longtable}{p{5.2cm}rp{3.4cm}rrrr}
 \toprule
@@ -135,7 +135,7 @@ Complexity: Higuchi fractal dimension & 0.1101 & [$-$0.000844, 0.2211] & [$-$0.2
 
 
 \Needspace{12\baselineskip}\section*{Table S3. Numerical validation controls}\label{tab:s3_validation}
-Gains were 0.25, 0.5, 1, 1.3, 2, 4 and 7.1 on 60 fixed windows (420 comparisons per feature). The time-domain features listed as degree 1 scale linearly with gain; every other listed feature has expected degree 0.
+Gains were 0.25, 0.5, 1, 1.3, 2, 4 and 7.1 on 60 fixed windows (420 comparisons per feature). The time-domain features listed as degree 1 scale linearly with gain; every other listed feature has expected degree 0. A comparison passed when $|\mathrm{computed}-\mathrm{expected}|\le10^{-10}+10^{-8}|\mathrm{expected}|$; the same rule defined gain-1 reproduction and the terms ``invariant'' and ``non-decreasing'' in Table S7A.
 \Needspace{6\baselineskip}\paragraph{A. Gain-1 reproduction and across-gain responses against expected laws}
 \begin{longtable}{p{7.4cm}p{2.0cm}p{2.4cm}p{1.6cm}p{3.4cm}}
 \toprule
@@ -146,7 +146,7 @@ Gains were 0.25, 0.5, 1, 1.3, 2, 4 and 7.1 on 60 fixed windows (420 comparisons 
 \textbf{Feature group} & \textbf{Expected law} & \textbf{Comparisons per feature} & \textbf{Pass} & \textbf{Max abs. error} \\
 \midrule
 \endhead
-Gain-1 reproduction of cached values (34 features, 60 windows, 2,040 comparisons) & -- & -- & no failures & $1.78\times10^{-15}$ \\
+Gain-1 reproduction of stored reference values (34 features, 60 windows, 2,040 comparisons) & -- & -- & no failures & $1.78\times10^{-15}$ \\
 Amplitude features (median, MAV, RMS, peak-to-peak, waveform length) & degree 1 & 420 & all & $7.11\times10^{-15}$ \\
 Other original features (23: remaining time, spectral, entropy and complexity features) & degree 0 & 420 & all & $1.07\times10^{-14}$ \\
 Entropy: Total SampEn & degree 0 & 420 & 60 of 420 & 72.7249 \\
@@ -160,14 +160,15 @@ GI Total and GI profile SD & degree 0 & 420 & all & 0 \\
 \end{longtable}
 \Needspace{6\baselineskip}\paragraph{B. Full-precision control (12 windows)}
 Total, average, profile SD and retained-support count were each unchanged across all gains (maximum difference 0; 12 of 12 windows with zero difference) when fixed-decimal distance rounding was removed without SD normalisation.
-\Needspace{6\baselineskip}\paragraph{C. Decimal-resolution ablation}
+\Needspace{16\baselineskip}\paragraph{C. Decimal-resolution ablation}
+Same 60 windows and six non-unit gains (0.25, 0.5, 1.3, 2, 4, 7.1); Total, average and SD SampEn. Differences are relative to the unit-gain value of the same summary. ``Worst median difference'' is the largest absolute median relative difference over windows, and ``worst maximum difference'' the largest absolute maximum, each taken over gains and summaries. ``Pass proportion'' is the fraction of window--gain--summary comparisons meeting the tolerance above. ``Approx. expected bins'' is the approximate number of occupied rounding bins expected for that resolution.
 \begin{longtable}{p{2cm}p{1.5cm}p{2cm}p{2.5cm}p{3cm}p{3cm}p{2cm}}
 \toprule
-\textbf{Resolution} & \textbf{Mode} & \textbf{Documented bins} & \textbf{Measured median bins} & \textbf{Worst median difference (\%)} & \textbf{Worst maximum difference (\%)} & \textbf{Pass proportion} \\
+\textbf{Resolution} & \textbf{Mode} & \textbf{Approx. expected bins} & \textbf{Measured median bins} & \textbf{Worst median difference (\%)} & \textbf{Worst maximum difference (\%)} & \textbf{Pass proportion} \\
 \midrule
 \endfirsthead
 \toprule
-\textbf{Resolution} & \textbf{Mode} & \textbf{Documented bins} & \textbf{Measured median bins} & \textbf{Worst median difference (\%)} & \textbf{Worst maximum difference (\%)} & \textbf{Pass proportion} \\
+\textbf{Resolution} & \textbf{Mode} & \textbf{Approx. expected bins} & \textbf{Measured median bins} & \textbf{Worst median difference (\%)} & \textbf{Worst maximum difference (\%)} & \textbf{Pass proportion} \\
 \midrule
 \endhead
 Original, 3 decimals & Original & 80 & 84.0 & 630.6386 & 673.1571 & 0.0 \\
@@ -179,11 +180,11 @@ GI, 3 decimals & GI & 5,000 & 5258.0 & 0 & 0 & 1.0 \\
 \bottomrule
 \end{longtable}
 \Needspace{6\baselineskip}\paragraph{D. Independent implementation of the fixed-grid profile (12 windows)}
-An explicit pairwise Chebyshev implementation matched the reference implementation after matching template starting indices, for normalised area under the profile, slope, centroid, profile SD, kurtosis, skewness and the valid fraction: maximum absolute difference 0 for every summary, with validity masks in agreement. This is an internal implementation check, not a replication, and it does not test agreement of state associations between representations. The fixed-grid check used 200 dimensionless tolerance points spanning 0.01--4.00 and a minimum coverage fraction of 1.0 across 300 IN windows.
+An explicit pairwise Chebyshev implementation matched the reference implementation after matching template starting indices, for normalised area under the profile, slope, centroid, profile SD, kurtosis, skewness and the valid fraction: maximum absolute difference 0 for every summary, with validity masks in agreement. This is an internal implementation check, not a replication, and it does not test agreement of state associations between representations. The fixed-grid check used 200 dimensionless tolerance points spanning 0.01--4.00 The required valid-point fraction was 0.90; the observed minimum across 300 IN windows was 1.0.
 
 
 \Needspace{12\baselineskip}\section*{Table S4. Complete gain-invariant state associations}\label{tab:s4_gi_associations}
-The common population is 42 women, 112 contributing recordings and 4,083 analysed windows. Coefficients are model-standardised window-level woman/recording mixed-model estimates with model-based Wald 95\% CIs. The final declared 16-test Benjamini--Hochberg family spans four channels, two GI summaries and two contrasts and was selected after development. Values from the earlier 13-feature development family are described in Table S5.
+The common population is 42 women, 112 contributing recordings and 4,083 analysed windows. Coefficients are model-standardised window-level woman/recording mixed-model estimates with model-based Wald 95\% CIs. The final declared 16-test Benjamini--Hochberg family spans four channels, two GI summaries and two contrasts and was selected after development. The 13-feature development family is identified in Table S5B.
 \begin{longtable}{p{1.5cm}p{2.5cm}p{2.4cm}p{1.4cm}p{3.2cm}p{1.8cm}p{2.0cm}}
 \toprule
 \textbf{Channel} & \textbf{Summary} & \textbf{Contrast} & \textbf{Estimate} & \textbf{95\% CI} & \textbf{Raw p} & \textbf{Final q (16-test)} \\
@@ -215,7 +216,7 @@ EHG12 & GI profile SD & UC--IN & $-$0.0538 & [$-$0.1538, 0.0461] & 0.2913 & 0.33
 
 \Needspace{12\baselineskip}\section*{Table S5. Exclusion scenarios and analysis-family map}\label{tab:s5_sensitivity}
 \Needspace{8\baselineskip}\subsection*{S5A. Annotation and whole-woman influence sensitivity}
-E0 is the full analysed dataset. E1 removes the five retained windows carrying movement, equipment-manipulation or position-change flags. E2 removes only the flagged ice037 window. E3 removes all ice037 windows. Each scenario reports the saved model structure/status and the scenario-specific feature SD used for standardisation. Coefficients are not comparable as raw physiological magnitudes across scenarios because the denominators change; interval exclusion is not treated as FDR-supported robustness.
+E0 is the full analysed dataset. E1 removes the five retained windows carrying movement, equipment-manipulation or position-change flags. E2 removes only the flagged ice037 window. E3 removes all ice037 windows. Each scenario reports the model structure/status and the scenario-specific feature SD used for standardisation. Coefficients are not comparable as raw physiological magnitudes across scenarios because the denominators change; interval exclusion is not treated as FDR-supported robustness.
 \begin{longtable}{p{3.3cm}p{1.5cm}p{1.2cm}p{1.4cm}p{1.5cm}p{3.0cm}p{1.5cm}p{4.0cm}}
 \toprule
 \textbf{Feature} & \textbf{Scenario} & \textbf{Women} & \textbf{Windows} & \textbf{Estimate} & \textbf{95\% CI} & \textbf{Feature SD} & \textbf{Model / status} \\
@@ -250,11 +251,11 @@ This map records the reporting role and selection timing for analyses discussed 
 \textbf{Analysis} & \textbf{Population / channel} & \textbf{Contrast} & \textbf{Estimator} & \textbf{Feature family} & \textbf{Adj. size} & \textbf{Role} & \textbf{Timing} \\
 \midrule
 \endhead
-Original EHG9 features & EHG9 & UC--IN & woman/recording mixed model & 34-feature & 34 & headline original effects & defined before final modelling; not preregistered \\
+Original EHG9 features & EHG9 & UC--IN & woman/recording mixed model & 34-feature & 34 & primary original-feature analysis & defined before final modelling; not preregistered \\
 Model dependence & EHG9 & UC--IN & pooled OLS; woman-cluster CR1; paired woman summary & 34-feature / paired summary & 34 per family & estimand comparison & secondary; not one covariance correction \\
 Gain-law audit & 60 windows & positive gains 0.25-$-$7.1 & descriptive per-window trajectories & none & none & numerical mechanism & after development \\
 Two-summary GI & EHG9 & UC--IN and FM--IN & woman/recording mixed model & secondary two-summary & 2 per contrast & secondary GI family & after development \\
-Cross-channel GI & EHG9--EHG12 & UC--IN and FM--IN & woman/recording mixed model & final cross-channel BH & 16 & headline GI inference & selected after development \\
+Cross-channel GI & EHG9--EHG12 & UC--IN and FM--IN & woman/recording mixed model & final cross-channel BH & 16 & exploratory GI inference & selected after development \\
 GI development family & EHG9 & UC--IN and FM--IN & woman/recording mixed model & 13-feature GI development family & 13 per contrast & screening; GI Total and GI profile SD carried forward & development \\
 Conditional analyses & EHG9 & UC--IN and FM--IN & mixed models with log RMS or shape covariates; leave-one-woman-out refits & none & none & exploratory conditioning, outside the declared family & after the primary analysis \\
 Annotation/influence sensitivity & EHG9 & UC--IN & scenario-specific mixed-model fits & descriptive & none & interpretation boundary & named scenarios \\
@@ -289,7 +290,7 @@ Higuchi FD & 4 & 0.553 \\
 \bottomrule
 \end{longtable}
 \Needspace{16\baselineskip}\subsection*{S6B. Balanced IN subsampling, window duration and clean-UC sensitivity}
-Balanced IN: 1,000 within-woman resamples of IN windows (same-direction and BH-supported frequencies, and the median ratio of the resampled to the primary-fit standard error). Duration: window length 40, 60 and 80 s with the same event centres. Clean UC: 21 UC windows containing a competing FM annotation removed (312 UC windows).
+Balanced IN: 1,000 within-woman resamples of IN windows (same-direction and BH-supported frequencies, and the median ratio of the resampled to the primary-fit standard error). Duration: window length 40, 60 and 80 s with the same event centres. Clean UC: 21 retained UC windows overlapping an FM-centred window removed (312 UC windows).
 \begin{longtable}{p{3.0cm}rrrrrrrrrr}
 \toprule
 \textbf{Feature} & \textbf{Same dir.} & \textbf{q$<$0.05 freq.} & \textbf{SE ratio} & \textbf{40 s $\beta$} & \textbf{40 s q} & \textbf{80 s $\beta$} & \textbf{80 s q} & \textbf{Clean $\beta$} & \textbf{Clean q} \\
@@ -340,7 +341,7 @@ Higuchi FD & 0.56 & 2.02 & 1.04 \\
 
 \Needspace{12\baselineskip}\section*{Table S7. Amplitude dependence of the entropy associations}\label{tab:s7_amplitude}
 \Needspace{8\baselineskip}\subsection*{S7A. Direct positive scaling of 60 windows (20 per state)}
-Median relative change from unit scale (\%). ``Non-decr.'' is the number of the 60 trajectories that were non-decreasing with scale; ``Invariant'' is the number numerically unchanged at every scale.
+Median relative change from unit scale (\%). ``Non-decr.'' is the number of the 60 trajectories that were non-decreasing across scales but not invariant (the two categories are exclusive); ``Invariant'' is the number numerically unchanged at every scale.
 \begin{longtable}{p{3.2cm}rrrrrrr}
 \toprule
 \textbf{Summary} & \textbf{0.25$\times$} & \textbf{0.5$\times$} & \textbf{2$\times$} & \textbf{4$\times$} & \textbf{Non-decr.} & \textbf{Invariant} \\
@@ -384,7 +385,7 @@ SVD entropy & OLS, woman-cluster CR1 & adjusted & 0.256 & [0.027, 0.485] & 0.029
 \end{longtable}
 \par\smallskip\noindent\footnotesize Residual diagnostics for the adjusted Total SampEn mixed model: the Spearman correlation between the conditional residual and log RMS was $-0.70$ (pooled; $-0.69$ to $-0.73$ across the four channels), against $-0.98$ for marginal residuals. Across channels, the Spearman correlation between each woman's UC-minus-IN change in Total SampEn and her change in RMS was 0.92--0.96 (34 paired women; 0.79--0.98 for the other amplitude summaries).\normalsize
 \Needspace{16\baselineskip}\subsection*{S7C. EHG9 UC-minus-IN coefficients for original and GI Total SampEn under log-RMS conditioning, with and without the extreme window}
-Three-state random-intercept model (woman and recording-within-woman), REML, 4,083 windows; custom block-diagonal REML implementation, checked against the cached unadjusted coefficients (agreement to four decimals). Log-RMS is standardised. Cross-checked against statsmodels 0.14.5 MixedLM (REML, woman intercept plus recording variance component): maximum absolute coefficient difference $3\times10^{-6}$, maximum standard-error difference 0.003 (saved as statsmodels\_verification.csv in the refit folder). The second window set removes the one UC window from woman ice037 (samples 6,094--18,094; RMS 5.49 against 0.17 for the next largest window); outcomes are re-standardised within each window set.
+Three-state random-intercept model (woman and recording-within-woman), REML, 4,083 windows; custom block-diagonal REML implementation, checked against the reference unadjusted coefficients (agreement to four decimals). Log-RMS is standardised. Cross-checked against statsmodels 0.14.5 MixedLM (REML, woman intercept plus recording variance component): maximum absolute coefficient difference $3\times10^{-6}$, maximum standard-error difference 0.003. The second window set removes the one UC window from woman ice037 (samples 6,094--18,094; RMS 5.49 against 0.17 for the next largest window); outcomes are re-standardised within each window set.
 \begin{longtable}{p{2.4cm}p{3.4cm}p{1.8cm}rrrr}
 \toprule
 \textbf{Outcome} & \textbf{Adjustment} & \textbf{Window set} & \textbf{UC $\beta$ (SE)} & \textbf{95\% CI} & \textbf{FM $\beta$} & \textbf{log-RMS $\beta$} \\
@@ -421,6 +422,6 @@ Original Total, log-RMS adjusted & 0.005 & 0.019 & 0.059 \\
 \bottomrule
 \end{longtable}
 
-\bibliographystyle{plainnat}
+\bibliographystyle{cas-model2-names}
 \bibliography{RINENG_References}
 \end{document}
