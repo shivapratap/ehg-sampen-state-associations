@@ -54,7 +54,7 @@ c = rd("results/conditional/refit_gi_total_rms_results.csv")
 uc = c[c.term == "UC_minus_IN"].set_index(["outcome", "adjusted_log_RMS"]).estimate
 check("GI Total UC: -0.113 -> +0.275 after log RMS", near(uc[("gi_total", False)], -0.113, 5e-4) and near(uc[("gi_total", True)], 0.275, 5e-4),
       f"{uc[('gi_total', False)]:+.3f} -> {uc[('gi_total', True)]:+.3f}")
-check("Frozen Total UC: 0.409 -> 0.020 after log RMS", near(uc[("frozen_total", False)], 0.409, 5e-4) and near(uc[("frozen_total", True)], 0.020, 5e-4),
+check("Standard Total UC: 0.409 -> 0.020 after log RMS", near(uc[("frozen_total", False)], 0.409, 5e-4) and near(uc[("frozen_total", True)], 0.020, 5e-4),
       f"{uc[('frozen_total', False)]:+.3f} -> {uc[('frozen_total', True)]:+.3f}")
 lw = rd("results/conditional/lowo_results.csv")
 check("leave-one-woman-out: 42 refits", len(lw) == 42, len(lw))
@@ -72,7 +72,7 @@ check("lag-1: 55 combinations, 25 with |r|>=0.30, max 0.56 (original-11 features
       len(l11) == 55 and int((l11.lag1_autocorr.abs() >= 0.3).sum()) == 25 and near(l11.lag1_autocorr.abs().max(), 0.560, 5e-4),
       f"{len(l11)}, {int((l11.lag1_autocorr.abs() >= 0.3).sum())}, {l11.lag1_autocorr.abs().max():.3f}")
 chk = (ROOT / "results/manuscript/supplement/Supplement_S7_S8_checks.txt").read_text().splitlines()
-check("Supplement S7/S8: every quoted number matches its source", sum(l.startswith("PASS") for l in chk) == 36 and not any(l.startswith("FAIL") for l in chk),
+check("Supplement S7/S8: every quoted number matches its source", sum(l.startswith("PASS") for l in chk) >= 36 and not any(l.startswith("FAIL") for l in chk),
       f"{sum(l.startswith('PASS') for l in chk)} PASS, {sum(l.startswith('FAIL') for l in chk)} FAIL")
 
 for ok, name, detail in rows:

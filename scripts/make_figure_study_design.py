@@ -81,11 +81,11 @@ def panel_b(fig):
     ax.text(19.5, 95, "Original profile: fixed absolute grid", fontsize=FS, weight="bold", color=SLATE, va="center")
     ax.text(19.5, 55.5, "GI profile: SD-scaled", fontsize=FS, weight="bold", color=TEAL, va="center")
     box(ax, colx[0], yo, w, h, "x unchanged\n(signal units,\nany gain g)", fc="#f4f6f7", ls=(0, (3, 2)), fs=f2)
-    box(ax, colx[1], yo, w, h, "pairwise\ndistances\n$d_{ij}=|x_i-x_j|$", fs=f2)
-    box(ax, colx[2], yo, w, h, "round $d_{ij}$\nto $10^{-3}$\nsignal units", fc="#fdf1d6", ec=AMBER, lw=1.5, weight="bold", fs=f2)
+    box(ax, colx[1], yo, w, h, "template\nChebyshev\ndistances\n(Eq. 2)", fs=f2)
+    box(ax, colx[2], yo, w, h, "round to\n$10^{-3}$\nsignal units", fc="#fdf1d6", ec=AMBER, lw=1.5, weight="bold", fs=f2)
     box(ax, colx[3], yo, w, h, "profile:\nTotal,\nprofile SD", fs=f2)
     box(ax, colx[0], yg, w, h, "$\\tilde{x}=x/\\mathrm{SD}(x)$\npopulation SD", fc="#e4f1f0", ec=TEAL, fs=f2)
-    box(ax, colx[1], yg, w, h, "pairwise\ndistances\n$|\\tilde{x}_i-\\tilde{x}_j|$", fs=f2)
+    box(ax, colx[1], yg, w, h, "template\nChebyshev\ndistances of\n$\\tilde{x}$ (Eq. 2)", fs=f2)
     box(ax, colx[2], yg, w, h, "round to\n$10^{-3}$\nSD units", fc="#e4f1f0", ec=TEAL, lw=1.5, weight="bold", fs=f2)
     box(ax, colx[3], yg, w, h, "GI profile:\nGI Total,\nGI profile SD", fs=f2)
     for row_y in (yo, yg):
@@ -113,7 +113,7 @@ def panel_c(fig):
         if i < 4:
             arrow(ax, 21, y, 21, y - gap)
     box(ax, 50, 62, 49, 36, "Inference tiers\n\u2022 mixed model: woman and\n   recording random effects\n\u2022 pooled OLS, woman-cluster CR1\n\u2022 paired woman-level comparison", fc="#f4f6f7", fs=FSS)
-    box(ax, 50, 27, 49, 31, "Multiplicity (BH, within family)\n\u2022 34 features per channel, contrast\n\u2022 16-test GI family, chosen\n   after development", fc="#f4f6f7", fs=FSS)
+    box(ax, 50, 27, 49, 31, "Multiplicity (BH, within family)\n\u2022 34 features per channel, contrast\n\u2022 16-test GI family, chosen\n   post hoc", fc="#f4f6f7", fs=FSS)
     box(ax, 50, 1, 49, 22, "EHG9\u2013EHG12 share one physical\nwindow: spatial evidence,\nnot independent replication", fc="white", ec=GREY, ls=(0, (3, 2)), fs=FSS, color="#444444")
     ax.plot([41, 45.5, 45.5], [91, 91, 80], color=TEAL, lw=0.8, ls=(0, (3, 2)))
     arrow(ax, 45.5, 80, 50, 80, color=TEAL)
